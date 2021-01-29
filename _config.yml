@@ -94,12 +94,15 @@ analytics:
 author:
   name: 'SungSeokMin'
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: 'I am Happy Developer'
+  bio: 'I am Happy Developer😄'
   location: 'South Korea'
   email: 'jkl154527@gmail.com'
   links:
     - label: 'Instagram'
       icon: 'fab fa-fw fa-instagram'
+      url: 'https://instagram.com/sungstonemin'
+    - label: 'Gitgub'
+      icon: 'fab fa-github'
       url: 'https://instagram.com/sungstonemin'
 
 # Site Footer
@@ -204,12 +207,12 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
-# category_archive:
-#   type: liquid
-#   path: /categories/
-# tag_archive:
-#   type: liquid
-#   path: /tags/
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -243,9 +246,9 @@ defaults:
       share: true
       related: true
   # _pages
-  - scope:
-      path: '_pages'
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+  # - scope:
+  #     path: '_pages'
+  #     type: pages
+  #   values:
+  #     layout: single
+  #     author_profile: true
