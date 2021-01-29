@@ -1,1 +1,0 @@
-# SungSeokMin.github.io

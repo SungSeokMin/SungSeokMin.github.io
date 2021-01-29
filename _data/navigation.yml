@@ -1,12 +1,14 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: 'About'
+    url: /about/
+  - title: 'JavaScript'
+    url: /javascript/
+  - title: 'BackEnd'
+    url: /backend/
+  - title: 'FrontEnd'
+    url: /frontend/
+  - title: 'Project'
+    url: /project/
+  - title: 'Algorithm'
+    url: /algorithm/
