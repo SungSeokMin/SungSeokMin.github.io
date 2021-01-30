@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>Algorithm - Happy Developer, 성석민</title>
-<meta name="description" content="Happy Blog">
+<!-- begin _includes/seo.html --><title>LSCS-연속된 부분 배열의 합의 최대값 - Happy Developer, 성석민</title>
+<meta name="description" content="LSCS">
 
 
   <meta name="author" content="SungSeokMin">
   
+  <meta property="article:author" content="SungSeokMin">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Happy Developer, 성석민">
-<meta property="og:title" content="Algorithm">
-<meta property="og:url" content="https://sungseokmin.github.io/algorithm/">
+<meta property="og:title" content="LSCS-연속된 부분 배열의 합의 최대값">
+<meta property="og:url" content="https://sungseokmin.github.io/algorithm/LSCS/">
 
 
-  <meta property="og:description" content="Happy Blog">
-
-
-
+  <meta property="og:description" content="LSCS">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2021-01-30T00:00:00+09:00">
 
 
 
@@ -41,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://sungseokmin.github.io/algorithm/">
+<link rel="canonical" href="https://sungseokmin.github.io/algorithm/LSCS/">
 
 
 
@@ -282,9 +286,74 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Algorithm</h1>
+      <h1 id="page-title" class="page__title">LSCS-연속된 부분 배열의 합의 최대값</h1>
     
-    
+    <h2 id="lscs">LSCS</h2>
+
+<h3 id="문제설명">문제설명</h3>
+
+<blockquote>
+  <p>정수를 요소로 갖는 배열 <br />
+주어진 배열의 연속된 부분 배열의 합을 구한다.<br />
+이 중 가장 큰 값을 리턴해야 한다.<br />
+배열의 모든 요소가 음수인 경우도 있다.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let output = LSCS([1, 2, 3]);
+console.log(output); // --&gt; 6
+
+output = LSCS([1, 2, 3, -4]);
+console.log(output); // --&gt; 6
+
+LSCS([1, 2, 3, -4, 5]);
+console.log(output); // --&gt; 7
+
+LSCS([10, -11, 11]);
+console.log(output); // --&gt; 11
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="수도코드">수도코드</h2>
+
+<ol>
+  <li>연속된 배열의 합을 저장할 변수 생성</li>
+  <li>연속된 부분 배열의 합을 저장할 변수 생성<br />
+2.1 Number.MIN_SAFE_INTEGER = -900719925474099<br /></li>
+  <li>배열의 길이만큼 반복 … for loop</li>
+  <li>각각의 요소를 1번 변수에 저장 +=</li>
+  <li>만약 1번 변수의 합이 최대값 보다 클 경우 2번 변수에 저장</li>
+  <li>연속된 부분 배열의 합이 0보다 작을 경우 0으로 초기화를 해도 된다.</li>
+  <li>2번 변수를 return 한다.</li>
+</ol>
+
+<h2 id="풀이-코드">풀이 코드</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const LSCS = function(arr) {
+  let result = 0;
+  let max = Number.MIN_SAFE_INTEGER;
+
+  for(let i = 0; i &lt; arr.length; i++) {
+    // 부분 합을 저장
+    result += arr[i]
+
+    // 최대값을 저장
+    if(result &gt; max) {
+      max = result;
+    }
+
+    // 부분 합이 음수 인 경우 0으로 초기화
+    if(result &lt; 0) {
+      result = 0;
+    }
+  }
+  return max;
+}
+</code></pre></div></div>
+
+<hr />
+
+<p>간단한 문제라고 생각했지만 부분 합의 최대값 이라는 부분에서 어떻게 풀어가야할 지 생각이 많았다.</p>
 
 <br />
 <section class="taxonomy__section">
