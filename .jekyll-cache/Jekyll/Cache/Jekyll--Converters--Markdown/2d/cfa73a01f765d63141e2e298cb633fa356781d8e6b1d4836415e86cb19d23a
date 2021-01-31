@@ -1,0 +1,29 @@
+I"!<h2 id="node">Node</h2>
+
+<blockquote>
+  <p>Node.js ?</p>
+</blockquote>
+
+<ul>
+  <li>V8 JavaScript 엔진으로 빌드된 JavaScript 런타임</li>
+  <li>즉, 브라우저 외의 다른 환경에서도 사용할 수 있게 해주는 런타임</li>
+  <li>module 시스템을 구축하고 있다.</li>
+  <li>http server가 내장되어 있다.</li>
+</ul>
+
+<h2 id="설치-방법">설치 방법</h2>
+
+<ul>
+  <li>공식사이트 <a href="'https://nodejs.org'">node</a></li>
+</ul>
+
+<h3 id="server-구현">server 구현</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// http 모듈을 불러온다.
+const http = require('http');
+
+http.createServer((request, response) =&gt; {
+  console.log('start server')
+}).listen(3000);
+</code></pre></div></div>
+:ET

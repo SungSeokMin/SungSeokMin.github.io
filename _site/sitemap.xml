@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://sungseokmin.github.io/algorithm/LSCS/</loc>
+<loc>https://sungseokmin.github.io/algorithm/LSCS-algorithm/</loc>
 <lastmod>2021-01-30T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>https://sungseokmin.github.io/algorithm/robotPath/</loc>
+<loc>https://sungseokmin.github.io/algorithm/robotPath-algorithm/</loc>
 <lastmod>2021-01-30T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://sungseokmin.github.io/backend/express/Express-backend/</loc>
+<lastmod>2021-01-31T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://sungseokmin.github.io/backend/http/HTTP-backend/</loc>
+<lastmod>2021-01-31T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://sungseokmin.github.io/backend/node/Node-backend/</loc>
+<lastmod>2021-01-31T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://sungseokmin.github.io/algorithm/</loc>

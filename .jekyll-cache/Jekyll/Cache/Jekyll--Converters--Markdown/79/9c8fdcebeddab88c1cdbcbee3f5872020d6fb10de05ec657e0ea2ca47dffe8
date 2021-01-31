@@ -1,0 +1,143 @@
+I"h<blockquote>
+  <h2 id="express-">Express ?</h2>
+</blockquote>
+
+<ul>
+  <li><a href="https://expressjs.com/ko/">공식문서</a> 참고</li>
+  <li>Node.js를 위한 빠르고 대중적인 프레임워크</li>
+  <li>Middleware를 사용할 수 있다는 큰 장점을 가지고 있다.</li>
+</ul>
+
+<h3 id="설치-방법">설치 방법</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install express
+</code></pre></div></div>
+
+<h3 id="express를-이용한-server-구현">express를 이용한 server 구현</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// express 모듈을 가져온다.
+const express = require('express');
+const app = express();
+
+app.get('/', (request, response) =&gt; {
+  res.send('Hello World');
+})
+
+app.listen(3000, () =&gt; {
+  console.log('Express Start')
+})
+</code></pre></div></div>
+
+<h3 id="routing">Routing</h3>
+
+<ul>
+  <li>method(GET, POST, PUT, DELETE …)와 url에 따른 분기</li>
+  <li>즉, url 및 특정 HTTP 요청 메소드인 엔드포인트(ex… ‘/mypage’)에 대한 client 요청에 application이 응답하는 방법을 결정하는 것</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const express = require('express');
+const app = express();
+
+// http://localhost:3000/ 경로로 이동할 경우 화면에 Hello가 출력된다.
+app.get('/', (req, res) =&gt; {
+  res.status(200).send('Hello');
+})
+
+app.get('/mypage', (req,res) =&gt; {
+  res.status(200).send('MyPage');
+})
+
+app.post('경로', (req, res) =&gt; {
+  TODO :
+})
+
+app.delete('경로', (req, res) =&gt; {
+  TODO :
+})
+
+app.listen(3000, () =&gt; {
+  console.log('Express Start')
+})
+</code></pre></div></div>
+
+<h3 id="middleware">Middleware</h3>
+
+<ul>
+  <li>요청과 응답 중간에 껴서 어떠한 동작을 실행해주는 프로그램</li>
+  <li>대표적인 Middleware
+    <ul>
+      <li>morgan : request를 loggin 해주는 미들웨어</li>
+      <li>cors : 현재 도메인에서 다른 도메인으로 리소스 요청 할 경우 제한을 정해주는 미들웨어
+        <ul>
+          <li>Cross Origin Resource Sharing의 약자</li>
+        </ul>
+      </li>
+      <li>express-session : 서버가 세션을 이용하게 해주고 쿠키에 세션 정보를 담을 수 있게 해주는 미들웨어</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="설치-방법-1">설치 방법</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install morgan
+npm install cors
+npm install express-session
+</code></pre></div></div>
+
+<h3 id="사용-방법">사용 방법</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const express = require('express');
+const app = express();
+const morgan = require('morgan');
+const cors = require('cors');
+const session = require('express-session');
+
+// 요청에 대한 본문을 해석해주는 미들웨어
+app.use(express.json());
+
+// post로 요청된 body를 쉽게 추출할 수 있는 미들웨어
+app.use(express.urlencoded({extended: false}));
+
+// morgan 미들웨어 사용
+app.use(logger('dev'));
+
+// cors 미들웨어 사용
+app.use(
+  cors({
+    origin: 'https://localhost:3000',
+    methods: ['GET', 'POST', 'UPDATE', 'OPTIONS'],
+    credentials: true,
+  })
+);
+
+// express-session 미들웨어 사용
+app.use(session({
+  secret: **필수항목** 비밀 키
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    // 서버와 요청의 도메인이 일치하는 경우 쿠키 전송
+    domain: 'localhost',
+
+    // 서버의 요청의 세부경로가 일치하는 경우 쿠키 전송
+    path: '/',
+
+    // maxAge, expires =&gt; 쿠키의 유효기간 설정
+    maxAge: 24 * 6 * 60,
+
+    // 스크립트의 쿠키 접근 가능 여부 설정
+    httpOnly: true,
+
+    // HTTPS에서만 쿠키 전송 여부 설정
+    secure: true,
+
+    // CORS 요청의 경우, 옵션 및 메소드에 따라 쿠키 전송 여부 설정
+    sameSite: 'none'
+  }
+}))
+
+app.listen(3000, () =&gt; {
+  console.log('Express Start');
+})
+</code></pre></div></div>
+:ET

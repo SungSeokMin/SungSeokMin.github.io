@@ -1,0 +1,529 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+<!-- begin _includes/seo.html --><title>최소시간으로 길찾기-완전탐색 - Happy Developer</title>
+<meta name="description" content="Robot Path">
+
+
+  <meta name="author" content="SungSeokMin">
+  
+  <meta property="article:author" content="SungSeokMin">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Happy Developer">
+<meta property="og:title" content="최소시간으로 길찾기-완전탐색">
+<meta property="og:url" content="https://sungseokmin.github.io/algorithm/robotPath-algorithm/">
+
+
+  <meta property="og:description" content="Robot Path">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-30T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sungseokmin.github.io/algorithm/robotPath-algorithm/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SungSeokMin",
+      "url": "https://sungseokmin.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link
+  href="/feed.xml"
+  type="application/atom+xml"
+  rel="alternate"
+  title="Happy Developer Feed"
+/>
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
+/>
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+  </head>
+
+  <body class="layout--category-algorithm">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Happy Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/javascript/">JavaScript</a>
+            </li><li class="masthead__menu-item">
+              <a href="/backend/">BackEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/frontend/">FrontEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/project/">Project</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/">Algorithm</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">SungSeokMin</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>I am Happy Developer😄</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:jkl154527@gmail.com">
+            <meta itemprop="email" content="jkl154527@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">최소시간으로 길찾기-완전탐색</h1>
+    
+    <h2 id="robot-path">Robot Path</h2>
+
+<h3 id="문제설명">문제설명</h3>
+
+<blockquote>
+  <p>2차원 배열(room), 현재 지점(src), 도착 지점(dst) <br />
+1은 장애물, 0은 이동 가능한 통로를 의미한다. <br />
+로봇은 지도 위를 일분에 한 칸씩 상하좌우로 이동 할 수 있다. <br />
+로봇의 위치와 목표 지점이 함께 주어질 경우
+로봇이 목표 지점까지 도달하는 데 걸리는 최소 시간을 리턴</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let room = [
+  [0, 0, 0, 0, 0, 0],
+  [0, 1, 1, 0, 1, 0],
+  [0, 1, 0, 0, 0, 0],
+  [0, 0, 1, 1, 1, 0],
+  [1, 0, 0, 0, 0, 0],
+];
+let src = [4, 2];
+let dst = [2, 2];
+let output = robotPath(room, src, dst);
+console.log(output); // --&gt; 8
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="수도코드">수도코드</h2>
+
+<ol>
+  <li>recursion 함수 생성 … (세로의 길이, 가로의 길이, 현재 지점, 최소시간=1)</li>
+  <li>배열의 범위가 벗어난 경우 return</li>
+  <li>room의 [row, col]이 0인 경우 와 최소시간 보다 큰 경우 <br />
+3.1 room의 [row, col]을 최소시간(step)으로 초기화 한다.</li>
+  <li>그것이 아니면 return <br />
+4.1 그 이유 ? 장애물이 이미 1이거나, 최소 시간으로 통과 가능한 경우니깐 !</li>
+  <li>상하좌우로 재귀한다.</li>
+  <li>완전탐색이 끝나면 도착지점의 row, col을 구조분해 하고</li>
+  <li>room의 row, col 자리의 값 = 최소시간에서 1을 빼준다. <br />
+7.1 그 이유? 방문하지 않기 위해 로봇의 위치를 1로 초기화 하면<br />
+7.2 바로 옆 통로는 1이 증가한다.</li>
+</ol>
+
+<h2 id="풀이-코드">풀이 코드</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const robotPath = function (room, src, dst) {
+  const recursion = (M, N, path, step) =&gt; {
+    // 현재 점을 저장
+    const [row, col] = path;
+
+    // 배열의 범위를 벗어난 경우
+    if(row &lt; 0 || row &gt;= M || col &lt; 0 || col &gt;= N) {
+      return;
+    }
+
+    // 이동할 수 있는 경우
+    if(room[row][col] === 0 || room[row][col] &gt; step) {
+      room[row][col] = step;
+    } else {
+      return;
+    }
+
+    // 상
+    recursion(M, N, [row+1, col], step + 1);
+    // 하
+    recursion(M, N, [row-1, col], step + 1);
+    // 좌
+    recursion(M, N, [row, col-1], step + 1);
+    // 우
+    recursion(M, N, [row, col+1], step + 1);
+  }
+  // 세로, 가로, 현재지점, 최소시간
+  recursion(room.length, room[0].length, src, 1);
+
+  const [row, col] = dst;
+  return room[row][col] -1;
+}
+</code></pre></div></div>
+
+<hr />
+
+<p>문제파악과 해결하는 부분에서 시간이 엄청 오래걸렸다.
+DFS, BFS에 대한 개념을 더 익히는 것이 필요한 것 같다.</p>
+
+<br />
+<section class="taxonomy__section">
+  <div class="entries-list">
+     
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/algorithm/robotPath-algorithm/" rel="permalink">최소시간으로 길찾기-완전탐색
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Robot Path
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/algorithm/LSCS-algorithm/" rel="permalink">LSCS-연속된 부분 배열의 합의 최대값
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">LSCS
+</p>
+  </article>
+</div>
+ 
+  </div>
+  <a href="#page-title" class="back-to-top"
+    >맨 위로 이동
+    &uarr;</a
+  >
+</section>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    <li><strong>팔로우:</strong></li>
+      
+    
+    <li>
+      <a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-github"
+          aria-hidden="true"
+        ></i>
+        GitHub</a
+      >
+    </li>
+     
+    
+    <li>
+      <a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-instagram"
+          aria-hidden="true"
+        ></i>
+        Instagram</a
+      >
+    </li>
+      
+  </ul>
+</div>
+
+<div class="page__footer-copyright">
+  &copy; 2021 SungSeokMin. Powered by
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+  <a
+    href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
+    rel="nofollow"
+    >Minimal Mistakes</a
+  >.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

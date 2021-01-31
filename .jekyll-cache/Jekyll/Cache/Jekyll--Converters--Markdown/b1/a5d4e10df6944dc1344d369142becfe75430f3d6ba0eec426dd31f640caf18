@@ -1,0 +1,98 @@
+I"�
+<h2 id="node">Node</h2>
+
+<blockquote>
+  <h2 id="nodejs-">Node.js ?</h2>
+</blockquote>
+
+<ul>
+  <li>V8 JavaScript 엔진으로 빌드된 JavaScript 런타임</li>
+  <li>즉, 브라우저 외의 다른 환경에서도 사용할 수 있게 해주는 런타임</li>
+  <li>module 시스템을 구축하고 있다.</li>
+  <li>http server가 내장되어 있다.</li>
+</ul>
+
+<h3 id="설치-방법">설치 방법</h3>
+
+<ul>
+  <li><a href="'https://nodejs.org'">공식사이트</a>를 통해 파일을 다운 받을 수 있다.</li>
+  <li>node가 설치되면 npm(Node Package Manager)가 같이 설치 된다.</li>
+  <li>설치가 되면 터미널을 켠 후 node -v와 npm -v를 입력해본다.</li>
+</ul>
+
+<blockquote>
+  <h2 id="npm-">npm ?</h2>
+</blockquote>
+
+<ul>
+  <li>패키지를 모아놓은 저장소, 이미 만들어져 있는 패키지들을 사용할 수 있게 해주는 도구</li>
+  <li>패키지들을 체계적으로 관리하기 위해서 package.json을 생성한다. 패키지명, 패키지 버전을 기록한다.</li>
+  <li>package.json 생성방법
+    <ul>
+      <li>npm init</li>
+    </ul>
+  </li>
+  <li>npm install [package Name]을 이용해 패키지들을 다운 받을 수 있다.
+    <ul>
+      <li>ex) npm install express</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="packagejson-">package.json ?</h2>
+</blockquote>
+
+<ul>
+  <li>패캐지들을 체계적으로 관리하기 위해서 필요한 파일</li>
+  <li>dependencies, devDependencies
+    <ul>
+      <li>dependencies ?
+        <ul>
+          <li>프로젝트에 필요한 패키지들의 이름과 버전을 기록
+            <ul>
+              <li>ex) express, cors, sequelize, mysql2 …</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>devDependencies ?
+        <ul>
+          <li>프로젝트 개발에 필요한 패캐지들의 이름과 버전을 기록
+            <ul>
+              <li>ex) nodemon, eslint, prettier …</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="server-구현">server 구현</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// http 모듈을 불러온다.
+const http = require('http');
+const url = require('url');
+
+// http://localhost:3000 확인 가능
+http.createServer((request, response) =&gt; {
+
+  // user가 요청한 url에서 path를 가져온다.
+  const path = url.parse(request.url, true).pathname;
+
+  // user가 요청한 method가 GET, POST, 그 외 일 경우
+  if(request.method === 'GET') {
+    // path가 /일 경우
+    if(path === '/') {
+      ...
+    }
+  } else if(request.method === 'POST') {
+    ...
+  } else {
+    ...
+  }
+
+}).listen(3000);
+</code></pre></div></div>
+:ET
