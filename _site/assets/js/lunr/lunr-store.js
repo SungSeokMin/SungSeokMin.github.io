@@ -20,7 +20,7 @@ var store = [{
         "title": "HTTP",
         "excerpt":"HTTP ? 웹 상에서 client와 server 간에 요청/응답으로 데이터를 주고 받을 수 있는 프로토콜 작동방식 client -&gt; (요청) -&gt; server Server -&gt; (응답) -&gt; client 특징 stateless(무상태성) : 이전 요청이나 다음 요청을 기억하지 않는다. ex) client가 server에게 고기를 먹으러 가자고 요청을 보내자 server는 알겠다고 응답을 한다. 응답을 받은 client는 언제갈까...","categories": ["backend","http"],
         "tags": [],
-        "url": "https://sungseokmin.github.io/backend/http/HTTP-backend/",
+        "url": "https://sungseokmin.github.io/backend/http/Http-backend/",
         "teaser": null
       },{
         "title": "Node.js",
