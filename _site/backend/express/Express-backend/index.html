@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>Node.js - Happy Developer</title>
-<meta name="description" content="Node.js ?">
+<!-- begin _includes/seo.html --><title>Express - Happy Developer</title>
+<meta name="description" content="Express ?">
 
 
   <meta name="author" content="SungSeokMin">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Happy Developer">
-<meta property="og:title" content="Node.js">
-<meta property="og:url" content="https://sungseokmin.github.io/backend/node/Node-backend/">
+<meta property="og:title" content="Express">
+<meta property="og:url" content="https://sungseokmin.github.io/backend/express/Express-backend/">
 
 
-  <meta property="og:description" content="Node.js ?">
+  <meta property="og:description" content="Express ?">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://sungseokmin.github.io/backend/node/Node-backend/">
+<link rel="canonical" href="https://sungseokmin.github.io/backend/express/Express-backend/">
 
 
 
@@ -286,104 +286,149 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Node.js</h1>
+      <h1 id="page-title" class="page__title">Express</h1>
     
     <blockquote>
-  <h2 id="nodejs-">Node.js ?</h2>
+  <h2 id="express-">Express ?</h2>
 </blockquote>
 
 <ul>
-  <li>V8 JavaScript 엔진으로 빌드된 JavaScript 런타임</li>
-  <li>즉, 브라우저 외의 다른 환경에서도 사용할 수 있게 해주는 런타임</li>
-  <li>module 시스템을 구축하고 있다.</li>
-  <li>http server가 내장되어 있다.</li>
+  <li><a href="https://expressjs.com/ko/">공식문서</a> 참고</li>
+  <li>Node.js를 위한 빠르고 대중적인 프레임워크</li>
+  <li>Middleware를 사용할 수 있다는 큰 장점을 가지고 있다.</li>
 </ul>
 
 <h3 id="설치-방법">설치 방법</h3>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install express
+</code></pre></div></div>
+
+<h3 id="express를-이용한-server-구현">express를 이용한 server 구현</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// express 모듈을 가져온다.
+const express = require('express');
+const app = express();
+
+app.get('/', (request, response) =&gt; {
+  res.send('Hello World');
+})
+
+app.listen(3000, () =&gt; {
+  console.log('Express Start')
+})
+</code></pre></div></div>
+
+<h3 id="routing">Routing</h3>
+
 <ul>
-  <li><a href="'https://nodejs.org'">공식사이트</a>를 통해 파일을 다운 받을 수 있다.</li>
-  <li>node가 설치되면 npm(Node Package Manager)가 같이 설치 된다.</li>
-  <li>설치가 되면 터미널을 켠 후 node -v와 npm -v를 입력해본다.</li>
+  <li>method(GET, POST, PUT, DELETE …)와 url에 따른 분기</li>
+  <li>즉, url 및 특정 HTTP 요청 메소드인 엔드포인트(ex… ‘/mypage’)에 대한 client 요청에 application이 응답하는 방법을 결정하는 것</li>
 </ul>
 
-<blockquote>
-  <h2 id="npm-">npm ?</h2>
-</blockquote>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const express = require('express');
+const app = express();
+
+// http://localhost:3000/ 경로로 이동할 경우 화면에 Hello가 출력된다.
+app.get('/', (req, res) =&gt; {
+  res.status(200).send('Hello');
+})
+
+app.get('/mypage', (req,res) =&gt; {
+  res.status(200).send('MyPage');
+})
+
+app.post('경로', (req, res) =&gt; {
+  TODO :
+})
+
+app.delete('경로', (req, res) =&gt; {
+  TODO :
+})
+
+app.listen(3000, () =&gt; {
+  console.log('Express Start')
+})
+</code></pre></div></div>
+
+<h3 id="middleware">Middleware</h3>
 
 <ul>
-  <li>패키지를 모아놓은 저장소, 이미 만들어져 있는 패키지들을 사용할 수 있게 해주는 도구</li>
-  <li>패키지들을 체계적으로 관리하기 위해서 package.json을 생성한다. 패키지명, 패키지 버전을 기록한다.</li>
-  <li>package.json 생성방법
+  <li>요청과 응답 중간에 껴서 어떠한 동작을 실행해주는 프로그램</li>
+  <li>대표적인 Middleware
     <ul>
-      <li>npm init</li>
-    </ul>
-  </li>
-  <li>npm install [package Name]을 이용해 패키지들을 다운 받을 수 있다.
-    <ul>
-      <li>ex) npm install express</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <h2 id="packagejson-">package.json ?</h2>
-</blockquote>
-
-<ul>
-  <li>패캐지들을 체계적으로 관리하기 위해서 필요한 파일</li>
-</ul>
-
-<h3 id="dependencies-devdependencies">dependencies, devDependencies</h3>
-
-<ul>
-  <li>dependencies ?
-    <ul>
-      <li>프로젝트에 필요한 패키지들의 이름과 버전을 기록
+      <li>morgan : request를 loggin 해주는 미들웨어</li>
+      <li>cors : 현재 도메인에서 다른 도메인으로 리소스 요청 할 경우 제한을 정해주는 미들웨어
         <ul>
-          <li>ex) express, cors, sequelize, mysql2 …</li>
-          <li>설치) npm install express</li>
+          <li>Cross Origin Resource Sharing의 약자</li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li>devDependencies ?
-    <ul>
-      <li>프로젝트 개발에 필요한 패캐지들의 이름과 버전을 기록
-        <ul>
-          <li>ex) nodemon, eslint, prettier …</li>
-          <li>설치) npm install nodemon –save-dev</li>
-        </ul>
-      </li>
+      <li>express-session : 서버가 세션을 이용하게 해주고 쿠키에 세션 정보를 담을 수 있게 해주는 미들웨어</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="server-구현">server 구현</h3>
+<h3 id="설치-방법-1">설치 방법</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// http 모듈을 불러온다.
-const http = require('http');
-const url = require('url');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install morgan
+npm install cors
+npm install express-session
+</code></pre></div></div>
 
-// http://localhost:3000 확인 가능
-http.createServer((request, response) =&gt; {
+<h3 id="사용-방법">사용 방법</h3>
 
-  // user가 요청한 url에서 path를 가져온다.
-  const path = url.parse(request.url, true).pathname;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const express = require('express');
+const app = express();
+const morgan = require('morgan');
+const cors = require('cors');
+const session = require('express-session');
 
-  // user가 요청한 method가 GET, POST, 그 외 일 경우
-  if(request.method === 'GET') {
-    // path가 /일 경우
-    if(path === '/') {
-      ...
-    }
-  } else if(request.method === 'POST') {
-    ...
-  } else {
-    ...
+// 요청에 대한 본문을 해석해주는 미들웨어
+app.use(express.json());
+
+// post로 요청된 body를 쉽게 추출할 수 있는 미들웨어
+app.use(express.urlencoded({extended: false}));
+
+// morgan 미들웨어 사용
+app.use(logger('dev'));
+
+// cors 미들웨어 사용
+app.use(
+  cors({
+    origin: 'https://localhost:3000',
+    methods: ['GET', 'POST', 'UPDATE', 'OPTIONS'],
+    credentials: true,
+  })
+);
+
+// express-session 미들웨어 사용
+app.use(session({
+  secret: **필수항목** 비밀 키
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    // 서버와 요청의 도메인이 일치하는 경우 쿠키 전송
+    domain: 'localhost',
+
+    // 서버의 요청의 세부경로가 일치하는 경우 쿠키 전송
+    path: '/',
+
+    // maxAge, expires =&gt; 쿠키의 유효기간 설정
+    maxAge: 24 * 6 * 60,
+
+    // 스크립트의 쿠키 접근 가능 여부 설정
+    httpOnly: true,
+
+    // HTTPS에서만 쿠키 전송 여부 설정
+    secure: true,
+
+    // CORS 요청의 경우, 옵션 및 메소드에 따라 쿠키 전송 여부 설정
+    sameSite: 'none'
   }
+}))
 
-}).listen(3000);
+app.listen(3000, () =&gt; {
+  console.log('Express Start');
+})
 </code></pre></div></div>
 
 <br />
@@ -456,7 +501,7 @@ http.createServer((request, response) =&gt; {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
