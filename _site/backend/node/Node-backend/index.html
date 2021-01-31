@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>Posts by Category - Happy Developer</title>
-<meta name="description" content="Happy Blog">
+<!-- begin _includes/seo.html --><title>Node.js - Happy Developer</title>
+<meta name="description" content="Node.js ?">
 
 
   <meta name="author" content="SungSeokMin">
   
+  <meta property="article:author" content="SungSeokMin">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Happy Developer">
-<meta property="og:title" content="Posts by Category">
-<meta property="og:url" content="https://sungseokmin.github.io/categories/">
+<meta property="og:title" content="Node.js">
+<meta property="og:url" content="https://sungseokmin.github.io/backend/node/Node-backend/">
 
 
-  <meta property="og:description" content="Happy Blog">
-
-
-
+  <meta property="og:description" content="Node.js ?">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2021-01-31T00:00:00+09:00">
 
 
 
@@ -41,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://sungseokmin.github.io/categories/">
+<link rel="canonical" href="https://sungseokmin.github.io/backend/node/Node-backend/">
 
 
 
@@ -113,7 +117,7 @@
     
   </head>
 
-  <body class="layout--categories">
+  <body class="layout--category-backend">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -282,161 +286,110 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Posts by Category</h1>
+      <h1 id="page-title" class="page__title">Node.js</h1>
     
-    
+    <blockquote>
+  <h2 id="nodejs-">Node.js ?</h2>
+</blockquote>
 
-
-
-
-
-<ul class="taxonomy__index">
-  
-    
-      
-        <li>
-          <a href="#algorithm">
-            <strong>algorithm</strong> <span class="taxonomy__count">2</span>
-          </a>
-        </li>
-      
-    
-      
-        <li>
-          <a href="#backend">
-            <strong>backend</strong> <span class="taxonomy__count">2</span>
-          </a>
-        </li>
-      
-    
-      
-    
-      
-    
-  
-    
-      
-    
-      
-    
-      
-        <li>
-          <a href="#http">
-            <strong>http</strong> <span class="taxonomy__count">1</span>
-          </a>
-        </li>
-      
-    
-      
-        <li>
-          <a href="#node">
-            <strong>node</strong> <span class="taxonomy__count">1</span>
-          </a>
-        </li>
-      
-    
-  
+<ul>
+  <li>V8 JavaScript 엔진으로 빌드된 JavaScript 런타임</li>
+  <li>즉, 브라우저 외의 다른 환경에서도 사용할 수 있게 해주는 런타임</li>
+  <li>module 시스템을 구축하고 있다.</li>
+  <li>http server가 내장되어 있다.</li>
 </ul>
 
+<h3 id="설치-방법">설치 방법</h3>
 
+<ul>
+  <li><a href="'https://nodejs.org'">공식사이트</a>를 통해 파일을 다운 받을 수 있다.</li>
+  <li>node가 설치되면 npm(Node Package Manager)가 같이 설치 된다.</li>
+  <li>설치가 되면 터미널을 켠 후 node -v와 npm -v를 입력해본다.</li>
+</ul>
 
-  
-    
-      <section id="algorithm" class="taxonomy__section">
-        <h2 class="archive__subtitle">algorithm</h2>
-        <div class="entries-list">
-          
-            
+<blockquote>
+  <h2 id="npm-">npm ?</h2>
+</blockquote>
 
+<ul>
+  <li>패키지를 모아놓은 저장소, 이미 만들어져 있는 패키지들을 사용할 수 있게 해주는 도구</li>
+  <li>패키지들을 체계적으로 관리하기 위해서 package.json을 생성한다. 패키지명, 패키지 버전을 기록한다.</li>
+  <li>package.json 생성방법
+    <ul>
+      <li>npm init</li>
+    </ul>
+  </li>
+  <li>npm install [package Name]을 이용해 패키지들을 다운 받을 수 있다.
+    <ul>
+      <li>ex) npm install express</li>
+    </ul>
+  </li>
+</ul>
 
+<blockquote>
+  <h2 id="packagejson-">package.json ?</h2>
+</blockquote>
 
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm/robotPath-algorithm/" rel="permalink">최소시간으로 길찾기-완전탐색
-</a>
-      
-    </h2>
-    
+<ul>
+  <li>패캐지들을 체계적으로 관리하기 위해서 필요한 파일</li>
+</ul>
 
-  <p class="page__meta">
-    
+<h3 id="dependencies-devdependencies">dependencies, devDependencies</h3>
 
-    
+<ul>
+  <li>dependencies ?
+    <ul>
+      <li>프로젝트에 필요한 패키지들의 이름과 버전을 기록
+        <ul>
+          <li>ex) express, cors, sequelize, mysql2 …</li>
+          <li>설치) npm install express</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>devDependencies ?
+    <ul>
+      <li>프로젝트 개발에 필요한 패캐지들의 이름과 버전을 기록
+        <ul>
+          <li>ex) nodemon, eslint, prettier …</li>
+          <li>설치) npm install nodemon –save-dev</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-    
-      
-      
+<h3 id="server-구현">server 구현</h3>
 
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// http 모듈을 불러온다.
+const http = require('http');
+const url = require('url');
 
+// http://localhost:3000 확인 가능
+http.createServer((request, response) =&gt; {
 
-    <p class="archive__item-excerpt" itemprop="description">Robot Path
-</p>
-  </article>
-</div>
+  // user가 요청한 url에서 path를 가져온다.
+  const path = url.parse(request.url, true).pathname;
 
-          
-            
+  // user가 요청한 method가 GET, POST, 그 외 일 경우
+  if(request.method === 'GET') {
+    // path가 /일 경우
+    if(path === '/') {
+      ...
+    }
+  } else if(request.method === 'POST') {
+    ...
+  } else {
+    ...
+  }
 
+}).listen(3000);
+</code></pre></div></div>
 
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm/LSCS-algorithm/" rel="permalink">LSCS-연속된 부분 배열의 합의 최대값
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">LSCS
-</p>
-  </article>
-</div>
-
-          
-        </div>
-        <a href="#page-title" class="back-to-top">맨 위로 이동 &uarr;</a>
-      </section>
-    
-  
-    
-      <section id="backend" class="taxonomy__section">
-        <h2 class="archive__subtitle">backend</h2>
-        <div class="entries-list">
-          
-            
+<br />
+<section class="taxonomy__section">
+  <div class="entries-list">
+     
 
 
 
@@ -476,9 +429,7 @@
 </p>
   </article>
 </div>
-
-          
-            
+  
 
 
 
@@ -518,128 +469,13 @@
 </p>
   </article>
 </div>
-
-          
-        </div>
-        <a href="#page-title" class="back-to-top">맨 위로 이동 &uarr;</a>
-      </section>
-    
-  
-    
-  
-    
-  
-
-  
-    
-  
-    
-  
-    
-      <section id="http" class="taxonomy__section">
-        <h2 class="archive__subtitle">http</h2>
-        <div class="entries-list">
-          
-            
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/backend/http/HTTP-backend/" rel="permalink">HTTP
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  HTTP ?
-
-</p>
-  </article>
-</div>
-
-          
-        </div>
-        <a href="#page-title" class="back-to-top">맨 위로 이동 &uarr;</a>
-      </section>
-    
-  
-    
-      <section id="node" class="taxonomy__section">
-        <h2 class="archive__subtitle">node</h2>
-        <div class="entries-list">
-          
-            
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/backend/node/Node-backend/" rel="permalink">Node.js
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  Node.js ?
-
-</p>
-  </article>
-</div>
-
-          
-        </div>
-        <a href="#page-title" class="back-to-top">맨 위로 이동 &uarr;</a>
-      </section>
-    
-  
-
+ 
+  </div>
+  <a href="#page-title" class="back-to-top"
+    >맨 위로 이동
+    &uarr;</a
+  >
+</section>
 
   </div>
 </div>
