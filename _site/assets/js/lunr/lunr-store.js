@@ -10,22 +10,4 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/algorithm/robotPath-algorithm/",
         "teaser": null
-      },{
-        "title": "Express",
-        "excerpt":"Express ? 공식문서 참고 Node.js를 위한 빠르고 대중적인 프레임워크 Middleware를 사용할 수 있다는 큰 장점을 가지고 있다. 설치 방법 npm install express express를 이용한 server 구현 // express 모듈을 가져온다. const express = require('express'); const app = express(); app.get('/', (request, response) =&gt; { res.send('Hello World'); }) app.listen(3000, () =&gt; {...","categories": ["backend","Express"],
-        "tags": [],
-        "url": "https://sungseokmin.github.io/backend/express/Express-backend/",
-        "teaser": null
-      },{
-        "title": "HTTP",
-        "excerpt":"HTTP ? 웹 상에서 client와 server 간에 요청/응답으로 데이터를 주고 받을 수 있는 프로토콜 작동방식 client -&gt; (요청) -&gt; server Server -&gt; (응답) -&gt; client 특징 stateless(무상태성) : 이전 요청이나 다음 요청을 기억하지 않는다. ex) client가 server에게 고기를 먹으러 가자고 요청을 보내자 server는 알겠다고 응답을 한다. 응답을 받은 client는 언제갈까...","categories": ["backend","http"],
-        "tags": [],
-        "url": "https://sungseokmin.github.io/backend/http/Http-backend/",
-        "teaser": null
-      },{
-        "title": "Node.js",
-        "excerpt":"Node.js ? V8 JavaScript 엔진으로 빌드된 JavaScript 런타임 즉, 브라우저 외의 다른 환경에서도 사용할 수 있게 해주는 런타임 module 시스템을 구축하고 있다. http server가 내장되어 있다. 설치 방법 공식사이트를 통해 파일을 다운 받을 수 있다. node가 설치되면 npm(Node Package Manager)가 같이 설치 된다. 설치가 되면 터미널을 켠 후 node -v와...","categories": ["backend","node"],
-        "tags": [],
-        "url": "https://sungseokmin.github.io/backend/node/Node-backend/",
-        "teaser": null
       }]
