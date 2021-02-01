@@ -1,12 +1,14 @@
 # main links
 main:
-  - title: 'JavaScript'
-    url: /javascript/
-  - title: 'BackEnd'
-    url: /backend/
+  # - title: 'JavaScript'
+  #   url: /javascript/
   - title: 'FrontEnd'
     url: /frontend/
+  - title: 'BackEnd'
+    url: /backend/
   - title: 'Project'
     url: /project/
   - title: 'Algorithm'
     url: /algorithm/
+  # - title: 'category'
+  #   url: /categories/
