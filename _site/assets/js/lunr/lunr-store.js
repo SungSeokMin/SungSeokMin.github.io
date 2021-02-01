@@ -46,4 +46,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/react/router/React_router/",
         "teaser": null
+      },{
+        "title": "2 weeks project",
+        "excerpt":"   Shape Of Voice    사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹   스키마      user : 각 유저들의 정보   voice : 목소리에 대한 정보   board : 게시글에 대한 정보   voice_board : voice table과 board table의 join table   ","categories": ["project","ShapeOfVoice"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/project/shapeofvoice/Project-1/",
+        "teaser": null
       }]
