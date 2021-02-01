@@ -1,4 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-01-31T18:38:40+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Express</title><link href="https://sungseokmin.github.io/backend/express/Express-backend/" rel="alternate" type="text/html" title="Express" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/express/Express-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/express/Express-backend/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-01T13:06:39+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">React_hooks</title><link href="https://sungseokmin.github.io/frontend/react/hooks/React_hooks/" rel="alternate" type="text/html" title="React_hooks" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/hooks/React_hooks</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/hooks/React_hooks/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;react-hooks-&quot;&gt;React Hooks ?&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;function Component에서 state를 관리하기 위해 해주는 고마운 녀석&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;사용-방법&quot;&gt;사용 방법&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;useState : function component에서 상태를 저장하고 수정할 수 있도록 도와준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {useState} = 'react';
+
+function Login (props) {
+  // 배열의 첫 요소는 값을 저장할 변수
+  // 배열의 두 번째 요소는 값을 바꿀 변수
+  const [id, setId] = useState('') // useState를 통해 id값을 저장, id = '';
+  const [password, setPassword] = useState('')
+
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;h1&amp;gt;로그인 페이지&amp;lt;/h1&amp;gt;
+      &amp;lt;input type='text' value={id} onChange={(e) =&amp;gt; setId(e.target.value)} /&amp;gt;
+      &amp;lt;input type='text' value={password} onChange={(e) =&amp;gt; setPassword(e.target.value)} /&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;useEffect : Component가 렌더링 될 때 마다 특정 작업을 수행하도록 설정할 수 있도록 도와준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {useState, useEffect} = 'react';
+
+function Login (props) {
+  // 배열의 첫 요소는 값을 저장할 변수
+  // 배열의 두 번째 요소는 값을 바꿀 변수
+  const [id, setId] = useState('') // useState를 통해 id값을 저장, id = '';
+  const [password, setPassword] = useState('')
+
+  useEffect(() =&amp;gt; {
+    console.log('렌더링 완료') // 밑의 onChange로 인해 계속 id와 password가 쳐질 때 마다 useEffect가 호출된다.
+                            // 그렇게 되면 너무 비효율 적이겠지요 ?? 그럼 어떻게 하냐 !! 아래 참고~
+  })
+
+  // 두 번째 인자로 빈 배열을 넣어준다. =&amp;gt; 처음 렌더링 될 때만 호출된다
+  useEffect(() =&amp;gt; {
+    console.log('componentDidMount와 같은 효과');   // 그럼 update될 때 마다 호출하고 싶다면 어떻게 ? 아래 참고 ~
+  }, [])
+
+  // 특정 값이 변경이 될 때만 호출
+  useEffect(() =&amp;gt; {
+    console.log('id가 바뀔 때 마다 )
+  }, [id])
+
+  // 마운트(처음 나타났을 때), 언마운트(사라질 때) 관리
+    useEffect(() =&amp;gt; {
+      console.log('Hi!!!')
+      return () =&amp;gt; {
+        console.log('bye...');
+      }
+    })
+
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;h1&amp;gt;로그인 페이지&amp;lt;/h1&amp;gt;
+      &amp;lt;input type='text' value={id} onChange={(e) =&amp;gt; setId(e.target.value)} /&amp;gt;
+      &amp;lt;input type='text' value={password} onChange={(e) =&amp;gt; setPassword(e.target.value)} /&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><category term="hooks" /><summary type="html">React Hooks ?</summary></entry><entry><title type="html">HTTP</title><link href="https://sungseokmin.github.io/backend/http/HTTP-backend/" rel="alternate" type="text/html" title="HTTP" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/http/HTTP-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/http/HTTP-backend/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;http-&quot;&gt;HTTP ?&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;웹 상에서 client와 server 간에 요청/응답으로 데이터를 주고 받을 수 있는 프로토콜&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;작동방식&quot;&gt;작동방식&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;client -&amp;gt; (요청) -&amp;gt; server&lt;/li&gt;
+  &lt;li&gt;Server -&amp;gt; (응답) -&amp;gt; client&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;stateless(무상태성) : 이전 요청이나 다음 요청을 기억하지 않는다.
+    &lt;ul&gt;
+      &lt;li&gt;ex) client가 server에게 고기를 먹으러 가자고 요청을 보내자 server는 알겠다고 응답을 한다.&lt;/li&gt;
+      &lt;li&gt;응답을 받은 client는 언제갈까 라고 server에게 요청을 보내지만 server는 무엇을? 이라는 응답을 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;connectionless(무연결성) : 한번의 요청에는 한번의 응답을 한다.
+    &lt;ul&gt;
+      &lt;li&gt;ex) client가 server에게 뭐해?, 바빠?, 어디갈까? 라는 요청을 한번에 보낼 수 없다는 뜻!!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;메소드&quot;&gt;메소드&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GET : 서버로부터 정보를 조회하기 위해 설계된 메소드
+    &lt;ul&gt;
+      &lt;li&gt;브라우저에서 웹페이지를 열거나 게시물을 읽는 등 조회하는 행위는 GET 요청&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;POST : 기존에 없던 리소스를 생성/변경하기 위해 설계된 메소드
+    &lt;ul&gt;
+      &lt;li&gt;기존에 없던 게시글을 작성하는 행위 등은 POST 요청&lt;/li&gt;
+      &lt;li&gt;데이터가 Body로 전송된다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PUT : 기존에 있던 리소스를 변경하기 위해 설계된 메소드
+    &lt;ul&gt;
+      &lt;li&gt;기존에 있던 게시글을 수정하는 행위 등은 PUT 요청&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DELETE : 리소스를 삭제하기 위해 설계된 메소드
+    &lt;ul&gt;
+      &lt;li&gt;게시글 삭제&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;OPTIONS, TRACE, CONNECT …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;get-post의-차이&quot;&gt;GET, POST의 차이&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GET은 서버에게 동일한 요청을 여러 번 전송하더라도 동일한 응답이 돌아와야 하고
+    &lt;ul&gt;
+      &lt;li&gt;서버의 데이터나 상태를 변경시키지 않아야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;POST는 서버에게 동일한 요청을 여러 번 전송해도 응답이 항상 다를 수 있다.
+    &lt;ul&gt;
+      &lt;li&gt;서버의 데이터나 상태를 변경 시킬 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;http-header&quot;&gt;HTTP HEADER&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/header.png&quot; alt=&quot;Headers&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;response-status&quot;&gt;Response Status&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/request_status.png&quot; alt=&quot;응답코드&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="http" /><summary type="html">HTTP ?</summary></entry><entry><title type="html">Express</title><link href="https://sungseokmin.github.io/backend/express/Express-backend/" rel="alternate" type="text/html" title="Express" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/express/Express-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/express/Express-backend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;express-&quot;&gt;Express ?&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -139,86 +293,57 @@ app.use(session({
 app.listen(3000, () =&amp;gt; {
   console.log('Express Start');
 })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="Express" /><summary type="html">Express ?</summary></entry><entry><title type="html">HTTP</title><link href="https://sungseokmin.github.io/backend/http/HTTP-backend/" rel="alternate" type="text/html" title="HTTP" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/http/HTTP-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/http/HTTP-backend/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;http-&quot;&gt;HTTP ?&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="Express" /><summary type="html">Express ?</summary></entry><entry><title type="html">React-router-dom</title><link href="https://sungseokmin.github.io/frontend/react/router/React_router/" rel="alternate" type="text/html" title="React-router-dom" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/router/React_router</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/router/React_router/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;react-router-&quot;&gt;React Router ?&lt;/h2&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;웹 상에서 client와 server 간에 요청/응답으로 데이터를 주고 받을 수 있는 프로토콜&lt;/li&gt;
+  &lt;li&gt;SPA : Single Page Application
+    &lt;ul&gt;
+      &lt;li&gt;페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;작동방식&quot;&gt;작동방식&lt;/h3&gt;
+&lt;h3 id=&quot;설치-방법&quot;&gt;설치 방법&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install react-router-dom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;사용-방법&quot;&gt;사용 방법&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;client -&amp;gt; (요청) -&amp;gt; server&lt;/li&gt;
-  &lt;li&gt;Server -&amp;gt; (응답) -&amp;gt; client&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;stateless(무상태성) : 이전 요청이나 다음 요청을 기억하지 않는다.
+  &lt;li&gt;react-router-dom 모듈 안에는 각각의 함수들이 있다.
     &lt;ul&gt;
-      &lt;li&gt;ex) client가 server에게 고기를 먹으러 가자고 요청을 보내자 server는 알겠다고 응답을 한다.&lt;/li&gt;
-      &lt;li&gt;응답을 받은 client는 언제갈까 라고 server에게 요청을 보내지만 server는 무엇을? 이라는 응답을 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;connectionless(무연결성) : 한번의 요청에는 한번의 응답을 한다.
-    &lt;ul&gt;
-      &lt;li&gt;ex) client가 server에게 뭐해?, 바빠?, 어디갈까? 라는 요청을 한번에 보낼 수 없다는 뜻!!&lt;/li&gt;
+      &lt;li&gt;BrowserRouter : History API를 사용하고, url과 ui를 동기화 해주는 라우터&lt;/li&gt;
+      &lt;li&gt;Route : user가 원하는 경로와 Route안의 path에 있는 경로가 일치할 경우 해당 컴포넌트를 렌더링 한다.&lt;/li&gt;
+      &lt;li&gt;Link : html의 a태그와 비슷하다.&lt;/li&gt;
+      &lt;li&gt;Switch : Route 태그를 순서대로 확인한 후, 첫 번째로 일치하는 Route로 렌더링 한다.&lt;/li&gt;
+      &lt;li&gt;withRouter : match, history, location을 Props로 전달해주는 역할&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;메소드&quot;&gt;메소드&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {Component} from 'react';
+import {BrowserRouter, Route, Link, Switch, withRouter} from 'react-router-dom';
 
-&lt;ul&gt;
-  &lt;li&gt;GET : 서버로부터 정보를 조회하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;브라우저에서 웹페이지를 열거나 게시물을 읽는 등 조회하는 행위는 GET 요청&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;POST : 기존에 없던 리소스를 생성/변경하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;기존에 없던 게시글을 작성하는 행위 등은 POST 요청&lt;/li&gt;
-      &lt;li&gt;데이터가 Body로 전송된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PUT : 기존에 있던 리소스를 변경하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;기존에 있던 게시글을 수정하는 행위 등은 PUT 요청&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;DELETE : 리소스를 삭제하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;게시글 삭제&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;OPTIONS, TRACE, CONNECT …&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;get-post의-차이&quot;&gt;GET, POST의 차이&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GET은 서버에게 동일한 요청을 여러 번 전송하더라도 동일한 응답이 돌아와야 하고
-    &lt;ul&gt;
-      &lt;li&gt;서버의 데이터나 상태를 변경시키지 않아야 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;POST는 서버에게 동일한 요청을 여러 번 전송해도 응답이 항상 다를 수 있다.
-    &lt;ul&gt;
-      &lt;li&gt;서버의 데이터나 상태를 변경 시킬 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;http-header&quot;&gt;HTTP HEADER&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/header.png&quot; alt=&quot;Headers&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;response-status&quot;&gt;Response Status&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/request_status.png&quot; alt=&quot;응답코드&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="http" /><summary type="html">HTTP ?</summary></entry><entry><title type="html">Node.js</title><link href="https://sungseokmin.github.io/backend/node/Node-backend/" rel="alternate" type="text/html" title="Node.js" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/node/Node-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/node/Node-backend/">&lt;blockquote&gt;
+function MyPage (props) {
+  return (
+    &amp;lt;BrowserRouter&amp;gt;
+      &amp;lt;div className='menu'&amp;gt;
+        &amp;lt;Link to='/'&amp;gt;&amp;lt;/Link&amp;gt;
+        &amp;lt;Link to='/login'&amp;gt;로그인&amp;lt;/Link&amp;gt;
+        &amp;lt;Link to='/mypage'&amp;gt;마이페이지&amp;lt;/Link&amp;gt;
+      &amp;lt;/div&amp;gt;
+      &amp;lt;Switch&amp;gt;
+        &amp;lt;Route path='/' component={Home} /&amp;gt;
+        &amp;lt;Route path='/login' component={Home} /&amp;gt;
+        &amp;lt;Route path='/mypage'component={Home} /&amp;gt;
+      &amp;lt;/Switch&amp;gt;
+    &amp;lt;/BrowserRouter&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><category term="Router" /><summary type="html">React Router ?</summary></entry><entry><title type="html">Node.js</title><link href="https://sungseokmin.github.io/backend/node/Node-backend/" rel="alternate" type="text/html" title="Node.js" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/node/Node-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/node/Node-backend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;nodejs-&quot;&gt;Node.js ?&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -314,7 +439,169 @@ http.createServer((request, response) =&amp;gt; {
   }
 
 }).listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="node" /><summary type="html">Node.js ?</summary></entry><entry><title type="html">LSCS-연속된 부분 배열의 합의 최대값</title><link href="https://sungseokmin.github.io/algorithm/LSCS-algorithm/" rel="alternate" type="text/html" title="LSCS-연속된 부분 배열의 합의 최대값" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>https://sungseokmin.github.io/algorithm/LSCS-algorithm</id><content type="html" xml:base="https://sungseokmin.github.io/algorithm/LSCS-algorithm/">&lt;h2 id=&quot;lscs&quot;&gt;LSCS&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="node" /><summary type="html">Node.js ?</summary></entry><entry><title type="html">React</title><link href="https://sungseokmin.github.io/frontend/react/React-frontend/" rel="alternate" type="text/html" title="React" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/React-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/React-frontend/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;react-&quot;&gt;React ?&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;페이스북이 만든 라이브러리&lt;/li&gt;
+  &lt;li&gt;JSX : javascript 확장 언어&lt;/li&gt;
+  &lt;li&gt;MVC pattern 중 V(View)를 담당한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;반드시 하나의 엘리먼트로 감싸야한다.&lt;/li&gt;
+  &lt;li&gt;javascript 코드를 적용하고 싶을 때는 {} 안에 작성한다.&lt;/li&gt;
+  &lt;li&gt;JSX 내부에서는 if문 대신 삼함연산자를 사용한다.&lt;/li&gt;
+  &lt;li&gt;Component System
+    &lt;ul&gt;
+      &lt;li&gt;Component : 웹을 잘게 잘게 쪼갠 것
+        &lt;ul&gt;
+          &lt;li&gt;독립적 기능, 재사용 가능&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;조건부-렌더링&quot;&gt;조건부 렌더링&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;JSX 문법 에서는 삼항연산자를 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  1+1 === 2 ? (&amp;lt;div&amp;gt;정답&amp;lt;/div&amp;gt;) : (&amp;lt;div&amp;gt;오답&amp;lt;/div&amp;gt;)
+
+  // 조건이 true일 때만 보여준다.
+  1+1 === 2 &amp;amp;&amp;amp; (&amp;lt;div&amp;gt;정답&amp;lt;/div&amp;gt;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;설치-방법&quot;&gt;설치 방법&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;터미널을 켜고 다음과 같이 수행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npx create-react-app [폴더 이름]
+cd [폴더 이름]
+
+// 실행
+npm start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;function-component-vs-class-component&quot;&gt;function Component VS class Component&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Component : JavaScript 함수와 유사하며, 화면에 어떻게 표시되는지를 기술하는 React 엘리먼트를 반환한다.&lt;/li&gt;
+  &lt;li&gt;props : 부모 Component로부터 물려받은 속성
+    &lt;ul&gt;
+      &lt;li&gt;순수 함수처럼 작동해야한다.
+        &lt;ul&gt;
+          &lt;li&gt;순수 함수 : 입력값을 바꾸려 하지 않고 항상 동일한 입력값에 대해 동일한 결과를 반환해야 한다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;state : 해당 Component에서 사용할 수 있는 상태&lt;/li&gt;
+  &lt;li&gt;state는 직접적인 수정이 불가능하다!! 반드시 setState를 통해 state의 값을 변경해준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;function-component&quot;&gt;function Component&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Login(props) {
+  return &amp;lt;h1&amp;gt;로그인 화면&amp;lt;/h1&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;class-component&quot;&gt;class Component&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Login exntends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id = 'sung';    // 직접 수정 불가 !! 변경하려면 아래와 같이 setState를 사용해야 한다.
+    };
+  }
+
+  changeId = () =&amp;gt; {
+    this.setState({id: 'seok'});
+  }
+
+  render() {
+    return &amp;lt;h1&amp;gt;로그인 화면&amp;lt;h1&amp;gt;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;흐름을-이해해보세요-&quot;&gt;흐름을 이해해보세요 !&lt;/h3&gt;
+
+&lt;p&gt;index.js&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {Component} from 'react';
+import Mypage from './Mypage.js' // .js는 생략 가능
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    // id, age, hobby라는 state(상태)를 가지고 있다.
+    this.setState = {
+      id : 'sung',
+      age : 27,
+      hobby: 'coding'
+    }
+  }
+
+  render() {
+    return &amp;lt;div&amp;gt;      // id와 age라는 이름으로 Mypage 컴포넌트로 props를 전달
+      &amp;lt;Mypage id={this.state.id} age={this.state.age} /&amp;gt;
+    &amp;lt;/div&amp;gt;
+  }
+}
+
+export default App;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;mypage.js&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React from 'react'
+
+// 구조분해할당으로 값을 받아올 수 있다.
+const Mypage = ({id, age}) =&amp;gt; {
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;div&amp;gt;{id}&amp;lt;/div&amp;gt;
+      &amp;lt;div&amp;gt;{age}&amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+
+또는
+
+const Mypage = (props) =&amp;gt; {
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;div&amp;gt;{this.props.id}&amp;lt;/div&amp;gt;
+      &amp;lt;div&amp;gt;{this.props.age}&amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+
+export default Mypage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;react-lifecycle&quot;&gt;React Lifecycle&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constructor -&amp;gt; render -&amp;gt; componentDidMount -&amp;gt;
+(setState/props 바뀔 때) -&amp;gt; ComponentDidUpdate -&amp;gt; render -&amp;gt;
+(부모가 자식 component를 없앨 때 ) -&amp;gt; componentWillUmmount -&amp;gt; 소멸
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/lifecycle.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><summary type="html">React ?</summary></entry><entry><title type="html">LSCS-연속된 부분 배열의 합의 최대값</title><link href="https://sungseokmin.github.io/algorithm/LSCS-algorithm/" rel="alternate" type="text/html" title="LSCS-연속된 부분 배열의 합의 최대값" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>https://sungseokmin.github.io/algorithm/LSCS-algorithm</id><content type="html" xml:base="https://sungseokmin.github.io/algorithm/LSCS-algorithm/">&lt;h2 id=&quot;lscs&quot;&gt;LSCS&lt;/h2&gt;
 
 &lt;h3 id=&quot;문제설명&quot;&gt;문제설명&lt;/h3&gt;
 

@@ -28,4 +28,22 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/backend/node/Node-backend/",
         "teaser": null
+      },{
+        "title": "React",
+        "excerpt":"React ? 페이스북이 만든 라이브러리 JSX : javascript 확장 언어 MVC pattern 중 V(View)를 담당한다. 특징 반드시 하나의 엘리먼트로 감싸야한다. javascript 코드를 적용하고 싶을 때는 {} 안에 작성한다. JSX 내부에서는 if문 대신 삼함연산자를 사용한다. Component System Component : 웹을 잘게 잘게 쪼갠 것 독립적 기능, 재사용 가능 조건부 렌더링 JSX...","categories": ["frontend","React"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/react/React-frontend/",
+        "teaser": null
+      },{
+        "title": "React_hooks",
+        "excerpt":"React Hooks ? function Component에서 state를 관리하기 위해 해주는 고마운 녀석 사용 방법 useState : function component에서 상태를 저장하고 수정할 수 있도록 도와준다. import React, {useState} = 'react'; function Login (props) { // 배열의 첫 요소는 값을 저장할 변수 // 배열의 두 번째 요소는 값을 바꿀 변수 const [id, setId]...","categories": ["frontend","React","hooks"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/react/hooks/React_hooks/",
+        "teaser": null
+      },{
+        "title": "React-router-dom",
+        "excerpt":"React Router ? SPA : Single Page Application 페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션 설치 방법 npm install react-router-dom 사용 방법 react-router-dom 모듈 안에는 각각의 함수들이 있다. BrowserRouter : History API를 사용하고, url과 ui를 동기화 해주는 라우터 Route : user가 원하는 경로와 Route안의 path에 있는 경로가 일치할 경우 해당...","categories": ["frontend","React","Router"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/react/router/React_router/",
+        "teaser": null
       }]

@@ -1,0 +1,164 @@
+I"�<blockquote>
+  <h2 id="react-">React ?</h2>
+</blockquote>
+
+<ul>
+  <li>페이스북이 만든 라이브러리</li>
+  <li>JSX : javascript 확장 언어</li>
+  <li>MVC pattern 중 V(View)를 담당한다.</li>
+</ul>
+
+<h3 id="특징">특징</h3>
+
+<ul>
+  <li>반드시 하나의 엘리먼트로 감싸야한다.</li>
+  <li>javascript 코드를 적용하고 싶을 때는 {} 안에 작성한다.</li>
+  <li>JSX 내부에서는 if문 대신 삼함연산자를 사용한다.</li>
+  <li>Component System
+    <ul>
+      <li>Component : 웹을 잘게 잘게 쪼갠 것
+        <ul>
+          <li>독립적 기능, 재사용 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="조건부-렌더링">조건부 렌더링</h3>
+
+<ul>
+  <li>JSX 문법 에서는 삼항연산자를 사용한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  1+1 === 2 ? (&lt;div&gt;정답&lt;/div&gt;) : (&lt;div&gt;오답&lt;/div&gt;)
+
+  // 조건이 true일 때만 보여준다.
+  1+1 === 2 &amp;&amp; (&lt;div&gt;정답&lt;/div&gt;)
+}
+</code></pre></div></div>
+
+<h3 id="설치-방법">설치 방법</h3>
+
+<ul>
+  <li>터미널을 켜고 다음과 같이 수행</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx create-react-app [폴더 이름]
+cd [폴더 이름]
+
+// 실행
+npm start
+</code></pre></div></div>
+
+<h3 id="function-component-vs-class-component">function Component VS class Component</h3>
+
+<ul>
+  <li>Component : JavaScript 함수와 유사하며, 화면에 어떻게 표시되는지를 기술하는 React 엘리먼트를 반환한다.</li>
+  <li>props : 부모 Component로부터 물려받은 속성
+    <ul>
+      <li>순수 함수처럼 작동해야한다.
+        <ul>
+          <li>순수 함수 : 입력값을 바꾸려 하지 않고 항상 동일한 입력값에 대해 동일한 결과를 반환해야 한다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>state : 해당 Component에서 사용할 수 있는 상태</li>
+  <li>state는 직접적인 수정이 불가능하다!! 반드시 setState를 통해 state의 값을 변경해준다.</li>
+</ul>
+
+<h4 id="function-component">function Component</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Login(props) {
+  return &lt;h1&gt;로그인 화면&lt;/h1&gt;
+}
+</code></pre></div></div>
+
+<h4 id="class-component">class Component</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Login exntends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id = 'sung';    // 직접 수정 불가 !! 변경하려면 아래와 같이 setState를 사용해야 한다.
+    };
+  }
+
+  changeId = () =&gt; {
+    this.setState({id: 'seok'});
+  }
+
+  render() {
+    return &lt;h1&gt;로그인 화면&lt;h1&gt;
+  }
+}
+</code></pre></div></div>
+
+<h3 id="흐름을-이해해보세요-">흐름을 이해해보세요 !</h3>
+
+<p>index.js</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, {Component} from 'react';
+import Mypage from './Mypage.js' // .js는 생략 가능
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    // id, age, hobby라는 state(상태)를 가지고 있다.
+    this.setState = {
+      id : 'sung',
+      age : 27,
+      hobby: 'coding'
+    }
+  }
+
+  render() {
+    return &lt;div&gt;      // id와 age라는 이름으로 Mypage 컴포넌트로 props를 전달
+      &lt;Mypage id={this.state.id} age={this.state.age} /&gt;
+    &lt;/div&gt;
+  }
+}
+
+export default App;
+</code></pre></div></div>
+
+<p>mypage.js</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React from 'react'
+
+// 구조분해할당으로 값을 받아올 수 있다.
+const Mypage = ({id, age}) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;div&gt;{id}&lt;/div&gt;
+      &lt;div&gt;{age}&lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+또는
+
+const Mypage = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;div&gt;{this.props.id}&lt;/div&gt;
+      &lt;div&gt;{this.props.age}&lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Mypage
+</code></pre></div></div>
+
+<h3 id="react-lifecycle">React Lifecycle</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor -&gt; render -&gt; componentDidMount -&gt;
+(setState/props 바뀔 때) -&gt; ComponentDidUpdate -&gt; render -&gt;
+(부모가 자식 component를 없앨 때 ) -&gt; componentWillUmmount -&gt; 소멸
+</code></pre></div></div>
+
+<p><img src="/img/lifecycle.png" alt="" /></p>
+:ET
