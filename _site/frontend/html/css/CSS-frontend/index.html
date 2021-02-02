@@ -1,0 +1,612 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+<!-- begin _includes/seo.html --><title>HTML/CSS - Happy Developer</title>
+<meta name="description" content="기본적인 HTML 문법">
+
+
+  <meta name="author" content="SungSeokMin">
+  
+  <meta property="article:author" content="SungSeokMin">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Happy Developer">
+<meta property="og:title" content="HTML/CSS">
+<meta property="og:url" content="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/">
+
+
+  <meta property="og:description" content="기본적인 HTML 문법">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-01T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SungSeokMin",
+      "url": "https://sungseokmin.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link
+  href="/feed.xml"
+  type="application/atom+xml"
+  rel="alternate"
+  title="Happy Developer Feed"
+/>
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
+/>
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+  </head>
+
+  <body class="layout--category-frontend">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Happy Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/frontend/">FrontEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/backend/">BackEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/project/">Project</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/">Algorithm</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">SungSeokMin</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>I am Happy Developer😄</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:jkl154527@gmail.com">
+            <meta itemprop="email" content="jkl154527@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">HTML/CSS</h1>
+    
+    <blockquote>
+  <h2 id="기본적인-html-문법">기본적인 HTML 문법</h2>
+</blockquote>
+
+<h3 id="inline-vs-block">Inline vs Block</h3>
+
+<p>대표적으로 span, div</p>
+
+<ul>
+  <li>Inline은 크기의 영역만큼 차지하고 Block은 한 줄을 차지한다.
+<img src="/img/div_span.png" alt="Inline VS Block" /></li>
+</ul>
+
+<h3 id="ul--li">ul &gt; li</h3>
+
+<p>목록을 나타낼 때 사용하는 목록태그</p>
+
+<ul>
+  <li>앞의 동그라미를 없애고 싶으면 list-style: none 속성을 주면 된다.
+<img src="/img/ul_li.png" alt="ul_li" /></li>
+</ul>
+
+<h3 id="li--input">li &gt; input</h3>
+
+<p>input태그는 Inline 속성이므로 ul &gt; li 와 같은 목록 태그로 감싸줘도 된다.</p>
+
+<p><img src="/img/li_input.png" alt="li_input" /></p>
+
+<h3 id="li--label--input">li &gt; label &gt; input</h3>
+
+<p>label태그 안에 input태그를 넣어주게 되면 for속성을 사용하지 않아도 된다.
+<img src="/img/li_label_input.png" alt="li_label_input" /></p>
+
+<h3 id="table">table</h3>
+
+<p>⭐️ TIP : border-collapse: collapse를 사용하면 표의 테두리와 셀의 테두리 사이의 간격을 사라지게 할 수 있다.<br /></p>
+
+<ul>
+  <li>th: 테이블의 헤더, 즉 카테고리를 작성</li>
+  <li>tr: 한 행을 열어주는 역할</li>
+  <li>td: 테이블의 데이터, 즉 내용을 작성<br />
+<img src="/img/table.png" alt="table" /></li>
+</ul>
+
+<h3 id="a">a</h3>
+
+<p>⭐️ TIP : blank : 새 창 또는 탭에서 문서를 연다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://sungseokmin.github.io"&gt;git blog&lt;/a&gt;
+</code></pre></div></div>
+
+<h3 id="img">img</h3>
+
+<p>⭐️ TIP : 링크의 밑줄을 없애고 싶다면 ?? text-decoration: none;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="img.jpg" alt="사진의 내용"&gt;
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <h3 id="유용한-css-속성">유용한 CSS 속성</h3>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>글자 가운데 정렬
+text-align: center;
+
+배경 이미지 넣기
+background-image: url('주소');
+
+줄 높이 정하기
+line-heignt: 다양하게 줄 수 있다. normal, length, number, px, % ...
+
+POSITION
+- relative : 지금 현재의 위치를 기준
+- absolute : html문서를 기준으로 right: 0; bottom:0; 을 하면 오른쪽 하단에 위치
+- fixed : 고정, 스크롤을 올리거나 내려도 항상 같은 위치에 존재
+
+⭐️ modal, 로그인 창 같은 것을 가운데로 오게 하고 싶다면 ??
+position: absolute; top: 50%; left: 50%; transform: translate(-50%. -50%);
+
+테두리 둥굴게
+border-radius : px, % 둘 다 가능
+</code></pre></div></div>
+
+<br />
+<section class="taxonomy__section">
+  <div class="entries-list">
+     
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/html/css/CSS-frontend/" rel="permalink">HTML/CSS
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  기본적인 HTML 문법
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/react/router/React_router/" rel="permalink">React-router-dom
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  React Router ?
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/react/hooks/React_hooks/" rel="permalink">React_hooks
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  React Hooks ?
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/react/React-frontend/" rel="permalink">React
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  React ?
+
+</p>
+  </article>
+</div>
+ 
+  </div>
+  <a href="#page-title" class="back-to-top"
+    >맨 위로 이동
+    &uarr;</a
+  >
+</section>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    <li><strong>팔로우:</strong></li>
+      
+    
+    <li>
+      <a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-github"
+          aria-hidden="true"
+        ></i>
+        GitHub</a
+      >
+    </li>
+     
+    
+    <li>
+      <a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-instagram"
+          aria-hidden="true"
+        ></i>
+        Instagram</a
+      >
+    </li>
+      
+  </ul>
+</div>
+
+<div class="page__footer-copyright">
+  &copy; 2021 SungSeokMin. Powered by
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+  <a
+    href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
+    rel="nofollow"
+    >Minimal Mistakes</a
+  >.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

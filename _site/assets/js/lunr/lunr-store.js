@@ -47,9 +47,15 @@ var store = [{
         "url": "https://sungseokmin.github.io/frontend/react/router/React_router/",
         "teaser": null
       },{
-        "title": "2 weeks project",
-        "excerpt":"   Shape Of Voice    사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹   스키마      user : 각 유저들의 정보   voice : 목소리에 대한 정보   board : 게시글에 대한 정보   voice_board : voice table과 board table의 join table   ","categories": ["project","ShapeOfVoice"],
+        "title": "HTML/CSS",
+        "excerpt":"기본적인 HTML 문법 Inline vs Block 대표적으로 span, div Inline은 크기의 영역만큼 차지하고 Block은 한 줄을 차지한다. ul &gt; li 목록을 나타낼 때 사용하는 목록태그 앞의 동그라미를 없애고 싶으면 list-style: none 속성을 주면 된다. li &gt; input input태그는 Inline 속성이므로 ul &gt; li 와 같은 목록 태그로 감싸줘도 된다. li...","categories": ["frontend","html","css"],
         "tags": [],
-        "url": "https://sungseokmin.github.io/project/shapeofvoice/Project-1/",
+        "url": "https://sungseokmin.github.io/frontend/html/css/CSS-frontend/",
+        "teaser": null
+      },{
+        "title": "2 weeks project",
+        "excerpt":"   Shape Of Voice    사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹   schema      user : 각 유저들의 정보   voice : 목소리에 대한 정보   board : 게시글에 대한 정보   voice_board : voice table과 board table의 join table    Wire frame      Flowchart   client      server      ","categories": ["project","2 weeks project"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/",
         "teaser": null
       }]
