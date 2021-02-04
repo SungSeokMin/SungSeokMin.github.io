@@ -1,0 +1,785 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+<!-- begin _includes/seo.html --><title>FlexBox - Happy Developer</title>
+<meta name="description" content="FlexBox (부모 속성)">
+
+
+  <meta name="author" content="SungSeokMin">
+  
+  <meta property="article:author" content="SungSeokMin">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Happy Developer">
+<meta property="og:title" content="FlexBox">
+<meta property="og:url" content="https://sungseokmin.github.io/frontend/flexbox/Flex/">
+
+
+  <meta property="og:description" content="FlexBox (부모 속성)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-03T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sungseokmin.github.io/frontend/flexbox/Flex/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SungSeokMin",
+      "url": "https://sungseokmin.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link
+  href="/feed.xml"
+  type="application/atom+xml"
+  rel="alternate"
+  title="Happy Developer Feed"
+/>
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
+/>
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+  </head>
+
+  <body class="layout--category-frontend">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Happy Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/frontend/">FrontEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/backend/">BackEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/project/">Project</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/">Algorithm</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">SungSeokMin</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>I am Happy Developer😄</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:jkl154527@gmail.com">
+            <meta itemprop="email" content="jkl154527@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">FlexBox</h1>
+    
+    <blockquote>
+  <h3 id="flexbox-부모-속성">FlexBox (부모 속성)</h3>
+</blockquote>
+
+<p>flex-direction: 주축 - 기본 값 : row<br />
+flex-wrap : 창의 너비에 따라 줄 바꿈 - 기본 값 : nowrap<br />
+justify-content : 중심축과 기준으로 정렬 - 기본 값 : flex-start<br />
+align-itmes : 교차축을 기준으로 정렬 - 기본 값 : flex-start<br /></p>
+
+<h4 id="가로로-정렬된-모습을-볼-수-있다">가로로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/flexbox.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+</code></pre></div></div>
+
+<h4 id="세로로-정렬된-모습을-볼-수-있다">세로로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/column.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: column;
+</code></pre></div></div>
+
+<h4 id="가로-축을-기준으로-가운데로-정렬된-모습을-볼-수-있다">가로 축을 기준으로 가운데로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/justify-content_center.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+justify-content: center
+</code></pre></div></div>
+
+<h4 id="가로-축을-기준으로-양-옆-공백-없는-사이에-간격을-둔-모습을-볼-수-있다">가로 축을 기준으로 양 옆 공백 없는, 사이에 간격을 둔 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/justify-content_between.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+justify-content: space-between
+</code></pre></div></div>
+
+<h4 id="가로-축을-기준으로-양-옆-공백이-있는-사이에-간격을-둔-모습을-볼-수-있다">가로 축을 기준으로 양 옆 공백이 있는, 사이에 간격을 둔 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/justify-content_around.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+justify-content: space-around
+</code></pre></div></div>
+
+<h4 id="세로-축을-기준으로-가운데-정렬된-모습을-볼-수-있다">세로 축을 기준으로 가운데 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/center.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: column;
+align-items: center;
+</code></pre></div></div>
+
+<h4 id="가로축을-기준으로-중앙으로-정렬된-모습을-볼-수-있다">가로축을 기준으로 중앙으로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/align-item.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: column
+justify-content: center;
+align-items: center;
+</code></pre></div></div>
+
+<h4 id="세로축을-기준으로-중앙으로-정렬된-모습을-볼-수-있다">세로축을 기준으로 중앙으로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/middle.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+</code></pre></div></div>
+
+<blockquote>
+  <h3 id="flexbox-자식-속성">FlexBox (자식 속성)</h3>
+</blockquote>
+
+<h4 id="flex-basis">flex-basis</h4>
+
+<p>기본 너비 설정, 기본 값: auto<br /></p>
+
+<h4 id="flex-grow">flex-grow</h4>
+
+<p>item의 증가 너비 비율 설정 &amp;&amp; 콘텐츠가 없는 여백의 공간을 비율적으로 나눠 가진다.</p>
+
+<p><img src="/img/grow.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.item1 {
+flex-grow: 1;
+background-color: pink;
+}
+.item2 {
+flex-grow: 2;
+background-color: green;
+}
+.item3 {
+flex-grow: 1;
+background-color: yellow;
+}
+
+</code></pre></div></div>
+
+<h4 id="flex-shrink">flex-shrink</h4>
+
+<p>item의 감소 너비 비율을 설정</p>
+
+<ul>
+  <li>창 너비를 줄였을 때 1:2:1 비율로 줄어든다.</li>
+</ul>
+
+<p><img src="/img/shrink.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.item1 {
+flex-shrink: 1;
+background-color: pink;
+}
+.item2 {
+flex-shrink: 2;
+background-color: green;
+}
+.item3 {
+flex-shrink: 1;
+background-color: yellow;
+}
+</code></pre></div></div>
+
+<h4 id="align-self">align-self</h4>
+
+<p>각각의 요소를 설정할 수 있다.</p>
+
+<p><img src="/img/align-self.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.item1 {
+flex: 1;
+align-self: flex-start;
+background-color: pink;
+}
+.item2 {
+flex: 1;
+align-self: center;
+background-color: green;
+}
+.item3 {
+flex: 1;
+align-self: flex-end;
+background-color: yellow;
+}
+</code></pre></div></div>
+
+<br />
+<section class="taxonomy__section">
+  <div class="entries-list">
+     
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/grid/Grid/" rel="permalink">Grid
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Grid
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/flexbox/Flex/" rel="permalink">FlexBox
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  FlexBox (부모 속성)
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/html/css/CSS-frontend/" rel="permalink">HTML/CSS
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  기본적인 HTML 문법
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/react/router/React_router/" rel="permalink">React-router-dom
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  React Router ?
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/react/hooks/React_hooks/" rel="permalink">React_hooks
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  React Hooks ?
+
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/frontend/react/React-frontend/" rel="permalink">React
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  React ?
+
+</p>
+  </article>
+</div>
+ 
+  </div>
+  <a href="#page-title" class="back-to-top"
+    >맨 위로 이동
+    &uarr;</a
+  >
+</section>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    <li><strong>팔로우:</strong></li>
+      
+    
+    <li>
+      <a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-github"
+          aria-hidden="true"
+        ></i>
+        GitHub</a
+      >
+    </li>
+     
+    
+    <li>
+      <a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-instagram"
+          aria-hidden="true"
+        ></i>
+        Instagram</a
+      >
+    </li>
+      
+  </ul>
+</div>
+
+<div class="page__footer-copyright">
+  &copy; 2021 SungSeokMin. Powered by
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+  <a
+    href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
+    rel="nofollow"
+    >Minimal Mistakes</a
+  >.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -299,7 +299,7 @@
   <li>voice : 목소리에 대한 정보</li>
   <li>board : 게시글에 대한 정보</li>
   <li>voice_board : voice table과 board table의 join table
-<img src="/img/DBdiagram.png" alt="" /></li>
+<img src="/img/schema.png" alt="" /></li>
 </ul>
 
 <h3 id="wire-frame">Wire frame</h3>
@@ -314,8 +314,104 @@
 
 <h4 id="server">server</h4>
 
-<p><img src="/img/server_flowchart_1.png" alt="" />
-<img src="/img/server_flowchart_2.png" alt="" /></p>
+<p><img src="/img/server_flowchart_2.png" alt="" /></p>
+
+<h4 id="api">API</h4>
+
+<p><a href="https://app.gitbook.com/@cloudacesending/s/shapeofvoice/">ShapeOfVoice API Documents</a></p>
+
+<hr />
+
+<blockquote>
+  <h2 id="진행하면서-겪은-상황">진행하면서 겪은 상황</h2>
+</blockquote>
+
+<h4 id="sequelize의-many-to-many를-설정해주는-데-어려움을-겪었다">sequelize의 Many To Many를 설정해주는 데 어려움을 겪었다.</h4>
+
+<ul>
+  <li>공식문서, 블로그 에서는 아래와 같은 글들이 있었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ex)
+voice.belongsToMany(board, { through: 'voice_board'});
+board.belongsToMany(voice, { through: 'voice_board'});
+</code></pre></div></div>
+
+<p>models &gt; index.js에서 console.log(sequelize.models)한 결과 voice_board테이블은
+있었지만 데이터베이스에서는 없었다.</p>
+
+<p>❗️여기서 migrations폴더에 voice_board를 만들어주는 파일이 없는데 안 만들어지는 게 당연하지 않을까 ? 라는 생각을 했다.</p>
+
+<p>팀원과 의견을 합쳐 하나 둘 씩 해결하기 시작…</p>
+
+<h5 id="해결-방법">해결 방법</h5>
+
+<ul>
+  <li>migration폴더에 voice_board 테이블을 생성하는 파일을 만들자 !</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx migration:generate --name voice_board
+</code></pre></div></div>
+
+<ul>
+  <li>voiceId와 boardId를 만들어 각각 voice테이블의 id와 board테이블의 id를 참조시켜주자 !</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
+  up: async (queryInterface, Sequelize) =&gt; {
+    await queryInterface.createTable('voice_board', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      voiceId: {
+        type: Sequelize.INTEGER,
+        references: { model: 'voices', key: 'id' },
+        onDelete: 'CASCADE',
+      },
+      boardId: {
+        type: Sequelize.INTEGER,
+        references: { model: 'boards', key: 'id' },
+        onDelete: 'CASCADE',
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+  },
+
+  down: async (queryInterface, Sequelize) =&gt; {
+    await queryInterface.dropTable('voice_board');
+  },
+};
+</code></pre></div></div>
+
+<ul>
+  <li>modles폴더 안에 있는 board, voice파일의 associate 안에 내용을 추가해주자 !</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>board.belongsToMany(models.voice, {
+        through: 'voice_board',
+      });
+voice.belongsToMany(models.board, {
+        through: 'voice_board',
+      });
+</code></pre></div></div>
+
+<h4 id="결과">결과</h4>
+
+<p><img src="/img/result.png" alt="" /></p>
+
+<p>잘 해결 되었다!!</p>
+
+<hr />
 
 <br />
 <section class="taxonomy__section">
@@ -347,7 +443,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
