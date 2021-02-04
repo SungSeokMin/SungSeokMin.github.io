@@ -1,0 +1,178 @@
+I"�<blockquote>
+  <h3 id="flexbox-부모-속성">FlexBox (부모 속성)</h3>
+</blockquote>
+
+<p>flex-direction: 주축 - 기본 값 : row<br />
+flex-wrap : 창의 너비에 따라 줄 바꿈 - 기본 값 : nowrap<br />
+justify-content : 중심축과 기준으로 정렬 - 기본 값 : flex-start<br />
+align-itmes : 교차축을 기준으로 정렬 - 기본 값 : flex-start<br /></p>
+
+<h4 id="가로로-정렬된-모습을-볼-수-있다">가로로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/flexbox.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+</code></pre></div></div>
+
+<h4 id="세로로-정렬된-모습을-볼-수-있다">세로로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/column.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: column;
+</code></pre></div></div>
+
+<h4 id="가로-축을-기준으로-가운데로-정렬된-모습을-볼-수-있다">가로 축을 기준으로 가운데로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/justify-content_center.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+justify-content: center
+</code></pre></div></div>
+
+<h4 id="가로-축을-기준으로-양-옆-공백-없는-사이에-간격을-둔-모습을-볼-수-있다">가로 축을 기준으로 양 옆 공백 없는, 사이에 간격을 둔 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/justify-content_between.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+justify-content: space-between
+</code></pre></div></div>
+
+<h4 id="가로-축을-기준으로-양-옆-공백이-있는-사이에-간격을-둔-모습을-볼-수-있다">가로 축을 기준으로 양 옆 공백이 있는, 사이에 간격을 둔 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/justify-content_around.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row; // default값이기 때문에 적어주지 않아도 된다.
+justify-content: space-around
+</code></pre></div></div>
+
+<h4 id="세로-축을-기준으로-가운데-정렬된-모습을-볼-수-있다">세로 축을 기준으로 가운데 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/center.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: column;
+align-items: center;
+</code></pre></div></div>
+
+<h4 id="가로축을-기준으로-중앙으로-정렬된-모습을-볼-수-있다">가로축을 기준으로 중앙으로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/align-item.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: column
+justify-content: center;
+align-items: center;
+</code></pre></div></div>
+
+<h4 id="세로축을-기준으로-중앙으로-정렬된-모습을-볼-수-있다">세로축을 기준으로 중앙으로 정렬된 모습을 볼 수 있다.</h4>
+
+<p><img src="/img/middle.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+</code></pre></div></div>
+
+<blockquote>
+  <h3 id="flexbox-자식-속성">FlexBox (자식 속성)</h3>
+</blockquote>
+
+<h4 id="flex-basis">flex-basis</h4>
+
+<p>기본 너비 설정, 기본 값: auto<br /></p>
+
+<h4 id="flex-grow">flex-grow</h4>
+
+<p>item의 증가 너비 비율 설정 &amp;&amp; 콘텐츠가 없는 여백의 공간을 비율적으로 나눠 가진다.</p>
+
+<p><img src="/img/grow.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.item1 {
+flex-grow: 1;
+background-color: pink;
+}
+.item2 {
+flex-grow: 2;
+background-color: green;
+}
+.item3 {
+flex-grow: 1;
+background-color: yellow;
+}
+
+</code></pre></div></div>
+
+<h4 id="flex-shrink">flex-shrink</h4>
+
+<p>item의 감소 너비 비율을 설정</p>
+
+<ul>
+  <li>창 너비를 줄였을 때 1:2:1 비율로 줄어든다.</li>
+</ul>
+
+<p><img src="/img/shrink.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.item1 {
+flex-shrink: 1;
+background-color: pink;
+}
+.item2 {
+flex-shrink: 2;
+background-color: green;
+}
+.item3 {
+flex-shrink: 1;
+background-color: yellow;
+}
+</code></pre></div></div>
+
+<h4 id="align-self">align-self</h4>
+
+<p>각각의 요소를 설정할 수 있다.</p>
+
+<p><img src="/img/align-self.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.item1 {
+flex: 1;
+align-self: flex-start;
+background-color: pink;
+}
+.item2 {
+flex: 1;
+align-self: center;
+background-color: green;
+}
+.item3 {
+flex: 1;
+align-self: flex-end;
+background-color: yellow;
+}
+</code></pre></div></div>
+:ET

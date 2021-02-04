@@ -84,4 +84,6 @@ position: absolute; top: 50%; left: 50%; transform: translate(-50%. -50%);
 
 테두리 둥굴게
 border-radius : px, % 둘 다 가능
+
+~계속해서 추가 예정~
 ```

@@ -1,4 +1,4 @@
-I"1<blockquote>
+I"~<blockquote>
   <h2 id="shape-of-voice">Shape Of Voice</h2>
 </blockquote>
 
@@ -11,7 +11,7 @@
   <li>voice : 목소리에 대한 정보</li>
   <li>board : 게시글에 대한 정보</li>
   <li>voice_board : voice table과 board table의 join table
-<img src="/img/DBdiagram.png" alt="" /></li>
+<img src="/img/schema.png" alt="" /></li>
 </ul>
 
 <h3 id="wire-frame">Wire frame</h3>
@@ -26,6 +26,9 @@
 
 <h4 id="server">server</h4>
 
-<p><img src="/img/server_flowchart_1.png" alt="" />
-<img src="/img/server_flowchart_2.png" alt="" /></p>
+<p><img src="/img/server_flowchart_2.png" alt="" /></p>
+
+<h4 id="api">API</h4>
+
+<p><a href="https://app.gitbook.com/@cloudacesending/s/shapeofvoice/">ShapeOfVoice API Documents</a></p>
 :ET

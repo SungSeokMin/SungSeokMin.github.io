@@ -1,0 +1,45 @@
+I"V<blockquote>
+  <h3 id="grid">Grid</h3>
+</blockquote>
+
+<h4 id="gird-template-columns-물론-rows도-있다">gird-template-columns (물론 rows도 있다!!)</h4>
+
+<ul>
+  <li>한 행에 2개씩 표현, 첫 번째는 40%의 비율, 두 번째는 60%의 비율</li>
+</ul>
+
+<p><img src="/img/4fr6fr.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 4fr 6fr;
+</code></pre></div></div>
+
+<ul>
+  <li>한 행에 3개씩 표현</li>
+</ul>
+
+<p><img src="/img/1fr1fr1fr.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 1fr 1fr 1fr;
+또는
+grid-template-columns: repeat(3, 1fr);
+</code></pre></div></div>
+
+<ul>
+  <li>한 쪽은 고정, 나머지는 자유~</li>
+</ul>
+
+<p><img src="/img/grid_px.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 200px 1fr;
+</code></pre></div></div>
+
+<h4 id="gap">gap</h4>
+
+<p>쉽게 말해 gap을 두는 것이라고 생각하면 좋다!!</p>
+
+<p><img src="/img/gap.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 4fr 6fr;
+grid-gap: 1rem;
+</code></pre></div></div>
+:ET

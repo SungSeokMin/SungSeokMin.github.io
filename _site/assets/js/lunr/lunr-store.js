@@ -54,8 +54,20 @@ var store = [{
         "teaser": null
       },{
         "title": "2 weeks project",
-        "excerpt":"   Shape Of Voice    사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹   schema      user : 각 유저들의 정보   voice : 목소리에 대한 정보   board : 게시글에 대한 정보   voice_board : voice table과 board table의 join table    Wire frame      Flowchart   client      server      ","categories": ["project","2 weeks project"],
+        "excerpt":"Shape Of Voice 사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹 schema user : 각 유저들의 정보 voice : 목소리에 대한 정보 board : 게시글에 대한 정보 voice_board : voice table과 board table의 join table Wire frame Flowchart client server API ShapeOfVoice API Documents 진행하면서 겪은...","categories": ["project","2 weeks project"],
         "tags": [],
         "url": "https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/",
+        "teaser": null
+      },{
+        "title": "FlexBox",
+        "excerpt":"FlexBox (부모 속성) flex-direction: 주축 - 기본 값 : row flex-wrap : 창의 너비에 따라 줄 바꿈 - 기본 값 : nowrap justify-content : 중심축과 기준으로 정렬 - 기본 값 : flex-start align-itmes : 교차축을 기준으로 정렬 - 기본 값 : flex-start 가로로 정렬된 모습을 볼 수 있다. display: flex;...","categories": ["frontend","flexbox"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/flexbox/Flex/",
+        "teaser": null
+      },{
+        "title": "Grid",
+        "excerpt":"Grid gird-template-columns (물론 rows도 있다!!) 한 행에 2개씩 표현, 첫 번째는 40%의 비율, 두 번째는 60%의 비율 grid-template-columns: 4fr 6fr; 한 행에 3개씩 표현 grid-template-columns: 1fr 1fr 1fr; 또는 grid-template-columns: repeat(3, 1fr); 한 쪽은 고정, 나머지는 자유~ grid-template-columns: 200px 1fr; gap 쉽게 말해 gap을 두는 것이라고 생각하면 좋다!! grid-template-columns: 4fr...","categories": ["frontend","grid"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/grid/Grid/",
         "teaser": null
       }]
