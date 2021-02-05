@@ -46,7 +46,7 @@ toc: true
 
 ### HTTP HEADER
 
-![Headers](/img/header.png)
+![Headers](/img/httpheader.png)
 
 ### Response Status
 
