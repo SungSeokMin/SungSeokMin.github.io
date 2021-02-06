@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-04T22:33:26+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Grid</title><link href="https://sungseokmin.github.io/frontend/grid/Grid/" rel="alternate" type="text/html" title="Grid" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/grid/Grid</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/grid/Grid/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-06T12:11:22+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Grid</title><link href="https://sungseokmin.github.io/frontend/grid/Grid/" rel="alternate" type="text/html" title="Grid" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/grid/Grid</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/grid/Grid/">&lt;blockquote&gt;
   &lt;h3 id=&quot;grid&quot;&gt;Grid&lt;/h3&gt;
 &lt;/blockquote&gt;
 
@@ -693,7 +693,7 @@ app.listen(3000, () =&amp;gt; {
 
 &lt;h3 id=&quot;http-header&quot;&gt;HTTP HEADER&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/header.png&quot; alt=&quot;Headers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/httpheader.png&quot; alt=&quot;Headers&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;response-status&quot;&gt;Response Status&lt;/h3&gt;
 

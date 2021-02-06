@@ -1,4 +1,4 @@
-I"&
+I"*
 <blockquote>
   <h2 id="http-">HTTP ?</h2>
 </blockquote>
@@ -74,7 +74,7 @@
 
 <h3 id="http-header">HTTP HEADER</h3>
 
-<p><img src="/img/header.png" alt="Headers" /></p>
+<p><img src="/img/httpheader.png" alt="Headers" /></p>
 
 <h3 id="response-status">Response Status</h3>
 
