@@ -413,6 +413,35 @@ voice.belongsToMany(models.board, {
 
 <hr />
 
+<h4 id="sequelize-include를-이용한-join">sequelize include를 이용한 JOIN</h4>
+
+<ol>
+  <li>sql문법에서는 join을 사용해 해결이 가능했지만 sequelize 문법은 익숙하지 않아 힘들었다.</li>
+  <li>json형식의 데이터를 가공하는 일은 쉽지 않았다.</li>
+</ol>
+
+<h4 id="해결방법">해결방법</h4>
+
+<ol>
+  <li>
+    <p>include를 이용해서 해결할 수 있었다.
+<img src="/img/include.png" alt="" /></p>
+  </li>
+  <li>
+    <p>server에서 가공처리를 해주지 않고 client에서 가공처리를 해주었다.</p>
+  </li>
+</ol>
+
+<p><img src="/img/map.png" alt="" /></p>
+
+<h3 id="느낀점">느낀점</h3>
+
+<p>문법을 익히는데 시간이 오래 걸리긴 했지만(완벽X) 알아가는 재미가 있다.<br />
+가공하는 방법에서는 충분한 scope의 이해가 필요했다. <br />
+많은 시간을 공들여 팀원과 함께 찾아낸 방법! 앞으로도 유용하게 쓰일 것 같다👍</p>
+
+<hr />
+
 <br />
 <section class="taxonomy__section">
   <div class="entries-list">

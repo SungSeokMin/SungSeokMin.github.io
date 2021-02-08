@@ -1,0 +1,134 @@
+I"Q<blockquote>
+  <h2 id="shape-of-voice">Shape Of Voice</h2>
+</blockquote>
+
+<p>사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹</p>
+
+<h3 id="schema">schema</h3>
+
+<ul>
+  <li>user : 각 유저들의 정보</li>
+  <li>voice : 목소리에 대한 정보</li>
+  <li>board : 게시글에 대한 정보</li>
+  <li>voice_board : voice table과 board table의 join table
+<img src="/img/schema.png" alt="" /></li>
+</ul>
+
+<h3 id="wire-frame">Wire frame</h3>
+
+<p><img src="/img/wireframe.png" alt="" /></p>
+
+<h3 id="flowchart">Flowchart</h3>
+
+<h4 id="client">client</h4>
+
+<p><img src="/img/client_flowchart.png" alt="" /></p>
+
+<h4 id="server">server</h4>
+
+<p><img src="/img/server_flowchart_2.png" alt="" /></p>
+
+<h4 id="api">API</h4>
+
+<p><a href="https://app.gitbook.com/@cloudacesending/s/shapeofvoice/">ShapeOfVoice API Documents</a></p>
+
+<hr />
+
+<blockquote>
+  <h2 id="진행하면서-겪은-상황">진행하면서 겪은 상황</h2>
+</blockquote>
+
+<h4 id="sequelize의-many-to-many를-설정해주는-데-어려움을-겪었다">sequelize의 Many To Many를 설정해주는 데 어려움을 겪었다.</h4>
+
+<ul>
+  <li>공식문서, 블로그 에서는 아래와 같은 글들이 있었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ex)
+voice.belongsToMany(board, { through: 'voice_board'});
+board.belongsToMany(voice, { through: 'voice_board'});
+</code></pre></div></div>
+
+<p>models &gt; index.js에서 console.log(sequelize.models)한 결과 voice_board테이블은
+있었지만 데이터베이스에서는 없었다.</p>
+
+<p>❗️여기서 migrations폴더에 voice_board를 만들어주는 파일이 없는데 안 만들어지는 게 당연하지 않을까 ? 라는 생각을 했다.</p>
+
+<p>팀원과 의견을 합쳐 하나 둘 씩 해결하기 시작…</p>
+
+<h5 id="해결-방법">해결 방법</h5>
+
+<ul>
+  <li>migration폴더에 voice_board 테이블을 생성하는 파일을 만들자 !</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx migration:generate --name voice_board
+</code></pre></div></div>
+
+<ul>
+  <li>voiceId와 boardId를 만들어 각각 voice테이블의 id와 board테이블의 id를 참조시켜주자 !</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
+  up: async (queryInterface, Sequelize) =&gt; {
+    await queryInterface.createTable('voice_board', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      voiceId: {
+        type: Sequelize.INTEGER,
+        references: { model: 'voices', key: 'id' },
+        onDelete: 'CASCADE',
+      },
+      boardId: {
+        type: Sequelize.INTEGER,
+        references: { model: 'boards', key: 'id' },
+        onDelete: 'CASCADE',
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+  },
+
+  down: async (queryInterface, Sequelize) =&gt; {
+    await queryInterface.dropTable('voice_board');
+  },
+};
+</code></pre></div></div>
+
+<ul>
+  <li>modles폴더 안에 있는 board, voice파일의 associate 안에 내용을 추가해주자 !</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>board.belongsToMany(models.voice, {
+        through: 'voice_board',
+      });
+voice.belongsToMany(models.board, {
+        through: 'voice_board',
+      });
+</code></pre></div></div>
+
+<h4 id="결과">결과</h4>
+
+<p><img src="/img/result.png" alt="" /></p>
+
+<p>잘 해결 되었다!!</p>
+
+<hr />
+
+<h4 id="sequelize-include를-이용한-join">sequelize include를 이용한 JOIN</h4>
+
+<p>sql문법에서는 join을 사용해 해결이 가능했지만 sequelize 문법은 정말 어려웠다.
+include를 이용해서 해결할 수 있었고, json형식의 데이터를 가공하는 일은 정말 어려웠다.</p>
+
+<p><img src="/img/include.png" alt="" /></p>
+:ET

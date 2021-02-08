@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-06T12:11:22+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Grid</title><link href="https://sungseokmin.github.io/frontend/grid/Grid/" rel="alternate" type="text/html" title="Grid" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/grid/Grid</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/grid/Grid/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-08T18:37:49+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Grid</title><link href="https://sungseokmin.github.io/frontend/grid/Grid/" rel="alternate" type="text/html" title="Grid" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/grid/Grid</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/grid/Grid/">&lt;blockquote&gt;
   &lt;h3 id=&quot;grid&quot;&gt;Grid&lt;/h3&gt;
 &lt;/blockquote&gt;
 
@@ -341,6 +341,35 @@ voice.belongsToMany(models.board, {
 &lt;p&gt;&lt;img src=&quot;/img/result.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;잘 해결 되었다!!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;sequelize-include를-이용한-join&quot;&gt;sequelize include를 이용한 JOIN&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;sql문법에서는 join을 사용해 해결이 가능했지만 sequelize 문법은 익숙하지 않아 힘들었다.&lt;/li&gt;
+  &lt;li&gt;json형식의 데이터를 가공하는 일은 쉽지 않았다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;해결방법&quot;&gt;해결방법&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;include를 이용해서 해결할 수 있었다.
+&lt;img src=&quot;/img/include.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;server에서 가공처리를 해주지 않고 client에서 가공처리를 해주었다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/map.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;느낀점&quot;&gt;느낀점&lt;/h3&gt;
+
+&lt;p&gt;문법을 익히는데 시간이 오래 걸리긴 했지만(완벽X) 알아가는 재미가 있다.&lt;br /&gt;
+가공하는 방법에서는 충분한 scope의 이해가 필요했다. &lt;br /&gt;
+많은 시간을 공들여 팀원과 함께 찾아낸 방법! 앞으로도 유용하게 쓰일 것 같다👍&lt;/p&gt;
 
 &lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Shape Of Voice</summary></entry><entry><title type="html">HTML/CSS</title><link href="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/" rel="alternate" type="text/html" title="HTML/CSS" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/css/CSS-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;기본적인-html-문법&quot;&gt;기본적인 HTML 문법&lt;/h2&gt;
