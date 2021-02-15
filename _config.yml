@@ -94,7 +94,7 @@ analytics:
 author:
   name: 'SungSeokMin'
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: 'I am Happy Developer😄'
+  bio: ''
   location: 'South Korea'
   email: 'jkl154527@gmail.com'
   links:
