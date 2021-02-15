@@ -1,47 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-08T18:37:49+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Grid</title><link href="https://sungseokmin.github.io/frontend/grid/Grid/" rel="alternate" type="text/html" title="Grid" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/grid/Grid</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/grid/Grid/">&lt;blockquote&gt;
-  &lt;h3 id=&quot;grid&quot;&gt;Grid&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-15T18:17:47+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Redux</title><link href="https://sungseokmin.github.io/frontend/redux/Redux/" rel="alternate" type="text/html" title="Redux" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/redux/Redux</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/redux/Redux/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;redux&quot;&gt;Redux&lt;/h2&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;gird-template-columns-물론-rows도-있다&quot;&gt;gird-template-columns (물론 rows도 있다!!)&lt;/h4&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;한 행에 2개씩 표현, 첫 번째는 40%의 비율, 두 번째는 60%의 비율&lt;/li&gt;
+  &lt;li&gt;action : store(저장소)로 data를 보내는 방법&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/4fr6fr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// actions -&amp;gt; index.js
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grid-template-columns: 4fr 6fr;
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+
+export const login = () =&amp;gt; {
+  return {
+    type: LOGIN,
+    payload : (생략가능)
+  }
+}
+
+export const logout = () =&amp;gt; {
+  return {
+    type: LOGOUT,
+    payload : (생략가능)
+  }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;한 행에 3개씩 표현&lt;/li&gt;
+  &lt;li&gt;Reducers : action을 통해 타입을 정의 했으면, 그 결과로 인해 상태를 어떻게 바꿀 것인지 정의하는 함수&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/1fr1fr1fr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// reducers -&amp;gt; userReducer.js
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grid-template-columns: 1fr 1fr 1fr;
-또는
-grid-template-columns: repeat(3, 1fr);
+import { LOGIN, LOGOUT } from '../actions';
+
+const initalState = {...};
+
+                    // es6 문법, default값 선언
+const userReducer = (state = initialState, action ) =&amp;gt; {
+  switch(action.type) {
+    case LOGIN:
+    return {
+      ...
+    }
+    case LOGOUT:
+    return {
+      ...
+    }
+    default:
+      return state;
+  }
+}
+
+export default userReducer;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;한 쪽은 고정, 나머지는 자유~&lt;/li&gt;
+  &lt;li&gt;store : state를 저장하는 객체&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/grid_px.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// store -&amp;gt; store.js
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grid-template-columns: 200px 1fr;
+import {createStore} from 'redux';
+import userReducer from '../reducers/userReducer';
+
+export const store = createStore(userReducer);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;gap&quot;&gt;gap&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Provider : 하위 컴포넌트에게 store에 관련한 모든 것들에 대한 접근을 허용&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;쉽게 말해 gap을 두는 것이라고 생각하면 좋다!!&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
 
-&lt;p&gt;&lt;img src=&quot;/img/gap.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import store from './store/store';
+import { Provider } from 'react-redux';
+import * as serviceWorker from './serviceWorker';
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grid-template-columns: 4fr 6fr;
-grid-gap: 1rem;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="grid" /><summary type="html">Grid</summary></entry><entry><title type="html">FlexBox</title><link href="https://sungseokmin.github.io/frontend/flexbox/Flex/" rel="alternate" type="text/html" title="FlexBox" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/flexbox/Flex</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/flexbox/Flex/">&lt;blockquote&gt;
+ReactDOM.render(
+  ⭐️&amp;lt;Provider store={store}&amp;gt;⭐️ // 모든 component를 Provider로 감싸주고 store를 넘겨준다.
+    &amp;lt;App /&amp;gt;
+  &amp;lt;/Provider&amp;gt;,
+  document.getElementById('root')
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;react-hooks를-이용한-component와-redux-연결&quot;&gt;React hooks를 이용한 Component와 Redux 연결&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { useDispatch, useSelector } from 'react-redux';
+import { login, logout } from './actions';
+
+const state = useSelector(state =&amp;gt; state.userReducer);
+
+const dispatch = useDispatch();
+
+dispatch(login(인자&amp;lt;없을 경우 생략&amp;gt;));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;… 추후 업데이트 예정 …&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="redux" /><summary type="html">Redux</summary></entry><entry><title type="html">2 weeks project_시연영상</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/" rel="alternate" type="text/html" title="2 weeks project_시연영상" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-2</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/">&lt;blockquote&gt;
+  &lt;p&gt;Login&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925933-6c812280-6fb8-11eb-80bf-9fee727c6636.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;SignUp&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925939-6db24f80-6fb8-11eb-9624-8406f4be996d.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TempLogin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925945-6e4ae600-6fb8-11eb-9b30-0f5101efe70d.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Capture &amp;amp; Clear&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925949-730f9a00-6fb8-11eb-98e3-623c1377db11.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AddBoard&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925953-7440c700-6fb8-11eb-8699-a48cac405337.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;BoardDetail&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925956-760a8a80-6fb8-11eb-8768-12c43147a38a.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MyPage&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925961-77d44e00-6fb8-11eb-8bb6-f019a9943fa2.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Logout&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925967-799e1180-6fb8-11eb-8056-27ad72c88182.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Login</summary></entry><entry><title type="html">FlexBox</title><link href="https://sungseokmin.github.io/frontend/flexbox/Flex/" rel="alternate" type="text/html" title="FlexBox" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/flexbox/Flex</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/flexbox/Flex/">&lt;blockquote&gt;
   &lt;h3 id=&quot;flexbox-부모-속성&quot;&gt;FlexBox (부모 속성)&lt;/h3&gt;
 &lt;/blockquote&gt;
 
@@ -217,7 +322,92 @@ flex: 1;
 align-self: flex-end;
 background-color: yellow;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="flexbox" /><summary type="html">FlexBox (부모 속성)</summary></entry><entry><title type="html">2 weeks project</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/" rel="alternate" type="text/html" title="2 weeks project" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-1</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="flexbox" /><summary type="html">FlexBox (부모 속성)</summary></entry><entry><title type="html">HTML/CSS</title><link href="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/" rel="alternate" type="text/html" title="HTML/CSS" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/css/CSS-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;기본적인-html-문법&quot;&gt;기본적인 HTML 문법&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;inline-vs-block&quot;&gt;Inline vs Block&lt;/h3&gt;
+
+&lt;p&gt;대표적으로 span, div&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inline은 크기의 영역만큼 차지하고 Block은 한 줄을 차지한다.
+&lt;img src=&quot;/img/div_span.png&quot; alt=&quot;Inline VS Block&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ul--li&quot;&gt;ul &amp;gt; li&lt;/h3&gt;
+
+&lt;p&gt;목록을 나타낼 때 사용하는 목록태그&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;앞의 동그라미를 없애고 싶으면 list-style: none 속성을 주면 된다.
+&lt;img src=&quot;/img/ul_li.png&quot; alt=&quot;ul_li&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;li--input&quot;&gt;li &amp;gt; input&lt;/h3&gt;
+
+&lt;p&gt;input태그는 Inline 속성이므로 ul &amp;gt; li 와 같은 목록 태그로 감싸줘도 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/li_input.png&quot; alt=&quot;li_input&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;li--label--input&quot;&gt;li &amp;gt; label &amp;gt; input&lt;/h3&gt;
+
+&lt;p&gt;label태그 안에 input태그를 넣어주게 되면 for속성을 사용하지 않아도 된다.
+&lt;img src=&quot;/img/li_label_input.png&quot; alt=&quot;li_label_input&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;table&quot;&gt;table&lt;/h3&gt;
+
+&lt;p&gt;⭐️ TIP : border-collapse: collapse를 사용하면 표의 테두리와 셀의 테두리 사이의 간격을 사라지게 할 수 있다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;th: 테이블의 헤더, 즉 카테고리를 작성&lt;/li&gt;
+  &lt;li&gt;tr: 한 행을 열어주는 역할&lt;/li&gt;
+  &lt;li&gt;td: 테이블의 데이터, 즉 내용을 작성&lt;br /&gt;
+&lt;img src=&quot;/img/table.png&quot; alt=&quot;table&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;a&quot;&gt;a&lt;/h3&gt;
+
+&lt;p&gt;⭐️ TIP : blank : 새 창 또는 탭에서 문서를 연다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=&quot;https://sungseokmin.github.io&quot;&amp;gt;git blog&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;img&quot;&gt;img&lt;/h3&gt;
+
+&lt;p&gt;⭐️ TIP : 링크의 밑줄을 없애고 싶다면 ?? text-decoration: none;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;img.jpg&quot; alt=&quot;사진의 내용&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;유용한-css-속성&quot;&gt;유용한 CSS 속성&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;글자 가운데 정렬
+text-align: center;
+
+배경 이미지 넣기
+background-image: url('주소');
+
+줄 높이 정하기
+line-heignt: 다양하게 줄 수 있다. normal, length, number, px, % ...
+
+POSITION
+- relative : 지금 현재의 위치를 기준
+- absolute : html문서를 기준으로 right: 0; bottom:0; 을 하면 오른쪽 하단에 위치
+- fixed : 고정, 스크롤을 올리거나 내려도 항상 같은 위치에 존재
+
+⭐️ modal, 로그인 창 같은 것을 가운데로 오게 하고 싶다면 ??
+position: absolute; top: 50%; left: 50%; transform: translate(-50%. -50%);
+
+테두리 둥굴게
+border-radius : px, % 둘 다 가능
+
+~계속해서 추가 예정~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="html" /><category term="css" /><summary type="html">기본적인 HTML 문법</summary></entry><entry><title type="html">2 weeks project</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/" rel="alternate" type="text/html" title="2 weeks project" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-1</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/">&lt;blockquote&gt;
   &lt;h2 id=&quot;shape-of-voice&quot;&gt;Shape Of Voice&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -229,7 +419,8 @@ background-color: yellow;
   &lt;li&gt;user : 각 유저들의 정보&lt;/li&gt;
   &lt;li&gt;voice : 목소리에 대한 정보&lt;/li&gt;
   &lt;li&gt;board : 게시글에 대한 정보&lt;/li&gt;
-  &lt;li&gt;voice_board : voice table과 board table의 join table
+  &lt;li&gt;voice_board : voice table과 board table의 join table&lt;/li&gt;
+  &lt;li&gt;user_board_like : 특정 user가 어떠한 게시판의 좋아요를 눌렀는지에 대한 table
 &lt;img src=&quot;/img/schema.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -371,142 +562,17 @@ voice.belongsToMany(models.board, {
 가공하는 방법에서는 충분한 scope의 이해가 필요했다. &lt;br /&gt;
 많은 시간을 공들여 팀원과 함께 찾아낸 방법! 앞으로도 유용하게 쓰일 것 같다👍&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Shape Of Voice</summary></entry><entry><title type="html">HTML/CSS</title><link href="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/" rel="alternate" type="text/html" title="HTML/CSS" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/css/CSS-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/css/CSS-frontend/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;기본적인-html-문법&quot;&gt;기본적인 HTML 문법&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;inline-vs-block&quot;&gt;Inline vs Block&lt;/h3&gt;
-
-&lt;p&gt;대표적으로 span, div&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Inline은 크기의 영역만큼 차지하고 Block은 한 줄을 차지한다.
-&lt;img src=&quot;/img/div_span.png&quot; alt=&quot;Inline VS Block&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ul--li&quot;&gt;ul &amp;gt; li&lt;/h3&gt;
-
-&lt;p&gt;목록을 나타낼 때 사용하는 목록태그&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;앞의 동그라미를 없애고 싶으면 list-style: none 속성을 주면 된다.
-&lt;img src=&quot;/img/ul_li.png&quot; alt=&quot;ul_li&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;li--input&quot;&gt;li &amp;gt; input&lt;/h3&gt;
-
-&lt;p&gt;input태그는 Inline 속성이므로 ul &amp;gt; li 와 같은 목록 태그로 감싸줘도 된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/li_input.png&quot; alt=&quot;li_input&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;li--label--input&quot;&gt;li &amp;gt; label &amp;gt; input&lt;/h3&gt;
-
-&lt;p&gt;label태그 안에 input태그를 넣어주게 되면 for속성을 사용하지 않아도 된다.
-&lt;img src=&quot;/img/li_label_input.png&quot; alt=&quot;li_label_input&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;table&quot;&gt;table&lt;/h3&gt;
-
-&lt;p&gt;⭐️ TIP : border-collapse: collapse를 사용하면 표의 테두리와 셀의 테두리 사이의 간격을 사라지게 할 수 있다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;th: 테이블의 헤더, 즉 카테고리를 작성&lt;/li&gt;
-  &lt;li&gt;tr: 한 행을 열어주는 역할&lt;/li&gt;
-  &lt;li&gt;td: 테이블의 데이터, 즉 내용을 작성&lt;br /&gt;
-&lt;img src=&quot;/img/table.png&quot; alt=&quot;table&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;a&quot;&gt;a&lt;/h3&gt;
-
-&lt;p&gt;⭐️ TIP : blank : 새 창 또는 탭에서 문서를 연다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=&quot;https://sungseokmin.github.io&quot;&amp;gt;git blog&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;img&quot;&gt;img&lt;/h3&gt;
-
-&lt;p&gt;⭐️ TIP : 링크의 밑줄을 없애고 싶다면 ?? text-decoration: none;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;img.jpg&quot; alt=&quot;사진의 내용&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;hr /&gt;
 
-&lt;blockquote&gt;
-  &lt;h3 id=&quot;유용한-css-속성&quot;&gt;유용한 CSS 속성&lt;/h3&gt;
-&lt;/blockquote&gt;
+&lt;h4 id=&quot;redux-사용&quot;&gt;Redux 사용&lt;/h4&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;글자 가운데 정렬
-text-align: center;
+&lt;p&gt;Redux를 사용해보긴 했지만 실질적으로 프로젝트에서 사용한 적이 없었다. &lt;br /&gt;
+막상 Redux를 이용해 state를 관리하려고 했을 때 action, reducer, store등 처음 보는 듯한
+문법 이였고 활용을 할 수 없어 어려움을 겪었다.&lt;/p&gt;
 
-배경 이미지 넣기
-background-image: url('주소');
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/frontend/redux/Redux/&quot;&gt;Redux&lt;/a&gt;&lt;/p&gt;
 
-줄 높이 정하기
-line-heignt: 다양하게 줄 수 있다. normal, length, number, px, % ...
-
-POSITION
-- relative : 지금 현재의 위치를 기준
-- absolute : html문서를 기준으로 right: 0; bottom:0; 을 하면 오른쪽 하단에 위치
-- fixed : 고정, 스크롤을 올리거나 내려도 항상 같은 위치에 존재
-
-⭐️ modal, 로그인 창 같은 것을 가운데로 오게 하고 싶다면 ??
-position: absolute; top: 50%; left: 50%; transform: translate(-50%. -50%);
-
-테두리 둥굴게
-border-radius : px, % 둘 다 가능
-
-~계속해서 추가 예정~
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="html" /><category term="css" /><summary type="html">기본적인 HTML 문법</summary></entry><entry><title type="html">React-router-dom</title><link href="https://sungseokmin.github.io/frontend/react/router/React_router/" rel="alternate" type="text/html" title="React-router-dom" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/router/React_router</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/router/React_router/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;react-router-&quot;&gt;React Router ?&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SPA : Single Page Application
-    &lt;ul&gt;
-      &lt;li&gt;페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;설치-방법&quot;&gt;설치 방법&lt;/h3&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install react-router-dom
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;사용-방법&quot;&gt;사용 방법&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;react-router-dom 모듈 안에는 각각의 함수들이 있다.
-    &lt;ul&gt;
-      &lt;li&gt;BrowserRouter : History API를 사용하고, url과 ui를 동기화 해주는 라우터&lt;/li&gt;
-      &lt;li&gt;Route : user가 원하는 경로와 Route안의 path에 있는 경로가 일치할 경우 해당 컴포넌트를 렌더링 한다.&lt;/li&gt;
-      &lt;li&gt;Link : html의 a태그와 비슷하다.&lt;/li&gt;
-      &lt;li&gt;Switch : Route 태그를 순서대로 확인한 후, 첫 번째로 일치하는 Route로 렌더링 한다.&lt;/li&gt;
-      &lt;li&gt;withRouter : match, history, location을 Props로 전달해주는 역할&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {Component} from 'react';
-import {BrowserRouter, Route, Link, Switch, withRouter} from 'react-router-dom';
-
-function MyPage (props) {
-  return (
-    &amp;lt;BrowserRouter&amp;gt;
-      &amp;lt;div className='menu'&amp;gt;
-        &amp;lt;Link to='/'&amp;gt;&amp;lt;/Link&amp;gt;
-        &amp;lt;Link to='/login'&amp;gt;로그인&amp;lt;/Link&amp;gt;
-        &amp;lt;Link to='/mypage'&amp;gt;마이페이지&amp;lt;/Link&amp;gt;
-      &amp;lt;/div&amp;gt;
-      &amp;lt;Switch&amp;gt;
-        &amp;lt;Route path='/' component={Home} /&amp;gt;
-        &amp;lt;Route path='/login' component={Home} /&amp;gt;
-        &amp;lt;Route path='/mypage'component={Home} /&amp;gt;
-      &amp;lt;/Switch&amp;gt;
-    &amp;lt;/BrowserRouter&amp;gt;
-  )
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><category term="Router" /><summary type="html">React Router ?</summary></entry><entry><title type="html">Express</title><link href="https://sungseokmin.github.io/backend/express/Express-backend/" rel="alternate" type="text/html" title="Express" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/express/Express-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/express/Express-backend/">&lt;blockquote&gt;
+&lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Shape Of Voice</summary></entry><entry><title type="html">Express</title><link href="https://sungseokmin.github.io/backend/express/Express-backend/" rel="alternate" type="text/html" title="Express" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/express/Express-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/express/Express-backend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;express-&quot;&gt;Express ?&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -822,82 +888,7 @@ http.createServer((request, response) =&amp;gt; {
   }
 
 }).listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="node" /><summary type="html">Node.js ?</summary></entry><entry><title type="html">React_hooks</title><link href="https://sungseokmin.github.io/frontend/react/hooks/React_hooks/" rel="alternate" type="text/html" title="React_hooks" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/hooks/React_hooks</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/hooks/React_hooks/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;react-hooks-&quot;&gt;React Hooks ?&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;function Component에서 state를 관리하기 위해 해주는 고마운 녀석&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;사용-방법&quot;&gt;사용 방법&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;useState : function component에서 상태를 저장하고 수정할 수 있도록 도와준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {useState} = 'react';
-
-function Login (props) {
-  // 배열의 첫 요소는 값을 저장할 변수
-  // 배열의 두 번째 요소는 값을 바꿀 변수
-  const [id, setId] = useState('') // useState를 통해 id값을 저장, id = '';
-  const [password, setPassword] = useState('')
-
-  return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;h1&amp;gt;로그인 페이지&amp;lt;/h1&amp;gt;
-      &amp;lt;input type='text' value={id} onChange={(e) =&amp;gt; setId(e.target.value)} /&amp;gt;
-      &amp;lt;input type='text' value={password} onChange={(e) =&amp;gt; setPassword(e.target.value)} /&amp;gt;
-    &amp;lt;/div&amp;gt;
-  )
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;useEffect : Component가 렌더링 될 때 마다 특정 작업을 수행하도록 설정할 수 있도록 도와준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {useState, useEffect} = 'react';
-
-function Login (props) {
-  // 배열의 첫 요소는 값을 저장할 변수
-  // 배열의 두 번째 요소는 값을 바꿀 변수
-  const [id, setId] = useState('') // useState를 통해 id값을 저장, id = '';
-  const [password, setPassword] = useState('')
-
-  useEffect(() =&amp;gt; {
-    console.log('렌더링 완료') // 밑의 onChange로 인해 계속 id와 password가 쳐질 때 마다 useEffect가 호출된다.
-                            // 그렇게 되면 너무 비효율 적이겠지요 ?? 그럼 어떻게 하냐 !! 아래 참고~
-  })
-
-  // 두 번째 인자로 빈 배열을 넣어준다. =&amp;gt; 처음 렌더링 될 때만 호출된다
-  useEffect(() =&amp;gt; {
-    console.log('componentDidMount와 같은 효과');   // 그럼 update될 때 마다 호출하고 싶다면 어떻게 ? 아래 참고 ~
-  }, [])
-
-  // 특정 값이 변경이 될 때만 호출
-  useEffect(() =&amp;gt; {
-    console.log('id가 바뀔 때 마다 )
-  }, [id])
-
-  // 마운트(처음 나타났을 때), 언마운트(사라질 때) 관리
-    useEffect(() =&amp;gt; {
-      console.log('Hi!!!')
-      return () =&amp;gt; {
-        console.log('bye...');
-      }
-    })
-
-  return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;h1&amp;gt;로그인 페이지&amp;lt;/h1&amp;gt;
-      &amp;lt;input type='text' value={id} onChange={(e) =&amp;gt; setId(e.target.value)} /&amp;gt;
-      &amp;lt;input type='text' value={password} onChange={(e) =&amp;gt; setPassword(e.target.value)} /&amp;gt;
-    &amp;lt;/div&amp;gt;
-  )
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><category term="hooks" /><summary type="html">React Hooks ?</summary></entry><entry><title type="html">React</title><link href="https://sungseokmin.github.io/frontend/react/React-frontend/" rel="alternate" type="text/html" title="React" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/React-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/React-frontend/">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="node" /><summary type="html">Node.js ?</summary></entry><entry><title type="html">React</title><link href="https://sungseokmin.github.io/frontend/react/React-frontend/" rel="alternate" type="text/html" title="React" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/React-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/React-frontend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;react-&quot;&gt;React ?&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -1059,4 +1050,54 @@ export default Mypage
 (부모가 자식 component를 없앨 때 ) -&amp;gt; componentWillUmmount -&amp;gt; 소멸
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/lifecycle.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><summary type="html">React ?</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/img/lifecycle.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><summary type="html">React ?</summary></entry><entry><title type="html">React-router-dom</title><link href="https://sungseokmin.github.io/frontend/react/router/React_router/" rel="alternate" type="text/html" title="React-router-dom" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/router/React_router</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/router/React_router/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;react-router-&quot;&gt;React Router ?&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SPA : Single Page Application
+    &lt;ul&gt;
+      &lt;li&gt;페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;설치-방법&quot;&gt;설치 방법&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install react-router-dom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;사용-방법&quot;&gt;사용 방법&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;react-router-dom 모듈 안에는 각각의 함수들이 있다.
+    &lt;ul&gt;
+      &lt;li&gt;BrowserRouter : History API를 사용하고, url과 ui를 동기화 해주는 라우터&lt;/li&gt;
+      &lt;li&gt;Route : user가 원하는 경로와 Route안의 path에 있는 경로가 일치할 경우 해당 컴포넌트를 렌더링 한다.&lt;/li&gt;
+      &lt;li&gt;Link : html의 a태그와 비슷하다.&lt;/li&gt;
+      &lt;li&gt;Switch : Route 태그를 순서대로 확인한 후, 첫 번째로 일치하는 Route로 렌더링 한다.&lt;/li&gt;
+      &lt;li&gt;withRouter : match, history, location을 Props로 전달해주는 역할&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {Component} from 'react';
+import {BrowserRouter, Route, Link, Switch, withRouter} from 'react-router-dom';
+
+function MyPage (props) {
+  return (
+    &amp;lt;BrowserRouter&amp;gt;
+      &amp;lt;div className='menu'&amp;gt;
+        &amp;lt;Link to='/'&amp;gt;&amp;lt;/Link&amp;gt;
+        &amp;lt;Link to='/login'&amp;gt;로그인&amp;lt;/Link&amp;gt;
+        &amp;lt;Link to='/mypage'&amp;gt;마이페이지&amp;lt;/Link&amp;gt;
+      &amp;lt;/div&amp;gt;
+      &amp;lt;Switch&amp;gt;
+        &amp;lt;Route path='/' component={Home} /&amp;gt;
+        &amp;lt;Route path='/login' component={Home} /&amp;gt;
+        &amp;lt;Route path='/mypage'component={Home} /&amp;gt;
+      &amp;lt;/Switch&amp;gt;
+    &amp;lt;/BrowserRouter&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><category term="Router" /><summary type="html">React Router ?</summary></entry></feed>

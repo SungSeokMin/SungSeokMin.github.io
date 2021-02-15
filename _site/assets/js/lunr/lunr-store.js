@@ -54,7 +54,7 @@ var store = [{
         "teaser": null
       },{
         "title": "2 weeks project",
-        "excerpt":"Shape Of Voice 사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹 schema user : 각 유저들의 정보 voice : 목소리에 대한 정보 board : 게시글에 대한 정보 voice_board : voice table과 board table의 join table Wire frame Flowchart client server API ShapeOfVoice API Documents 진행하면서 겪은...","categories": ["project","2 weeks project"],
+        "excerpt":"Shape Of Voice 사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹 schema user : 각 유저들의 정보 voice : 목소리에 대한 정보 board : 게시글에 대한 정보 voice_board : voice table과 board table의 join table user_board_like : 특정 user가 어떠한 게시판의 좋아요를 눌렀는지에 대한 table Wire...","categories": ["project","2 weeks project"],
         "tags": [],
         "url": "https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/",
         "teaser": null
@@ -65,9 +65,15 @@ var store = [{
         "url": "https://sungseokmin.github.io/frontend/flexbox/Flex/",
         "teaser": null
       },{
-        "title": "Grid",
-        "excerpt":"Grid gird-template-columns (물론 rows도 있다!!) 한 행에 2개씩 표현, 첫 번째는 40%의 비율, 두 번째는 60%의 비율 grid-template-columns: 4fr 6fr; 한 행에 3개씩 표현 grid-template-columns: 1fr 1fr 1fr; 또는 grid-template-columns: repeat(3, 1fr); 한 쪽은 고정, 나머지는 자유~ grid-template-columns: 200px 1fr; gap 쉽게 말해 gap을 두는 것이라고 생각하면 좋다!! grid-template-columns: 4fr...","categories": ["frontend","grid"],
+        "title": "2 weeks project_시연영상",
+        "excerpt":"   Login          SignUp          TempLogin          Capture &amp; Clear          AddBoard          BoardDetail          MyPage          Logout      ","categories": ["project","2 weeks project"],
         "tags": [],
-        "url": "https://sungseokmin.github.io/frontend/grid/Grid/",
+        "url": "https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/",
+        "teaser": null
+      },{
+        "title": "Redux",
+        "excerpt":"Redux action : store(저장소)로 data를 보내는 방법 // actions -&gt; index.js export const LOGIN = 'LOGIN'; export const LOGOUT = 'LOGOUT'; export const login = () =&gt; { return { type: LOGIN, payload : (생략가능) } } export const logout = () =&gt; { return { type: LOGOUT, payload :...","categories": ["frontend","redux"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/redux/Redux/",
         "teaser": null
       }]

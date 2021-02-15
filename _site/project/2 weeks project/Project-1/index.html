@@ -298,7 +298,8 @@
   <li>user : 각 유저들의 정보</li>
   <li>voice : 목소리에 대한 정보</li>
   <li>board : 게시글에 대한 정보</li>
-  <li>voice_board : voice table과 board table의 join table
+  <li>voice_board : voice table과 board table의 join table</li>
+  <li>user_board_like : 특정 user가 어떠한 게시판의 좋아요를 눌렀는지에 대한 table
 <img src="/img/schema.png" alt="" /></li>
 </ul>
 
@@ -442,10 +443,60 @@ voice.belongsToMany(models.board, {
 
 <hr />
 
+<h4 id="redux-사용">Redux 사용</h4>
+
+<p>Redux를 사용해보긴 했지만 실질적으로 프로젝트에서 사용한 적이 없었다. <br />
+막상 Redux를 이용해 state를 관리하려고 했을 때 action, reducer, store등 처음 보는 듯한
+문법 이였고 활용을 할 수 없어 어려움을 겪었다.</p>
+
+<p><a href="http://localhost:4000/frontend/redux/Redux/">Redux</a></p>
+
+<hr />
+
 <br />
 <section class="taxonomy__section">
   <div class="entries-list">
      
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/project/2%20weeks%20project/Project-2/" rel="permalink">2 weeks project_시연영상
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Login
+
+</p>
+  </article>
+</div>
+  
 
 
 
