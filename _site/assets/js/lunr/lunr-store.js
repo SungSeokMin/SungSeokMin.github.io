@@ -70,4 +70,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/redux/Redux/",
         "teaser": null
+      },{
+        "title": "TypeScript",
+        "excerpt":"TypeScript ? JavaScript를 기반으로 한 언어로써 JavaScript에서 유요한 코드는 TypeScript에서도 유효하다. 타입 추론(Type Inference) TypeScript에서는 타입 표기가 없는 경우 자체에서 코드를 읽고 분석하여 타입을 유추해낼 수 있다. 타입 명시 변수를 선언할 때, 변수 값의 타입을 명시함으로써 변수 값의 데이터 타입을 지정하는 것 interface 타입으로 사용되는 interface interface에 정의된 변수가 전부...","categories": ["frontend","typescript"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/typescript/typescript/",
+        "teaser": null
       }]
