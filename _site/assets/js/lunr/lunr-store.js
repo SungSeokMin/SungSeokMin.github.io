@@ -76,4 +76,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/typescript/typescript/",
         "teaser": null
+      },{
+        "title": "React-TypeScript",
+        "excerpt":"React에서 TypeScript 사용하기 + Redux ❗️ 시작하기 전에 ❗️ TypeScript를 사용하면서 어떤 건 .ts이고 어떤 건 .tsx인지 궁금했다. Component를 작성 시 .tsx를 사용하고 그 외에는 .ts를 사용 TodoList 파일 구조 Redux Setting index.ts ✔️ 궁금해 export * from ‘path’ ? from 뒤에 오는 path에서 export된 것들을 가져와서 내보내준다는 의미! export...","categories": ["frontend","react-typescript"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/",
+        "teaser": null
       }]

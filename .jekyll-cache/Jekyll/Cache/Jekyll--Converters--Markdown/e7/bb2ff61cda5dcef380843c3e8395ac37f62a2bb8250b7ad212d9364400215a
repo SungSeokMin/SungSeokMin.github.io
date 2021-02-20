@@ -1,0 +1,31 @@
+I"<blockquote>
+  <h2 id="react에서-typescript-사용하기--redux">React에서 TypeScript 사용하기 + Redux</h2>
+</blockquote>
+
+<h3 id="todolist">TodoList</h3>
+
+<h4 id="파일-구조">파일 구조</h4>
+
+<p><img width="265" alt="스크린샷 2021-02-20 오후 2 44 50" src="https://user-images.githubusercontent.com/72539723/108585206-893ba280-738a-11eb-909b-9a32937333b6.png" /></p>
+
+<h3 id="redux-pattern">Redux Pattern</h3>
+
+<p>actions.ts</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// typesafe-actions ? action, reducer를 보다 편한히 사용하기 위한 라이브러리
+import { deprecated } from 'typesafe-actions';
+const { createStandardAction } = deprecated;
+
+export const ADD_TODO = 'todos/ADD_TODO' as const;
+export const TOGGLE_TODO = 'todos/TOGGLE_TODO';
+export const REMOVE_TODO = 'todos/REMOVE_TODO';
+
+export const addTodo = (text: string) =&gt; ({
+  type: ADD_TODO,
+  payload: {
+    id: nextId++,
+    text
+  }
+})
+</code></pre></div></div>
+:ET
