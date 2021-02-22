@@ -35,6 +35,29 @@ toc: true
 
 <img width="473" alt="스크린샷 2021-02-17 오전 11 49 40" src="https://user-images.githubusercontent.com/72539723/108149446-38bc0f00-7116-11eb-8d4f-9e06b388dde5.png">
 
+- interface 상속
+
+```
+interface Person {
+  name: string;
+  age?: number;
+}
+
+interface Developer {
+  skills: string[];
+}
+
+const person extends Person = {
+  name: '김코딩',
+  age: 27,
+}
+
+const myInfo extends Developer{
+  name: '성석민',
+  skills: [ 'javascript', 'typescript' ]
+}
+```
+
 ### Enum & Literal Type
 
 - Enum
@@ -49,15 +72,31 @@ toc: true
 
 ### Type Aliases
 
-- 변수의 타입이 string이 올 수도 있고 number 또는 어떠한 타입이 올 수 있는 경우 가독성을 위하여 사용한다
+- interface와 동일하게 ㅅ
 
 ```
-ex) string이거나 number일 경우
-type StrOrNum = string | number;
+type Person = {
+  name: string;
+  age?: number;
+}
 
-// 원래 같았으면 오류가 나겠지만 위의 Aliases 덕분에 오류가 나지 않는다
-const WeDontKnow : StrOrNum = 'string 타입 입니다';
-WeDontKnow : StrOrNum = 'number 타입 입니다';
+type Developer = Person & {
+  skills: string[];
+}
+
+const person: Person = {
+  name: '김코딩',
+  age: 27,
+}
+
+const myInfo: Developer = {
+  name: '성석민',
+  skills: [ 'javascript', 'typescript' ]
+}
+
+type People = Person[];
+
+const people: People = [person, myInfo]
 ```
 
 ### 접근제한자(Access Modifiers)
