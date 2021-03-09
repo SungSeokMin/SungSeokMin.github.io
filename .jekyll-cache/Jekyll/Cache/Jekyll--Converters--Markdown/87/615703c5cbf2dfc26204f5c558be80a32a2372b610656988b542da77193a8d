@@ -1,0 +1,145 @@
+I"<blockquote>
+  <h2 id="css-선택자">CSS 선택자</h2>
+</blockquote>
+
+<h3 id="기본">기본</h3>
+
+<p>전체 선택자 : * <br />
+태그 선택자 : div, span, li … <br />
+클래스 선택자 : .className <br />
+아이디 선택자 : #idName <br /></p>
+
+<h3 id="복합">복합</h3>
+
+<p>일치 선택자 : 두 개의 선택자를 동시에 만족하는 요소</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; span.orange (span 태그 중 class가 orange인 요소)
+&lt;span class="orange"&gt;오렌지&lt;/span&gt; ⭐️
+</code></pre></div></div>
+
+<p>복합 선택자 : 특정 선택자의 자식 요소를 선택</p>
+
+<ul>
+  <li>✔️ ‘&gt;’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; ul &gt; .orange (ul 태그의 자식요소 중 class가 orange인 요소)
+&lt;ul&gt;
+  &lt;li class="orange"&gt;&lt;/li&gt; ⭐️
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<p>하위 선택자 : 특정 선택자의 하위 요소</p>
+
+<ul>
+  <li>✔️ ‘띄어쓰기’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; div .orange (div 태그의 하위 요소 중 class가 orange인 요소)
+&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li class="orange"&gt; ⭐️
+  &lt;/ul&gt;
+  &lt;span class="orange"&gt; ⭐️
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>인접 형제 선택자 : 특정 선택자의 다음 형제 요소 하나를 선택</p>
+
+<ul>
+  <li>✔️ ‘+’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .orange + li
+&lt;ul&gt;
+  &lt;li&gt;사과&lt;/li&gt;
+  &lt;li calss="orange"&gt;오렌지&lt;/li&gt;
+  &lt;li&gt;바나나&lt;/li&gt; ⭐️
+  &lt;li&gt;키위&lt;/li&gt;
+&lt;ui&gt;
+</code></pre></div></div>
+
+<p>일반 형제 선택자 : 특정 선택자의 다음 형제 요소 모두를 선택</p>
+
+<ul>
+  <li>✔️ ‘~’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+  &lt;li&gt;사과&lt;/li&gt;
+  &lt;li calss="orange"&gt;오렌지&lt;/li&gt;
+  &lt;li&gt;바나나&lt;/li&gt; ⭐️
+  &lt;li&gt;키위&lt;/li&gt; ⭐️
+&lt;ui&gt;
+</code></pre></div></div>
+
+<h3 id="가상-클래스">가상 클래스</h3>
+
+<p>:hover : 마우스 커서가 올라가 있는 동안 선택</p>
+
+<p>:active : 마우스를 클릭하고 있는 동안 선택</p>
+
+<p>:focus : 해당 요소가 포커스 되면 선택</p>
+
+<p>:first-child : 선택자의 형제 요소 중 첫째 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits span:first-child
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt; ⭐️
+  &lt;span&gt;오렌지&lt;/span&gt;
+  &lt;p&gt;바나나&lt;/p&gt;
+  &lt;span&gt;키위&lt;/span&gt;
+&lt;div&gt;
+</code></pre></div></div>
+
+<p>:last-child : 선택자의 형제 요소 중 막내 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits span:last-child
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt;
+  &lt;span&gt;오렌지&lt;/span&gt; ⭐️
+  &lt;p&gt;바나나&lt;/p&gt;
+  &lt;span&gt;키위&lt;/span&gt;
+&lt;div&gt;
+</code></pre></div></div>
+
+<p>:nth-child(n) : 선택자의 형제 요소 중 (n)번째 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits *:nth-child(4) ❗️2n과 같이 2의 배수를 선택할 수도 있고 2n+1과 같이 홀수 선택 가능
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt;
+  &lt;span&gt;오렌지&lt;/span&gt;
+  &lt;p&gt;바나나&lt;/p&gt;
+  &lt;span&gt;키위&lt;/span&gt; ⭐️
+&lt;div&gt;
+</code></pre></div></div>
+
+<p>:not(?) : 선택자가 아닌 요소 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits *:not(span)
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt;
+  &lt;span&gt;오렌지&lt;/span&gt;
+  &lt;p&gt;바나나&lt;/p&gt; ⭐️
+  &lt;span&gt;키위&lt;/span&gt;
+&lt;div&gt;
+</code></pre></div></div>
+
+<h3 id="가상-요소">가상 요소</h3>
+
+<ul>
+  <li>before, after는 inline 속성</li>
+  <li>그 말은 즉!! 가로와 세로의 길이를 조정할 수 없다.
+    <ul>
+      <li>조정하려면 display: bolck 설정!!</li>
+    </ul>
+  </li>
+</ul>
+
+<p>::before : 선택자 요소의 내부 앞에 내용(content)을 삽입</p>
+
+<p>::after : 선택자 요소의 내부 뒤에 내용(content)을 삽입</p>
+
+<p>속성</p>
+:ET

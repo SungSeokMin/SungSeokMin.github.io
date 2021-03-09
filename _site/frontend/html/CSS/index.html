@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>React-router-dom - Happy Developer</title>
-<meta name="description" content="React Router ?">
+<!-- begin _includes/seo.html --><title>CSS - Happy Developer</title>
+<meta name="description" content="CSS 우선순위">
 
 
   <meta name="author" content="SungSeokMin">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Happy Developer">
-<meta property="og:title" content="React-router-dom">
-<meta property="og:url" content="https://sungseokmin.github.io/frontend/react/router/React_router/">
+<meta property="og:title" content="CSS">
+<meta property="og:url" content="https://sungseokmin.github.io/frontend/html/CSS/">
 
 
-  <meta property="og:description" content="React Router ?">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2021-01-31T00:00:00+09:00">
+  <meta property="og:description" content="CSS 우선순위">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2021-03-09T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sungseokmin.github.io/frontend/react/router/React_router/">
+
+<link rel="canonical" href="https://sungseokmin.github.io/frontend/html/CSS/">
 
 
 
@@ -284,58 +284,179 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">React-router-dom</h1>
+      <h1 id="page-title" class="page__title">CSS</h1>
     
     <blockquote>
-  <h2 id="react-router-">React Router ?</h2>
+  <h2 id="css-우선순위">CSS 우선순위</h2>
 </blockquote>
 
-<ul>
-  <li>SPA : Single Page Application
-    <ul>
-      <li>페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션</li>
-    </ul>
-  </li>
-</ul>
+<p>!important(무한) &gt; inline 선언(1000점) &gt; ID선택자(100점) &gt; Class선택자(10점) &gt; 태그 선택자(1점) &gt; 전체 선택자(0점)</p>
 
-<h3 id="설치-방법">설치 방법</h3>
+<blockquote>
+  <h2 id="css-선택자">CSS 선택자</h2>
+</blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install react-router-dom
+<h3 id="기본">기본</h3>
+
+<p>전체 선택자 : * <br />
+태그 선택자 : div, span, li … <br />
+클래스 선택자 : .className <br />
+아이디 선택자 : #idName <br /></p>
+
+<h3 id="복합">복합</h3>
+
+<p>일치 선택자 : 두 개의 선택자를 동시에 만족하는 요소</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; span.orange (span 태그 중 class가 orange인 요소)
+&lt;span class="orange"&gt;오렌지&lt;/span&gt; ⭐️
 </code></pre></div></div>
 
-<h3 id="사용-방법">사용 방법</h3>
+<p>복합 선택자 : 특정 선택자의 자식 요소를 선택</p>
 
 <ul>
-  <li>react-router-dom 모듈 안에는 각각의 함수들이 있다.
+  <li>✔️ ‘&gt;’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; ul &gt; .orange (ul 태그의 자식요소 중 class가 orange인 요소)
+&lt;ul&gt;
+  &lt;li class="orange"&gt;&lt;/li&gt; ⭐️
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<p>하위 선택자 : 특정 선택자의 하위 요소</p>
+
+<ul>
+  <li>✔️ ‘띄어쓰기’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; div .orange (div 태그의 하위 요소 중 class가 orange인 요소)
+&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li class="orange"&gt; ⭐️
+  &lt;/ul&gt;
+  &lt;span class="orange"&gt; ⭐️
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>인접 형제 선택자 : 특정 선택자의 다음 형제 요소 하나를 선택</p>
+
+<ul>
+  <li>✔️ ‘+’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .orange + li
+&lt;ul&gt;
+  &lt;li&gt;사과&lt;/li&gt;
+  &lt;li calss="orange"&gt;오렌지&lt;/li&gt;
+  &lt;li&gt;바나나&lt;/li&gt; ⭐️
+  &lt;li&gt;키위&lt;/li&gt;
+&lt;ui&gt;
+</code></pre></div></div>
+
+<p>일반 형제 선택자 : 특정 선택자의 다음 형제 요소 모두를 선택</p>
+
+<ul>
+  <li>✔️ ‘~’가 선택자의 기호 ✔️</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+  &lt;li&gt;사과&lt;/li&gt;
+  &lt;li calss="orange"&gt;오렌지&lt;/li&gt;
+  &lt;li&gt;바나나&lt;/li&gt; ⭐️
+  &lt;li&gt;키위&lt;/li&gt; ⭐️
+&lt;ui&gt;
+</code></pre></div></div>
+
+<h3 id="가상-클래스">가상 클래스</h3>
+
+<p>:hover : 마우스 커서가 올라가 있는 동안 선택</p>
+
+<p>:active : 마우스를 클릭하고 있는 동안 선택</p>
+
+<p>:focus : 해당 요소가 포커스 되면 선택</p>
+
+<p>:first-child : 선택자의 형제 요소 중 첫째 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits span:first-child
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt; ⭐️
+  &lt;span&gt;오렌지&lt;/span&gt;
+  &lt;p&gt;바나나&lt;/p&gt;
+  &lt;span&gt;키위&lt;/span&gt;
+&lt;div&gt;
+</code></pre></div></div>
+
+<p>:last-child : 선택자의 형제 요소 중 막내 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits span:last-child
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt;
+  &lt;span&gt;오렌지&lt;/span&gt; ⭐️
+  &lt;p&gt;바나나&lt;/p&gt;
+  &lt;span&gt;키위&lt;/span&gt;
+&lt;div&gt;
+</code></pre></div></div>
+
+<p>:nth-child(n) : 선택자의 형제 요소 중 (n)번째 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits *:nth-child(4) ❗️2n과 같이 2의 배수를 선택할 수도 있고 2n+1과 같이 홀수 선택 가능
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt;
+  &lt;span&gt;오렌지&lt;/span&gt;
+  &lt;p&gt;바나나&lt;/p&gt;
+  &lt;span&gt;키위&lt;/span&gt; ⭐️
+&lt;div&gt;
+</code></pre></div></div>
+
+<p>:not(?) : 선택자가 아닌 요소 선택</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits *:not(span)
+&lt;div coass="fruits"&gt;
+  &lt;span&gt;사과&lt;/span&gt;
+  &lt;span&gt;오렌지&lt;/span&gt;
+  &lt;p&gt;바나나&lt;/p&gt; ⭐️
+  &lt;span&gt;키위&lt;/span&gt;
+&lt;div&gt;
+</code></pre></div></div>
+
+<h3 id="가상-요소">가상 요소</h3>
+
+<ul>
+  <li>before, after는 inline 속성</li>
+  <li>그 말은 즉!! 가로와 세로의 길이를 조정할 수 없다.
     <ul>
-      <li>BrowserRouter : History API를 사용하고, url과 ui를 동기화 해주는 라우터</li>
-      <li>Route : user가 원하는 경로와 Route안의 path에 있는 경로가 일치할 경우 해당 컴포넌트를 렌더링 한다.</li>
-      <li>Link : html의 a태그와 비슷하다.</li>
-      <li>Switch : Route 태그를 순서대로 확인한 후, 첫 번째로 일치하는 Route로 렌더링 한다.</li>
-      <li>withRouter : match, history, location을 Props로 전달해주는 역할</li>
+      <li>조정하려면 display: bolck 설정!!</li>
     </ul>
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, {Component} from 'react';
-import {BrowserRouter, Route, Link, Switch, withRouter} from 'react-router-dom';
+<p>::before : 선택자 요소의 내부 앞에 내용(content)을 삽입</p>
 
-function MyPage (props) {
-  return (
-    &lt;BrowserRouter&gt;
-      &lt;div className='menu'&gt;
-        &lt;Link to='/'&gt;&lt;/Link&gt;
-        &lt;Link to='/login'&gt;로그인&lt;/Link&gt;
-        &lt;Link to='/mypage'&gt;마이페이지&lt;/Link&gt;
-      &lt;/div&gt;
-      &lt;Switch&gt;
-        &lt;Route path='/' component={Home} /&gt;
-        &lt;Route path='/login' component={Home} /&gt;
-        &lt;Route path='/mypage'component={Home} /&gt;
-      &lt;/Switch&gt;
-    &lt;/BrowserRouter&gt;
-  )
-}
+<p>::after : 선택자 요소의 내부 뒤에 내용(content)을 삽입</p>
+
+<h3 id="속성">속성</h3>
+
+<p>속성 선택자 : 속성을 포함한 요소 선택</p>
+
+<ul>
+  <li>[ATTR]</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; [type]
+&lt;input type="text" value="사과" /&gt; ⭐️
+&lt;input type="text" value="사과" /&gt; ⭐️
+&lt;input type="text" value="사과" /&gt; ⭐️
+</code></pre></div></div>
+
+<ul>
+  <li>[ATTR=”VALUE”]</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; [type="password"]
+&lt;input type="text" value="사과" /&gt;
+&lt;input type="password" value="사과" /&gt; ⭐️
+&lt;input type="text" value="사과" /&gt;
 </code></pre></div></div>
 
 <br />

@@ -1,4 +1,175 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-02-20T16:34:12+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">React-TypeScript</title><link href="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/" rel="alternate" type="text/html" title="React-TypeScript" /><published>2021-02-20T00:00:00+09:00</published><updated>2021-02-20T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react-typescript/react-typescript%20copy</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-03-09T22:45:37+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;css-우선순위&quot;&gt;CSS 우선순위&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;!important(무한) &amp;gt; inline 선언(1000점) &amp;gt; ID선택자(100점) &amp;gt; Class선택자(10점) &amp;gt; 태그 선택자(1점) &amp;gt; 전체 선택자(0점)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;css-선택자&quot;&gt;CSS 선택자&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;기본&quot;&gt;기본&lt;/h3&gt;
+
+&lt;p&gt;전체 선택자 : * &lt;br /&gt;
+태그 선택자 : div, span, li … &lt;br /&gt;
+클래스 선택자 : .className &lt;br /&gt;
+아이디 선택자 : #idName &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;복합&quot;&gt;복합&lt;/h3&gt;
+
+&lt;p&gt;일치 선택자 : 두 개의 선택자를 동시에 만족하는 요소&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; span.orange (span 태그 중 class가 orange인 요소)
+&amp;lt;span class=&quot;orange&quot;&amp;gt;오렌지&amp;lt;/span&amp;gt; ⭐️
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;복합 선택자 : 특정 선택자의 자식 요소를 선택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;✔️ ‘&amp;gt;’가 선택자의 기호 ✔️&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; ul &amp;gt; .orange (ul 태그의 자식요소 중 class가 orange인 요소)
+&amp;lt;ul&amp;gt;
+  &amp;lt;li class=&quot;orange&quot;&amp;gt;&amp;lt;/li&amp;gt; ⭐️
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;하위 선택자 : 특정 선택자의 하위 요소&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;✔️ ‘띄어쓰기’가 선택자의 기호 ✔️&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; div .orange (div 태그의 하위 요소 중 class가 orange인 요소)
+&amp;lt;div&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li class=&quot;orange&quot;&amp;gt; ⭐️
+  &amp;lt;/ul&amp;gt;
+  &amp;lt;span class=&quot;orange&quot;&amp;gt; ⭐️
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;인접 형제 선택자 : 특정 선택자의 다음 형제 요소 하나를 선택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;✔️ ‘+’가 선택자의 기호 ✔️&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; .orange + li
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;사과&amp;lt;/li&amp;gt;
+  &amp;lt;li calss=&quot;orange&quot;&amp;gt;오렌지&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;바나나&amp;lt;/li&amp;gt; ⭐️
+  &amp;lt;li&amp;gt;키위&amp;lt;/li&amp;gt;
+&amp;lt;ui&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;일반 형제 선택자 : 특정 선택자의 다음 형제 요소 모두를 선택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;✔️ ‘~’가 선택자의 기호 ✔️&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;사과&amp;lt;/li&amp;gt;
+  &amp;lt;li calss=&quot;orange&quot;&amp;gt;오렌지&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;바나나&amp;lt;/li&amp;gt; ⭐️
+  &amp;lt;li&amp;gt;키위&amp;lt;/li&amp;gt; ⭐️
+&amp;lt;ui&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;가상-클래스&quot;&gt;가상 클래스&lt;/h3&gt;
+
+&lt;p&gt;:hover : 마우스 커서가 올라가 있는 동안 선택&lt;/p&gt;
+
+&lt;p&gt;:active : 마우스를 클릭하고 있는 동안 선택&lt;/p&gt;
+
+&lt;p&gt;:focus : 해당 요소가 포커스 되면 선택&lt;/p&gt;
+
+&lt;p&gt;:first-child : 선택자의 형제 요소 중 첫째 선택&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; .fruits span:first-child
+&amp;lt;div coass=&quot;fruits&quot;&amp;gt;
+  &amp;lt;span&amp;gt;사과&amp;lt;/span&amp;gt; ⭐️
+  &amp;lt;span&amp;gt;오렌지&amp;lt;/span&amp;gt;
+  &amp;lt;p&amp;gt;바나나&amp;lt;/p&amp;gt;
+  &amp;lt;span&amp;gt;키위&amp;lt;/span&amp;gt;
+&amp;lt;div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;:last-child : 선택자의 형제 요소 중 막내 선택&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; .fruits span:last-child
+&amp;lt;div coass=&quot;fruits&quot;&amp;gt;
+  &amp;lt;span&amp;gt;사과&amp;lt;/span&amp;gt;
+  &amp;lt;span&amp;gt;오렌지&amp;lt;/span&amp;gt; ⭐️
+  &amp;lt;p&amp;gt;바나나&amp;lt;/p&amp;gt;
+  &amp;lt;span&amp;gt;키위&amp;lt;/span&amp;gt;
+&amp;lt;div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;:nth-child(n) : 선택자의 형제 요소 중 (n)번째 선택&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; .fruits *:nth-child(4) ❗️2n과 같이 2의 배수를 선택할 수도 있고 2n+1과 같이 홀수 선택 가능
+&amp;lt;div coass=&quot;fruits&quot;&amp;gt;
+  &amp;lt;span&amp;gt;사과&amp;lt;/span&amp;gt;
+  &amp;lt;span&amp;gt;오렌지&amp;lt;/span&amp;gt;
+  &amp;lt;p&amp;gt;바나나&amp;lt;/p&amp;gt;
+  &amp;lt;span&amp;gt;키위&amp;lt;/span&amp;gt; ⭐️
+&amp;lt;div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;:not(?) : 선택자가 아닌 요소 선택&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; .fruits *:not(span)
+&amp;lt;div coass=&quot;fruits&quot;&amp;gt;
+  &amp;lt;span&amp;gt;사과&amp;lt;/span&amp;gt;
+  &amp;lt;span&amp;gt;오렌지&amp;lt;/span&amp;gt;
+  &amp;lt;p&amp;gt;바나나&amp;lt;/p&amp;gt; ⭐️
+  &amp;lt;span&amp;gt;키위&amp;lt;/span&amp;gt;
+&amp;lt;div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;가상-요소&quot;&gt;가상 요소&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;before, after는 inline 속성&lt;/li&gt;
+  &lt;li&gt;그 말은 즉!! 가로와 세로의 길이를 조정할 수 없다.
+    &lt;ul&gt;
+      &lt;li&gt;조정하려면 display: bolck 설정!!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;::before : 선택자 요소의 내부 앞에 내용(content)을 삽입&lt;/p&gt;
+
+&lt;p&gt;::after : 선택자 요소의 내부 뒤에 내용(content)을 삽입&lt;/p&gt;
+
+&lt;h3 id=&quot;속성&quot;&gt;속성&lt;/h3&gt;
+
+&lt;p&gt;속성 선택자 : 속성을 포함한 요소 선택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[ATTR]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; [type]
+&amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt; ⭐️
+&amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt; ⭐️
+&amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt; ⭐️
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[ATTR=”VALUE”]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;css =&amp;gt; [type=&quot;password&quot;]
+&amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt;
+&amp;lt;input type=&quot;password&quot; value=&quot;사과&quot; /&amp;gt; ⭐️
+&amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="HTML" /><summary type="html">CSS 우선순위</summary></entry><entry><title type="html">React-TypeScript</title><link href="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/" rel="alternate" type="text/html" title="React-TypeScript" /><published>2021-02-20T00:00:00+09:00</published><updated>2021-02-20T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react-typescript/react-typescript%20copy</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/">&lt;blockquote&gt;
   &lt;h2 id=&quot;react에서-typescript-사용하기--redux&quot;&gt;React에서 TypeScript 사용하기 + Redux&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -427,6 +598,30 @@ TypeScript 문법이 익숙하지 않았지만 계속 따라 쳐보고 생각하
 
 &lt;p&gt;&lt;img width=&quot;473&quot; alt=&quot;스크린샷 2021-02-17 오전 11 49 40&quot; src=&quot;https://user-images.githubusercontent.com/72539723/108149446-38bc0f00-7116-11eb-8d4f-9e06b388dde5.png&quot; /&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;interface 상속&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;interface Person {
+  name: string;
+  age?: number;
+}
+
+interface Developer {
+  skills: string[];
+}
+
+const person extends Person = {
+  name: '김코딩',
+  age: 27,
+}
+
+const myInfo extends Developer{
+  name: '성석민',
+  skills: [ 'javascript', 'typescript' ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;enum--literal-type&quot;&gt;Enum &amp;amp; Literal Type&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -446,15 +641,31 @@ TypeScript 문법이 익숙하지 않았지만 계속 따라 쳐보고 생각하
 &lt;h3 id=&quot;type-aliases&quot;&gt;Type Aliases&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;변수의 타입이 string이 올 수도 있고 number 또는 어떠한 타입이 올 수 있는 경우 가독성을 위하여 사용한다&lt;/li&gt;
+  &lt;li&gt;interface와 동일하게 ㅅ&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ex) string이거나 number일 경우
-type StrOrNum = string | number;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type Person = {
+  name: string;
+  age?: number;
+}
 
-// 원래 같았으면 오류가 나겠지만 위의 Aliases 덕분에 오류가 나지 않는다
-const WeDontKnow : StrOrNum = 'string 타입 입니다';
-WeDontKnow : StrOrNum = 'number 타입 입니다';
+type Developer = Person &amp;amp; {
+  skills: string[];
+}
+
+const person: Person = {
+  name: '김코딩',
+  age: 27,
+}
+
+const myInfo: Developer = {
+  name: '성석민',
+  skills: [ 'javascript', 'typescript' ]
+}
+
+type People = Person[];
+
+const people: People = [person, myInfo]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;접근제한자access-modifiers&quot;&gt;접근제한자(Access Modifiers)&lt;/h3&gt;
@@ -1321,166 +1532,4 @@ http.createServer((request, response) =&amp;gt; {
   }
 
 }).listen(3000);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="node" /><summary type="html">Node.js ?</summary></entry><entry><title type="html">React</title><link href="https://sungseokmin.github.io/frontend/react/React-frontend/" rel="alternate" type="text/html" title="React" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react/React-frontend</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react/React-frontend/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;react-&quot;&gt;React ?&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;페이스북이 만든 라이브러리&lt;/li&gt;
-  &lt;li&gt;JSX : javascript 확장 언어&lt;/li&gt;
-  &lt;li&gt;MVC pattern 중 V(View)를 담당한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;반드시 하나의 엘리먼트로 감싸야한다.&lt;/li&gt;
-  &lt;li&gt;javascript 코드를 적용하고 싶을 때는 {} 안에 작성한다.&lt;/li&gt;
-  &lt;li&gt;JSX 내부에서는 if문 대신 삼함연산자를 사용한다.&lt;/li&gt;
-  &lt;li&gt;Component System
-    &lt;ul&gt;
-      &lt;li&gt;Component : 웹을 잘게 잘게 쪼갠 것
-        &lt;ul&gt;
-          &lt;li&gt;독립적 기능, 재사용 가능&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;조건부-렌더링&quot;&gt;조건부 렌더링&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;JSX 문법 에서는 삼항연산자를 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  1+1 === 2 ? (&amp;lt;div&amp;gt;정답&amp;lt;/div&amp;gt;) : (&amp;lt;div&amp;gt;오답&amp;lt;/div&amp;gt;)
-
-  // 조건이 true일 때만 보여준다.
-  1+1 === 2 &amp;amp;&amp;amp; (&amp;lt;div&amp;gt;정답&amp;lt;/div&amp;gt;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;설치-방법&quot;&gt;설치 방법&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;터미널을 켜고 다음과 같이 수행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npx create-react-app [폴더 이름]
-cd [폴더 이름]
-
-// 실행
-npm start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;function-component-vs-class-component&quot;&gt;function Component VS class Component&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Component : JavaScript 함수와 유사하며, 화면에 어떻게 표시되는지를 기술하는 React 엘리먼트를 반환한다.&lt;/li&gt;
-  &lt;li&gt;props : 부모 Component로부터 물려받은 속성
-    &lt;ul&gt;
-      &lt;li&gt;순수 함수처럼 작동해야한다.
-        &lt;ul&gt;
-          &lt;li&gt;순수 함수 : 입력값을 바꾸려 하지 않고 항상 동일한 입력값에 대해 동일한 결과를 반환해야 한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;state : 해당 Component에서 사용할 수 있는 상태&lt;/li&gt;
-  &lt;li&gt;state는 직접적인 수정이 불가능하다!! 반드시 setState를 통해 state의 값을 변경해준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;function-component&quot;&gt;function Component&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Login(props) {
-  return &amp;lt;h1&amp;gt;로그인 화면&amp;lt;/h1&amp;gt;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;class-component&quot;&gt;class Component&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Login exntends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id = 'sung';    // 직접 수정 불가 !! 변경하려면 아래와 같이 setState를 사용해야 한다.
-    };
-  }
-
-  changeId = () =&amp;gt; {
-    this.setState({id: 'seok'});
-  }
-
-  render() {
-    return &amp;lt;h1&amp;gt;로그인 화면&amp;lt;h1&amp;gt;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;흐름을-이해해보세요-&quot;&gt;흐름을 이해해보세요 !&lt;/h3&gt;
-
-&lt;p&gt;index.js&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, {Component} from 'react';
-import Mypage from './Mypage.js' // .js는 생략 가능
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    // id, age, hobby라는 state(상태)를 가지고 있다.
-    this.setState = {
-      id : 'sung',
-      age : 27,
-      hobby: 'coding'
-    }
-  }
-
-  render() {
-    return &amp;lt;div&amp;gt;      // id와 age라는 이름으로 Mypage 컴포넌트로 props를 전달
-      &amp;lt;Mypage id={this.state.id} age={this.state.age} /&amp;gt;
-    &amp;lt;/div&amp;gt;
-  }
-}
-
-export default App;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;mypage.js&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React from 'react'
-
-// 구조분해할당으로 값을 받아올 수 있다.
-const Mypage = ({id, age}) =&amp;gt; {
-  return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;div&amp;gt;{id}&amp;lt;/div&amp;gt;
-      &amp;lt;div&amp;gt;{age}&amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-  )
-}
-
-또는
-
-const Mypage = (props) =&amp;gt; {
-  return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;div&amp;gt;{this.props.id}&amp;lt;/div&amp;gt;
-      &amp;lt;div&amp;gt;{this.props.age}&amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-  )
-}
-
-export default Mypage
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;react-lifecycle&quot;&gt;React Lifecycle&lt;/h3&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constructor -&amp;gt; render -&amp;gt; componentDidMount -&amp;gt;
-(setState/props 바뀔 때) -&amp;gt; ComponentDidUpdate -&amp;gt; render -&amp;gt;
-(부모가 자식 component를 없앨 때 ) -&amp;gt; componentWillUmmount -&amp;gt; 소멸
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/lifecycle.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="React" /><summary type="html">React ?</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="node" /><summary type="html">Node.js ?</summary></entry></feed>

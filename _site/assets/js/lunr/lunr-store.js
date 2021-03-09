@@ -82,4 +82,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/",
         "teaser": null
+      },{
+        "title": "CSS",
+        "excerpt":"CSS 우선순위 !important(무한) &gt; inline 선언(1000점) &gt; ID선택자(100점) &gt; Class선택자(10점) &gt; 태그 선택자(1점) &gt; 전체 선택자(0점) CSS 선택자 기본 전체 선택자 : * 태그 선택자 : div, span, li … 클래스 선택자 : .className 아이디 선택자 : #idName 복합 일치 선택자 : 두 개의 선택자를 동시에 만족하는 요소 css =&gt;...","categories": ["frontend","HTML"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/html/CSS/",
+        "teaser": null
       }]
