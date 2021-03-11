@@ -1,4 +1,10 @@
-I"l<blockquote>
+I"� <blockquote>
+  <h2 id="css-우선순위">CSS 우선순위</h2>
+</blockquote>
+
+<p>!important(무한) &gt; inline 선언(1000점) &gt; ID선택자(100점) &gt; Class선택자(10점) &gt; 태그 선택자(1점) &gt; 전체 선택자(0점)</p>
+
+<blockquote>
   <h2 id="css-선택자">CSS 선택자</h2>
 </blockquote>
 
@@ -117,14 +123,143 @@
 
 <p>:not(?) : 선택자가 아닌 요소 선택</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div coass="fruits"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; .fruits *:not(span)
+&lt;div coass="fruits"&gt;
   &lt;span&gt;사과&lt;/span&gt;
   &lt;span&gt;오렌지&lt;/span&gt;
-  &lt;p&gt;바나나&lt;/p&gt;
-  &lt;span&gt;키위&lt;/span&gt; ⭐️
+  &lt;p&gt;바나나&lt;/p&gt; ⭐️
+  &lt;span&gt;키위&lt;/span&gt;
 &lt;div&gt;
 </code></pre></div></div>
 
-<p>가상 요소
-속성</p>
+<h3 id="가상-요소">가상 요소</h3>
+
+<ul>
+  <li>before, after는 inline 속성</li>
+  <li>그 말은 즉!! 가로와 세로의 길이를 조정할 수 없다.
+    <ul>
+      <li>조정하려면 display: bolck 설정!!</li>
+    </ul>
+  </li>
+</ul>
+
+<p>::before : 선택자 요소의 내부 앞에 내용(content)을 삽입</p>
+
+<p>::after : 선택자 요소의 내부 뒤에 내용(content)을 삽입</p>
+
+<h3 id="속성">속성</h3>
+
+<p>속성 선택자 : 속성을 포함한 요소 선택</p>
+
+<ul>
+  <li>[ATTR]</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; [type]
+&lt;input type="text" value="사과" /&gt; ⭐️
+&lt;input type="text" value="사과" /&gt; ⭐️
+&lt;input type="text" value="사과" /&gt; ⭐️
+</code></pre></div></div>
+
+<ul>
+  <li>[ATTR=”VALUE”]</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css =&gt; [type="password"]
+&lt;input type="text" value="사과" /&gt;
+&lt;input type="password" value="사과" /&gt; ⭐️
+&lt;input type="text" value="사과" /&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="css-단위">CSS 단위</h2>
+</blockquote>
+
+<p>px : 픽셀<br />
+% : 상대적 백분율<br />
+em : 요소의 글꼴 크기<br />
+rem : 루트 요소(html)의 글꼴 크기<br />
+vw : 뷰포트 가로 너비의 백분율<br />
+vh : 뷰포트 세로 너비의 백분율<br /></p>
+
+<blockquote>
+  <h2 id="css-속성">CSS 속성</h2>
+</blockquote>
+
+<h4 id="width너비--height높이">width(너비) &amp; height(높이)</h4>
+
+<ul>
+  <li>
+    <p>기본 값(auto) : 브라우저가 자동으로 너비를 계산</p>
+  </li>
+  <li>
+    <p>개별 속성<br />
+max-width, min-width
+max-height, max-height</p>
+  </li>
+</ul>
+
+<h4 id="margin외부여백">margin(외부여백)</h4>
+
+<ul>
+  <li>기본 값 : 0</li>
+  <li>단위 : px, em, wv 등 단위로 지정</li>
+  <li>auto : 가운데 정렬</li>
+</ul>
+
+<p>네 가지 표기 방법</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. margin : 10px; =&gt; 상,하,좌,우
+2. margin : 10px 20px; =&gt; (상,하):10, (좌,우):20
+3. margin : 10px 20px 30px =&gt; 상:10, (좌,우):20, 하:30
+4. margin : 10px 20px 30px 40px; =&gt; 상:10, 우:20, 하:30, 좌:40
+</code></pre></div></div>
+
+<ul>
+  <li>개별 속성<br />
+margin-top, margin-bottom, margin-left, margin-right</li>
+</ul>
+
+<h4 id="padding내부여백">padding(내부여백)</h4>
+
+<ul>
+  <li>기본 값 : 0</li>
+  <li>단위 : px, em, vw등 단위로 지정</li>
+  <li>% : 부모 요소의 가로 너비에 대한 비율로 지정</li>
+</ul>
+
+<p>네 가지 표기 방법</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. padding : 10px; =&gt; 상,하,좌,우
+2. padding : 10px 20px; =&gt; (상,하):10, (좌,우):20
+3. padding : 10px 20px 30px =&gt; 상:10, (좌,우):20, 하:30
+4. padding : 10px 20px 30px 40px; =&gt; 상:10, 우:20, 하:30, 좌:40
+</code></pre></div></div>
+
+<ul>
+  <li>개별 속성<br />
+padding-top, padding-bottom, padding-left, padding-right</li>
+</ul>
+
+<h4 id="border테두리">border(테두리)</h4>
+
+<p>border : 선-두께 선-종류 선-색상</p>
+
+<ul>
+  <li>기본 값 : medium none black</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>border : 1px solid red;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>개별 속성<br /></p>
+
+    <ul>
+      <li>border-width : margin, padding의 네 가지 표기 방법과 동일<br /></li>
+      <li>border-</li>
+    </ul>
+  </li>
+</ul>
 :ET

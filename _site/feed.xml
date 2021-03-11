@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-03-09T22:45:37+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-03-11T21:42:19+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
   &lt;h2 id=&quot;css-우선순위&quot;&gt;CSS 우선순위&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -169,7 +169,276 @@
 &amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt;
 &amp;lt;input type=&quot;password&quot; value=&quot;사과&quot; /&amp;gt; ⭐️
 &amp;lt;input type=&quot;text&quot; value=&quot;사과&quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="HTML" /><summary type="html">CSS 우선순위</summary></entry><entry><title type="html">React-TypeScript</title><link href="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/" rel="alternate" type="text/html" title="React-TypeScript" /><published>2021-02-20T00:00:00+09:00</published><updated>2021-02-20T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react-typescript/react-typescript%20copy</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;css-단위&quot;&gt;CSS 단위&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;px : 픽셀&lt;br /&gt;
+% : 상대적 백분율&lt;br /&gt;
+em : 요소의 글꼴 크기&lt;br /&gt;
+rem : 루트 요소(html)의 글꼴 크기&lt;br /&gt;
+vw : 뷰포트 가로 너비의 백분율&lt;br /&gt;
+vh : 뷰포트 세로 너비의 백분율&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;css-속성&quot;&gt;CSS 속성&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;width너비--height높이&quot;&gt;width(너비) &amp;amp; height(높이)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;기본 값(auto) : 브라우저가 자동으로 너비를 계산&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;개별 속성&lt;br /&gt;
+max-width, min-width
+max-height, max-height&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;margin외부여백&quot;&gt;margin(외부여백)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본 값 : 0&lt;/li&gt;
+  &lt;li&gt;단위 : px, em, wv 등 단위로 지정&lt;/li&gt;
+  &lt;li&gt;auto : 가운데 정렬&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;네 가지 표기 방법&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. margin : 10px; =&amp;gt; 상,하,좌,우
+2. margin : 10px 20px; =&amp;gt; (상,하):10, (좌,우):20
+3. margin : 10px 20px 30px =&amp;gt; 상:10, (좌,우):20, 하:30
+4. margin : 10px 20px 30px 40px; =&amp;gt; 상:10, 우:20, 하:30, 좌:40
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개별 속성&lt;br /&gt;
+margin-top, margin-bottom, margin-left, margin-right&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;padding내부여백&quot;&gt;padding(내부여백)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본 값 : 0&lt;/li&gt;
+  &lt;li&gt;단위 : px, em, vw등 단위로 지정&lt;/li&gt;
+  &lt;li&gt;% : 부모 요소의 가로 너비에 대한 비율로 지정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;네 가지 표기 방법&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. padding : 10px; =&amp;gt; 상,하,좌,우
+2. padding : 10px 20px; =&amp;gt; (상,하):10, (좌,우):20
+3. padding : 10px 20px 30px =&amp;gt; 상:10, (좌,우):20, 하:30
+4. padding : 10px 20px 30px 40px; =&amp;gt; 상:10, 우:20, 하:30, 좌:40
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개별 속성&lt;br /&gt;
+padding-top, padding-bottom, padding-left, padding-right&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;border테두리&quot;&gt;border(테두리)&lt;/h4&gt;
+
+&lt;p&gt;border : 선-두께 선-종류 선-색상&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본 값 : medium none black&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;border : 1px solid red;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;개별 속성&lt;br /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;border-width : margin, padding의 네 가지 표기 방법과 동일&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;border-style : margin, padding의 네 가지 표기 방법과 동일&lt;br /&gt;
+        &lt;ul&gt;
+          &lt;li&gt;solid, dashed(파선), dotted(점선) 등&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;border-color : margin, padding의 네 가지 표기 방법과 동일&lt;br /&gt;
+        &lt;ul&gt;
+          &lt;li&gt;색상, transparent(투명)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;border-radius : px, em, % 등 단위로 지정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;색상 표현&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;색상 이름 : 브라우저에서 제공하는 색상 이름 &lt;br /&gt;
+ex) red, royalblue, orange …&lt;/li&gt;
+      &lt;li&gt;Hex 색상코드 : 16진수 색상 ex) #000, #FFFFFF&lt;/li&gt;
+      &lt;li&gt;RGB : 빛의 삼원색 ex) rgb(255, 255, 255)&lt;/li&gt;
+      &lt;li&gt;RGBA : 빛의 삼원색 + 투명도 ex)rgba(0, 0, 0, 0.5)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;box-sizing&quot;&gt;box-sizing&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본 값 : content-box(요소의 내용으로 크기 계산)&lt;/li&gt;
+  &lt;li&gt;border-box : 요소의 내용 + padding + border로 크기 계산
+    &lt;ul&gt;
+      &lt;li&gt;지정한 가로, 세로크기를 그대로 유지하기 위해서 사용하는 속성&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;overflow&quot;&gt;overflow&lt;/h4&gt;
+
+&lt;p&gt;요소의 크기 이상으로 내용이 넘쳤을 때, 보여짐을 제어하는 속성&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;기본 값(visible) : 넘친 내용을 그대로 보여줌&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;개별 속성&lt;br /&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;hidden : 넘친 내용을 잘라냄&lt;/li&gt;
+      &lt;li&gt;auto : 넘친 내용이 있는 경우에만 잘라내고 스크롤바 생성&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;display&quot;&gt;display&lt;/h4&gt;
+
+&lt;p&gt;요소의 화면 출력(보여짐) 특성&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개별 속성&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;block : 상자(레이아웃) 요소&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;inline : 글자 요소&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;inline-block : 글자 + 상자 요소&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;flex : 플렉스 박스 (1차원 레이아웃)&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;grid : 그리도 (2차원 레이아웃)&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;none : 보여짐 특성 없음, 화면에서 사라짐&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;투명도opacity&quot;&gt;투명도(opacity)&lt;/h4&gt;
+
+&lt;p&gt;0부터 1 사이의 소수점 숫자&lt;/p&gt;
+
+&lt;h4 id=&quot;글꼴&quot;&gt;글꼴&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;font-style : 글자의 기울기
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : normal&lt;/li&gt;
+      &lt;li&gt;이텔릭체 : italic&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;font-weight : 글자의 두께
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : normal(400)&lt;/li&gt;
+      &lt;li&gt;두껍게 : bold, 700&lt;/li&gt;
+      &lt;li&gt;범위 : 100단위의 숫자 9개 (100 ~ 900)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;font-size : 글자의 크기
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : normal (16px)&lt;/li&gt;
+      &lt;li&gt;단위 : px, em, rem 등 단위로 지정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;line-height : 한 줄의 높이, 행간과 유사
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : normal&lt;/li&gt;
+      &lt;li&gt;숫자 : 요소의 글꼴 크기의 배수로 지정
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;line-height : 1.4  ex) 글꼴 크기가 16px이라고 가정하면 높이는 16 * 1.4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;문자&quot;&gt;문자&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;color : 색깔
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : rgb(0,0,0) =&amp;gt; 검정색&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;text-align : 문자의 정렬방식
+    &lt;ul&gt;
+      &lt;li&gt;left(기본값), right, center&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;text-decoration : 문자의 장식(선)
+    &lt;ul&gt;
+      &lt;li&gt;none(기본값), underline, line-through&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;배경&quot;&gt;배경&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;background-color : 요소의 배경 색상
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : transparent&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;background-image : 요소의 배경 이미지 삽입
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : none&lt;/li&gt;
+      &lt;li&gt;이미지 경로 : url(“경로”)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;background-repeat : 요소의 배경 이미지 반복
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : repeat(이미지를 수직, 수평 반복)&lt;/li&gt;
+      &lt;li&gt;repeat-x : 이미지를 수평 반복&lt;/li&gt;
+      &lt;li&gt;repeat-y : 이미지를 수직 반복&lt;/li&gt;
+      &lt;li&gt;no-repeat : 반복 없음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;background-position : 요소의 배경 이미지 위치
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : 0% 0%&lt;/li&gt;
+      &lt;li&gt;방향 : top, bottom, left, right, center
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;background-position : top right; =&amp;gt; 오른쪽 상단에 위치
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;단위 : px, em, rem 등 단위로 지정
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;background-position : 100px 30px; =&amp;gt; 축으로 부터 가로 100px, 세로 30px
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;background-size : 요소의 배경 이미지 크기
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : auto&lt;/li&gt;
+      &lt;li&gt;단위 : px, em, rem 등 단위로 지정&lt;/li&gt;
+      &lt;li&gt;cover : 비율을 유지, 요소의 더 넓은 너비에 맞춤&lt;/li&gt;
+      &lt;li&gt;contain : 비율을 유지, 요소의 더 짧은 너비에 맞춤&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;background-attachment : 요소의 배경 이미지 스크롤 특성
+    &lt;ul&gt;
+      &lt;li&gt;기본 값 : scroll, 이미지가 요소를 따라서 같이 스크롤&lt;/li&gt;
+      &lt;li&gt;fixed : 이미지가 뷰포트에 고정, 스크롤 X&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="HTML" /><summary type="html">CSS 우선순위</summary></entry><entry><title type="html">React-TypeScript</title><link href="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/" rel="alternate" type="text/html" title="React-TypeScript" /><published>2021-02-20T00:00:00+09:00</published><updated>2021-02-20T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react-typescript/react-typescript%20copy</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/">&lt;blockquote&gt;
   &lt;h2 id=&quot;react에서-typescript-사용하기--redux&quot;&gt;React에서 TypeScript 사용하기 + Redux&lt;/h2&gt;
 &lt;/blockquote&gt;
 
