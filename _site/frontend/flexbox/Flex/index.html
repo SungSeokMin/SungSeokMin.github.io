@@ -290,10 +290,56 @@
   <h3 id="flexbox-부모-속성">FlexBox (부모 속성)</h3>
 </blockquote>
 
-<p>flex-direction: 주축 - 기본 값 : row<br />
-flex-wrap : 창의 너비에 따라 줄 바꿈 - 기본 값 : nowrap<br />
-justify-content : 중심축과 기준으로 정렬 - 기본 값 : flex-start<br />
-align-itmes : 교차축을 기준으로 정렬 - 기본 값 : flex-start<br /></p>
+<ul>
+  <li>
+    <p>Flex Container</p>
+
+    <ul>
+      <li>flex-flow</li>
+      <li>flex-direction : 주 축(Main-Axis)을 설정
+        <ul>
+          <li>row(기본 값) : 행 축(좌 =&gt; 우)</li>
+          <li>row-reverse : 행 축(우 =&gt; 좌)</li>
+          <li>column : 열 축(위 =&gt; 아래)</li>
+          <li>column-reverse : 열 축(아래 =&gt; 위)</li>
+        </ul>
+      </li>
+      <li>flex-wrap : Flex Items 묶음(줄 바꿈) 여부
+        <ul>
+          <li>nowrap(기본 값) : 묶음(줄 바꿈) 없음</li>
+          <li>wrap : 여러 줄로 묶음</li>
+        </ul>
+      </li>
+      <li>justify-content : 주 축의 정렬 방법
+        <ul>
+          <li>flex-start(기본 값) : Flex Items를 시작점으로 정렬</li>
+          <li>flex-end : Flex Items를 끝점으로 정렬</li>
+          <li>center : Flex Items를 가운데 정렬</li>
+          <li>space-between : 각 Flex Item 사이를 균등하게 정렬</li>
+          <li>space-around : 각 Flex Item의 외부 여백을 균등하게 정렬</li>
+        </ul>
+      </li>
+      <li>align-content : 교차 축의 여러 줄 정렬 방법 <br />❗️ 여러 줄 주의 ! wrap을 통해 줄 바꿈이 일어나야 한다.
+        <ul>
+          <li>stretch(기본 값) : Flex Items를 시작점으로 정렬</li>
+          <li>flex-start : Flex Items를 시작점으로 정렬</li>
+          <li>flex-end : Flex Items를 끝점으로 정렬</li>
+          <li>center : Flex Items를 가운데 정렬</li>
+          <li>space-between : 각 Flex Item 사이를 균등하게 정렬</li>
+          <li>space-around : 각 Flex Item의 외부 여백을 균등하게 정렬</li>
+        </ul>
+      </li>
+      <li>align-items : 교차 축의 한 줄 정렬 방법
+        <ul>
+          <li>stretch(기본 값) : Flex Items를 교차 축으로 늘림</li>
+          <li>flex-start : Flex Items를 각 줄의 시작점으로 정렬</li>
+          <li>flex-end : Flex Items를 각 줄의 끝점으로 정렬</li>
+          <li>center : Flex Items를 각 줄의 가운데 정렬</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h4 id="가로로-정렬된-모습을-볼-수-있다">가로로 정렬된 모습을 볼 수 있다.</h4>
 
@@ -370,6 +416,39 @@ align-items: center;
 <blockquote>
   <h3 id="flexbox-자식-속성">FlexBox (자식 속성)</h3>
 </blockquote>
+
+<ul>
+  <li>Flex Items
+    <ul>
+      <li>order : Flex Item의 순서
+        <ul>
+          <li>0(기본 값) : 순서 없음</li>
+          <li>숫자 : 숫자가 작을 수록 먼저</li>
+        </ul>
+      </li>
+      <li>flex</li>
+      <li>flex-grow : Flex Item의 증가 너비 비율
+        <ul>
+          <li>0(기본 값) : 증가 비율 없음</li>
+          <li>숫자 : 증가 비율</li>
+        </ul>
+      </li>
+      <li>flex-shrink : Flex Item의 감소 너비 비율
+        <ul>
+          <li>1(기본 값) : Flex Container 너비에 따라 감소 비율 적용</li>
+          <li>숫자 : 감소 비율</li>
+        </ul>
+      </li>
+      <li>flex-basis : Flex Item의 공간 배분 전 기본 너비
+        <ul>
+          <li>auto(기본 값) : 요소의 Content 너비</li>
+          <li>단위 : px, em, rem 등 단위로 지정</li>
+        </ul>
+      </li>
+      <li>align-self</li>
+    </ul>
+  </li>
+</ul>
 
 <h4 id="flex-basis">flex-basis</h4>
 
@@ -494,7 +573,7 @@ background-color: yellow;
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          7 분 소요
         
       </span>
     
@@ -654,7 +733,7 @@ background-color: yellow;
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     

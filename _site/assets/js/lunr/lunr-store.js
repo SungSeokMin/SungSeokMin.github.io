@@ -54,7 +54,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FlexBox",
-        "excerpt":"FlexBox (부모 속성) flex-direction: 주축 - 기본 값 : row flex-wrap : 창의 너비에 따라 줄 바꿈 - 기본 값 : nowrap justify-content : 중심축과 기준으로 정렬 - 기본 값 : flex-start align-itmes : 교차축을 기준으로 정렬 - 기본 값 : flex-start 가로로 정렬된 모습을 볼 수 있다. display: flex;...","categories": ["frontend","flexbox"],
+        "excerpt":"FlexBox (부모 속성) Flex Container flex-flow flex-direction : 주 축(Main-Axis)을 설정 row(기본 값) : 행 축(좌 =&gt; 우) row-reverse : 행 축(우 =&gt; 좌) column : 열 축(위 =&gt; 아래) column-reverse : 열 축(아래 =&gt; 위) flex-wrap : Flex Items 묶음(줄 바꿈) 여부 nowrap(기본 값) : 묶음(줄 바꿈) 없음 wrap...","categories": ["frontend","flexbox"],
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/flexbox/Flex/",
         "teaser": null

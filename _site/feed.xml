@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-03-11T21:42:19+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-03-13T15:51:07+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
   &lt;h2 id=&quot;css-우선순위&quot;&gt;CSS 우선순위&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -190,7 +190,7 @@ vh : 뷰포트 세로 너비의 백분율&lt;br /&gt;&lt;/p&gt;
   &lt;h2 id=&quot;css-속성&quot;&gt;CSS 속성&lt;/h2&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;width너비--height높이&quot;&gt;width(너비) &amp;amp; height(높이)&lt;/h4&gt;
+&lt;h4 id=&quot;너비width--높이height&quot;&gt;너비(width) &amp;amp; 높이(height)&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -203,7 +203,7 @@ max-height, max-height&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;margin외부여백&quot;&gt;margin(외부여백)&lt;/h4&gt;
+&lt;h4 id=&quot;외부여백margin&quot;&gt;외부여백(margin)&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;기본 값 : 0&lt;/li&gt;
@@ -224,7 +224,7 @@ max-height, max-height&lt;/p&gt;
 margin-top, margin-bottom, margin-left, margin-right&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;padding내부여백&quot;&gt;padding(내부여백)&lt;/h4&gt;
+&lt;h4 id=&quot;내부여백padding&quot;&gt;내부여백(padding)&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;기본 값 : 0&lt;/li&gt;
@@ -245,7 +245,7 @@ margin-top, margin-bottom, margin-left, margin-right&lt;/li&gt;
 padding-top, padding-bottom, padding-left, padding-right&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;border테두리&quot;&gt;border(테두리)&lt;/h4&gt;
+&lt;h4 id=&quot;테두리border&quot;&gt;테두리(border)&lt;/h4&gt;
 
 &lt;p&gt;border : 선-두께 선-종류 선-색상&lt;/p&gt;
 
@@ -336,7 +336,7 @@ ex) red, royalblue, orange …&lt;/li&gt;
 
 &lt;p&gt;0부터 1 사이의 소수점 숫자&lt;/p&gt;
 
-&lt;h4 id=&quot;글꼴&quot;&gt;글꼴&lt;/h4&gt;
+&lt;h4 id=&quot;글꼴font&quot;&gt;글꼴(font)&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;font-style : 글자의 기울기
@@ -369,7 +369,7 @@ ex) red, royalblue, orange …&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;문자&quot;&gt;문자&lt;/h4&gt;
+&lt;h4 id=&quot;문자text&quot;&gt;문자(text)&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;color : 색깔
@@ -389,7 +389,7 @@ ex) red, royalblue, orange …&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;배경&quot;&gt;배경&lt;/h4&gt;
+&lt;h4 id=&quot;배경background&quot;&gt;배경(background)&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;background-color : 요소의 배경 색상
@@ -436,6 +436,124 @@ ex) red, royalblue, orange …&lt;/li&gt;
     &lt;ul&gt;
       &lt;li&gt;기본 값 : scroll, 이미지가 요소를 따라서 같이 스크롤&lt;/li&gt;
       &lt;li&gt;fixed : 이미지가 뷰포트에 고정, 스크롤 X&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;배치position&quot;&gt;배치(position)&lt;/h4&gt;
+
+&lt;p&gt;요소의 위치 지정 기준 (음수 가능)&lt;/p&gt;
+
+&lt;p&gt;✔️ 요소의 쌓임 순서&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;요소에 position 속성의 값이 있는 경우 위에 쌓임.&lt;/li&gt;
+  &lt;li&gt;1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임.&lt;/li&gt;
+  &lt;li&gt;1번, 2번 조건가지 같은 경우, HTML의 다음 구조일 수록 위에 쌓임.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본 값 : static (기준 없음)&lt;/li&gt;
+  &lt;li&gt;relative : 요소 자신을 기준&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;position: relative; =&amp;gt; 화면에는 아무런 변화가 없다.
+top : 30px;
+left: 20px;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;❗️ absolute, fixed가 지정된 요소는 display 속성이 bolck으로 변경 됨 ❗️&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;absolute : 위치 상 부모 요소를 기준&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 위치 상 부모 요소를 기준으로 하기 때문에 부모 요소에 relative 속성을 부여해줘야 한다.
+position : absolute;
+top : 30px;
+bottom : 30px;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;fixed : 뷰포트(브라우저)를 기준&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;개별 속성&lt;br /&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;top, bottom, left, right&lt;/li&gt;
+      &lt;li&gt;z-index
+        &lt;ul&gt;
+          &lt;li&gt;기본 값 : auto&lt;/li&gt;
+          &lt;li&gt;숫자 : 숫자가 높을 수록 위에 쌓임&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;전환transition&quot;&gt;전환(transition)&lt;/h4&gt;
+
+&lt;p&gt;요소의 전환(시작과 끝) 효과를 지정하는 단축 속성&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;trasition : 속성명 &lt;span style=&quot;color:red&quot;&gt;지속시간&lt;/span&gt; 타이밍함수 대기시간;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;transition-property(속성명) :전환 효과를 사용할 속성 이름을 지정
+        &lt;ul&gt;
+          &lt;li&gt;all(기본 값) : 모든 속성에 적용&lt;/li&gt;
+          &lt;li&gt;속성이름 : 전환 효과를 사용할 속성 이름 명시&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;transition-duration(지속시간) : 전환 효과의 시간을 지정
+        &lt;ul&gt;
+          &lt;li&gt;0s(기본 값) : 전환 효과 없음&lt;/li&gt;
+          &lt;li&gt;시간 : 지속시간(s)을 지정&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;transition-timing-funciton : 전환 효과의 타이밍(Easing) 함수를 지정
+        &lt;ul&gt;
+          &lt;li&gt;ease(기본 값) : 느리게 - 빠르게 - 느리게&lt;/li&gt;
+          &lt;li&gt;linear : 일정하게&lt;/li&gt;
+          &lt;li&gt;ease-in : 느리게 - 빠르게&lt;/li&gt;
+          &lt;li&gt;ease-out : 빠르게 - 느리게&lt;/li&gt;
+          &lt;li&gt;ease-in-out : 느리게 쁘라게 - 느리게&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;transition-delay : 전환 효과가 몇 초 뒤에 시작할지 대기시간을 지정
+        &lt;ul&gt;
+          &lt;li&gt;0s(기본 값) : 대기시간 없음&lt;/li&gt;
+          &lt;li&gt;시간 : 대기시간(s)을 지정&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;변환transform&quot;&gt;변환(transform)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;2D 변환 함수&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;translate(x,y) : 이동(x축, y축)&lt;/li&gt;
+      &lt;li&gt;translateX(x) : 이동(x축)&lt;/li&gt;
+      &lt;li&gt;translateY(y) : 이동(y축)&lt;/li&gt;
+      &lt;li&gt;scale(x,y) : 크기(x축, y축)&lt;/li&gt;
+      &lt;li&gt;rotate(degree) : 회전(각도)&lt;/li&gt;
+      &lt;li&gt;skewX(x) : 기울임(x축)&lt;/li&gt;
+      &lt;li&gt;skewY(y) : 기울임(y축)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;3D 변환 함수&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;rotateX(x) : 회전(x축)&lt;/li&gt;
+      &lt;li&gt;rotateY(y) : 회전(y축)&lt;/li&gt;
+      &lt;li&gt;perspective(n) : 원근법(거리)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="HTML" /><summary type="html">CSS 우선순위</summary></entry><entry><title type="html">React-TypeScript</title><link href="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/" rel="alternate" type="text/html" title="React-TypeScript" /><published>2021-02-20T00:00:00+09:00</published><updated>2021-02-20T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/react-typescript/react-typescript%20copy</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/">&lt;blockquote&gt;
@@ -1148,10 +1266,56 @@ dispatch(login(인자&amp;lt;없을 경우 생략&amp;gt;));
   &lt;h3 id=&quot;flexbox-부모-속성&quot;&gt;FlexBox (부모 속성)&lt;/h3&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;flex-direction: 주축 - 기본 값 : row&lt;br /&gt;
-flex-wrap : 창의 너비에 따라 줄 바꿈 - 기본 값 : nowrap&lt;br /&gt;
-justify-content : 중심축과 기준으로 정렬 - 기본 값 : flex-start&lt;br /&gt;
-align-itmes : 교차축을 기준으로 정렬 - 기본 값 : flex-start&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Flex Container&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;flex-flow&lt;/li&gt;
+      &lt;li&gt;flex-direction : 주 축(Main-Axis)을 설정
+        &lt;ul&gt;
+          &lt;li&gt;row(기본 값) : 행 축(좌 =&amp;gt; 우)&lt;/li&gt;
+          &lt;li&gt;row-reverse : 행 축(우 =&amp;gt; 좌)&lt;/li&gt;
+          &lt;li&gt;column : 열 축(위 =&amp;gt; 아래)&lt;/li&gt;
+          &lt;li&gt;column-reverse : 열 축(아래 =&amp;gt; 위)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;flex-wrap : Flex Items 묶음(줄 바꿈) 여부
+        &lt;ul&gt;
+          &lt;li&gt;nowrap(기본 값) : 묶음(줄 바꿈) 없음&lt;/li&gt;
+          &lt;li&gt;wrap : 여러 줄로 묶음&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;justify-content : 주 축의 정렬 방법
+        &lt;ul&gt;
+          &lt;li&gt;flex-start(기본 값) : Flex Items를 시작점으로 정렬&lt;/li&gt;
+          &lt;li&gt;flex-end : Flex Items를 끝점으로 정렬&lt;/li&gt;
+          &lt;li&gt;center : Flex Items를 가운데 정렬&lt;/li&gt;
+          &lt;li&gt;space-between : 각 Flex Item 사이를 균등하게 정렬&lt;/li&gt;
+          &lt;li&gt;space-around : 각 Flex Item의 외부 여백을 균등하게 정렬&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;align-content : 교차 축의 여러 줄 정렬 방법 &lt;br /&gt;❗️ 여러 줄 주의 ! wrap을 통해 줄 바꿈이 일어나야 한다.
+        &lt;ul&gt;
+          &lt;li&gt;stretch(기본 값) : Flex Items를 시작점으로 정렬&lt;/li&gt;
+          &lt;li&gt;flex-start : Flex Items를 시작점으로 정렬&lt;/li&gt;
+          &lt;li&gt;flex-end : Flex Items를 끝점으로 정렬&lt;/li&gt;
+          &lt;li&gt;center : Flex Items를 가운데 정렬&lt;/li&gt;
+          &lt;li&gt;space-between : 각 Flex Item 사이를 균등하게 정렬&lt;/li&gt;
+          &lt;li&gt;space-around : 각 Flex Item의 외부 여백을 균등하게 정렬&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;align-items : 교차 축의 한 줄 정렬 방법
+        &lt;ul&gt;
+          &lt;li&gt;stretch(기본 값) : Flex Items를 교차 축으로 늘림&lt;/li&gt;
+          &lt;li&gt;flex-start : Flex Items를 각 줄의 시작점으로 정렬&lt;/li&gt;
+          &lt;li&gt;flex-end : Flex Items를 각 줄의 끝점으로 정렬&lt;/li&gt;
+          &lt;li&gt;center : Flex Items를 각 줄의 가운데 정렬&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;가로로-정렬된-모습을-볼-수-있다&quot;&gt;가로로 정렬된 모습을 볼 수 있다.&lt;/h4&gt;
 
@@ -1228,6 +1392,39 @@ align-items: center;
 &lt;blockquote&gt;
   &lt;h3 id=&quot;flexbox-자식-속성&quot;&gt;FlexBox (자식 속성)&lt;/h3&gt;
 &lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Flex Items
+    &lt;ul&gt;
+      &lt;li&gt;order : Flex Item의 순서
+        &lt;ul&gt;
+          &lt;li&gt;0(기본 값) : 순서 없음&lt;/li&gt;
+          &lt;li&gt;숫자 : 숫자가 작을 수록 먼저&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;flex&lt;/li&gt;
+      &lt;li&gt;flex-grow : Flex Item의 증가 너비 비율
+        &lt;ul&gt;
+          &lt;li&gt;0(기본 값) : 증가 비율 없음&lt;/li&gt;
+          &lt;li&gt;숫자 : 증가 비율&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;flex-shrink : Flex Item의 감소 너비 비율
+        &lt;ul&gt;
+          &lt;li&gt;1(기본 값) : Flex Container 너비에 따라 감소 비율 적용&lt;/li&gt;
+          &lt;li&gt;숫자 : 감소 비율&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;flex-basis : Flex Item의 공간 배분 전 기본 너비
+        &lt;ul&gt;
+          &lt;li&gt;auto(기본 값) : 요소의 Content 너비&lt;/li&gt;
+          &lt;li&gt;단위 : px, em, rem 등 단위로 지정&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;align-self&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;flex-basis&quot;&gt;flex-basis&lt;/h4&gt;
 

@@ -1,292 +1,4 @@
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="ko" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-
-<!-- begin _includes/seo.html --><title>CSS - Happy Developer</title>
-<meta name="description" content="CSS 우선순위">
-
-
-  <meta name="author" content="SungSeokMin">
-  
-  <meta property="article:author" content="SungSeokMin">
-  
-
-
-<meta property="og:type" content="article">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="Happy Developer">
-<meta property="og:title" content="CSS">
-<meta property="og:url" content="https://sungseokmin.github.io/frontend/html/CSS/">
-
-
-  <meta property="og:description" content="CSS 우선순위">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2021-03-09T00:00:00+09:00">
-
-
-
-
-
-  
-
-  
-
-
-<link rel="canonical" href="https://sungseokmin.github.io/frontend/html/CSS/">
-
-
-
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "SungSeokMin",
-      "url": "https://sungseokmin.github.io/"
-    
-  }
-</script>
-
-
-
-
-
-
-<!-- end _includes/seo.html -->
-
-
-<link
-  href="/feed.xml"
-  type="application/atom+xml"
-  rel="alternate"
-  title="Happy Developer Feed"
-/>
-
-<!-- https://t.co/dKP3o1e -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<script>
-  document.documentElement.className =
-    document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css" />
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
-/>
-
-<!--[if IE]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
-
-
-
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-
-    
-  </head>
-
-  <body class="layout--category-frontend">
-    <nav class="skip-links">
-  <h2 class="screen-reader-text">Skip links</h2>
-  <ul>
-    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-  </ul>
-</nav>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
-
-    
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-        <a class="site-title" href="/">
-          Happy Developer
-          
-        </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/frontend/">FrontEnd</a>
-            </li><li class="masthead__menu-item">
-              <a href="/backend/">BackEnd</a>
-            </li><li class="masthead__menu-item">
-              <a href="/project/">Project</a>
-            </li><li class="masthead__menu-item">
-              <a href="/algorithm/">Algorithm</a>
-            </li></ul>
-        
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">토글 메뉴</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div>
-
-
-    <div class="initial-content">
-      
-
-
-
-<div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person">
-
-  
-
-  <div class="author__content">
-    
-      <h3 class="author__name" itemprop="name">SungSeokMin</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
-        
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">팔로우</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
-          
-        
-          
-            <li><a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-          
-        
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:jkl154527@gmail.com">
-            <meta itemprop="email" content="jkl154527@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title">CSS</h1>
-    
-    <blockquote>
+I"C<blockquote>
   <h2 id="css-우선순위">CSS 우선순위</h2>
 </blockquote>
 
@@ -478,7 +190,7 @@ vh : 뷰포트 세로 너비의 백분율<br /></p>
   <h2 id="css-속성">CSS 속성</h2>
 </blockquote>
 
-<h4 id="너비width--높이height">너비(width) &amp; 높이(height)</h4>
+<h4 id="width너비--height높이">width(너비) &amp; height(높이)</h4>
 
 <ul>
   <li>
@@ -491,7 +203,7 @@ max-height, max-height</p>
   </li>
 </ul>
 
-<h4 id="외부여백margin">외부여백(margin)</h4>
+<h4 id="margin외부여백">margin(외부여백)</h4>
 
 <ul>
   <li>기본 값 : 0</li>
@@ -512,7 +224,7 @@ max-height, max-height</p>
 margin-top, margin-bottom, margin-left, margin-right</li>
 </ul>
 
-<h4 id="내부여백padding">내부여백(padding)</h4>
+<h4 id="padding내부여백">padding(내부여백)</h4>
 
 <ul>
   <li>기본 값 : 0</li>
@@ -533,7 +245,7 @@ margin-top, margin-bottom, margin-left, margin-right</li>
 padding-top, padding-bottom, padding-left, padding-right</li>
 </ul>
 
-<h4 id="테두리border">테두리(border)</h4>
+<h4 id="border테두리">border(테두리)</h4>
 
 <p>border : 선-두께 선-종류 선-색상</p>
 
@@ -624,7 +336,7 @@ ex) red, royalblue, orange …</li>
 
 <p>0부터 1 사이의 소수점 숫자</p>
 
-<h4 id="글꼴font">글꼴(font)</h4>
+<h4 id="글꼴">글꼴</h4>
 
 <ul>
   <li>font-style : 글자의 기울기
@@ -657,7 +369,7 @@ ex) red, royalblue, orange …</li>
   </li>
 </ul>
 
-<h4 id="문자text">문자(text)</h4>
+<h4 id="문자">문자</h4>
 
 <ul>
   <li>color : 색깔
@@ -677,7 +389,7 @@ ex) red, royalblue, orange …</li>
   </li>
 </ul>
 
-<h4 id="배경background">배경(background)</h4>
+<h4 id="배경">배경</h4>
 
 <ul>
   <li>background-color : 요소의 배경 색상
@@ -728,7 +440,7 @@ ex) red, royalblue, orange …</li>
   </li>
 </ul>
 
-<h4 id="배치position">배치(position)</h4>
+<h4 id="position배치">position(배치)</h4>
 
 <p>요소의 위치 지정 기준 (음수 가능)</p>
 
@@ -780,7 +492,7 @@ bottom : 30px;
   </li>
 </ul>
 
-<h4 id="전환transition">전환(transition)</h4>
+<h4 id="전환">전환</h4>
 
 <p>요소의 전환(시작과 끝) 효과를 지정하는 단축 속성</p>
 
@@ -818,14 +530,8 @@ bottom : 30px;
       </li>
     </ul>
   </li>
-</ul>
-
-<h4 id="변환transform">변환(transform)</h4>
-
-<ul>
   <li>
     <p>2D 변환 함수</p>
-
     <ul>
       <li>translate(x,y) : 이동(x축, y축)</li>
       <li>translateX(x) : 이동(x축)</li>
@@ -836,412 +542,5 @@ bottom : 30px;
       <li>skewY(y) : 기울임(y축)</li>
     </ul>
   </li>
-  <li>
-    <p>3D 변환 함수</p>
-    <ul>
-      <li>rotateX(x) : 회전(x축)</li>
-      <li>rotateY(y) : 회전(y축)</li>
-      <li>perspective(n) : 원근법(거리)</li>
-    </ul>
-  </li>
 </ul>
-
-<br />
-<section class="taxonomy__section">
-  <div class="entries-list">
-     
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/html/CSS/" rel="permalink">CSS
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          6 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  CSS 우선순위
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/react-typescript/react-typescript-copy/" rel="permalink">React-TypeScript
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  React에서 TypeScript 사용하기 + Redux
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/typescript/typescript/" rel="permalink">TypeScript
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  TypeScript ?
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/redux/Redux/" rel="permalink">Redux
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  Redux
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/flexbox/Flex/" rel="permalink">FlexBox
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  FlexBox (부모 속성)
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/react/router/React_router/" rel="permalink">React-router-dom
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  React Router ?
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/react/hooks/React_hooks/" rel="permalink">React_hooks
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  React Hooks ?
-
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/frontend/react/React-frontend/" rel="permalink">React
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  React ?
-
-</p>
-  </article>
-</div>
- 
-  </div>
-  <a href="#page-title" class="back-to-top"
-    >맨 위로 이동
-    &uarr;</a
-  >
-</section>
-
-  </div>
-</div>
-    </div>
-
-    
-
-    <div id="footer" class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
-        <div class="page__footer-follow">
-  <ul class="social-icons">
-    
-    <li><strong>팔로우:</strong></li>
-      
-    
-    <li>
-      <a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"
-        ><i
-          class="fab fa-fw fa-github"
-          aria-hidden="true"
-        ></i>
-        GitHub</a
-      >
-    </li>
-     
-    
-    <li>
-      <a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"
-        ><i
-          class="fab fa-fw fa-instagram"
-          aria-hidden="true"
-        ></i>
-        Instagram</a
-      >
-    </li>
-      
-  </ul>
-</div>
-
-<div class="page__footer-copyright">
-  &copy; 2021 SungSeokMin. Powered by
-  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
-  <a
-    href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
-    rel="nofollow"
-    >Minimal Mistakes</a
-  >.
-</div>
-
-      </footer>
-    </div>
-
-    
-  <script src="/assets/js/main.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-  </body>
-</html>
+:ET
