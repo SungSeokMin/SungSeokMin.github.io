@@ -47,7 +47,7 @@ var store = [{
         "url": "https://sungseokmin.github.io/frontend/react/router/React_router/",
         "teaser": null
       },{
-        "title": "2 weeks project",
+        "title": "2 weeks project - ShapeOfVoice",
         "excerpt":"Shape Of Voice 사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹 schema user : 각 유저들의 정보 voice : 목소리에 대한 정보 board : 게시글에 대한 정보 voice_board : voice table과 board table의 join table user_board_like : 특정 user가 어떠한 게시판의 좋아요를 눌렀는지에 대한 table Wire...","categories": ["project","2 weeks project"],
         "tags": [],
         "url": "https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/",
@@ -59,7 +59,7 @@ var store = [{
         "url": "https://sungseokmin.github.io/frontend/flexbox/Flex/",
         "teaser": null
       },{
-        "title": "2 weeks project_시연영상",
+        "title": "2 weeks project_시연영상 - ShapeOfVoice",
         "excerpt":"   Login          SignUp          TempLogin          Capture &amp; Clear          AddBoard          BoardDetail          MyPage          Logout      ","categories": ["project","2 weeks project"],
         "tags": [],
         "url": "https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/",
@@ -72,7 +72,7 @@ var store = [{
         "teaser": null
       },{
         "title": "TypeScript",
-        "excerpt":"TypeScript ? JavaScript를 기반으로 한 언어로써 JavaScript에서 유요한 코드는 TypeScript에서도 유효하다. 타입 추론(Type Inference) TypeScript에서는 타입 표기가 없는 경우 자체에서 코드를 읽고 분석하여 타입을 유추해낼 수 있다. 타입 명시 변수를 선언할 때, 변수 값의 타입을 명시함으로써 변수 값의 데이터 타입을 지정하는 것 interface 타입으로 사용되는 interface interface에 정의된 변수가 전부...","categories": ["frontend","typescript"],
+        "excerpt":"TypeScript ? 자바스크립트에 타입을 적용시켜서 컴파일 환경에서 보다 쉽게 에러를 핸들링 할 수 있게 도와주는 프로그래밍 언어 never 함수의 리턴 타입으로 사용(오류를 출력하거나 리턴 값을 내보내지 않음) function error(message: string): never { throw new Error(error); } function fail() { return error('fail'); } function infinitieLoop(): never { while(true){} } void void...","categories": ["frontend","typescript"],
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/typescript/typescript/",
         "teaser": null

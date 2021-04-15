@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-03-13T15:51:07+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-04-15T17:34:43+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">CSS</title><link href="https://sungseokmin.github.io/frontend/html/CSS/" rel="alternate" type="text/html" title="CSS" /><published>2021-03-09T00:00:00+09:00</published><updated>2021-03-09T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/CSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/CSS/">&lt;blockquote&gt;
   &lt;h2 id=&quot;css-우선순위&quot;&gt;CSS 우선순위&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -950,8 +950,61 @@ TypeScript 문법이 익숙하지 않았지만 계속 따라 쳐보고 생각하
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;JavaScript를 기반으로 한 언어로써 JavaScript에서 유요한 코드는 TypeScript에서도 유효하다.&lt;/li&gt;
+  &lt;li&gt;자바스크립트에 타입을 적용시켜서 컴파일 환경에서 보다 쉽게 에러를 핸들링 할 수 있게 도와주는 프로그래밍 언어&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;never&quot;&gt;never&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;함수의 리턴 타입으로 사용(오류를 출력하거나 리턴 값을 내보내지 않음)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function error(message: string): never {
+  throw new Error(error);
+}
+
+function fail() {
+  return error('fail');
+}
+
+function infinitieLoop(): never {
+  while(true){}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;void&quot;&gt;void&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;void : 함수의 리턴 타입으로 사용(어떤 타입도 가지지 않는 빈 상태를 의미)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function returnVoid(message: string) {
+  console.log(message);
+}
+
+returnVoid('리턴이 없다');
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;tuple&quot;&gt;Tuple&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Primitive type의 순서를 정확히 아는 경우 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let x: [string, number] = ['sung', 27]; // good!!
+let y: [string, number] = ['sung', '스물일곫'] // error!!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;union-type&quot;&gt;Union Type&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;타입이 2개이상으로 될 것으로 기대할 때 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let x: string | number = '안녕하세요'; // good!!
+또는
+let x: string | number = 150; // good!!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;타입-추론type-inference&quot;&gt;타입 추론(Type Inference)&lt;/h3&gt;
 
@@ -968,6 +1021,28 @@ TypeScript 문법이 익숙하지 않았지만 계속 따라 쳐보고 생각하
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img width=&quot;614&quot; alt=&quot;스크린샷 2021-02-17 오전 11 36 40&quot; src=&quot;https://user-images.githubusercontent.com/72539723/108148564-6902ae00-7114-11eb-9481-a32cf645f849.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;타입-별칭-type-alias&quot;&gt;타입 별칭 (Type Alias)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;타입에 직접 이름을 부여하고 재사용이 가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type User = {
+  name: string;
+  age: number;
+}
+
+const user1: User = {
+  name: '성석민',
+  age: 27,
+}
+
+const user2: User = {
+  name: '홍길동',
+  age: 30,
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;interface&quot;&gt;interface&lt;/h3&gt;
 
@@ -1028,7 +1103,7 @@ const myInfo extends Developer{
 &lt;h3 id=&quot;type-aliases&quot;&gt;Type Aliases&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;interface와 동일하게 ㅅ&lt;/li&gt;
+  &lt;li&gt;interface와 동일하게 사용&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type Person = {
@@ -1114,7 +1189,9 @@ tsc app.ts
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// w = watch (감시한다!!)
 tsc -w
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="typescript" /><summary type="html">TypeScript ?</summary></entry><entry><title type="html">2 weeks project_시연영상</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/" rel="alternate" type="text/html" title="2 weeks project_시연영상" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-2</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="typescript" /><summary type="html">TypeScript ?</summary></entry><entry><title type="html">2 weeks project_시연영상 - ShapeOfVoice</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/" rel="alternate" type="text/html" title="2 weeks project_시연영상 - ShapeOfVoice" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-2</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/">&lt;blockquote&gt;
   &lt;p&gt;Login&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1517,7 +1594,7 @@ flex: 1;
 align-self: flex-end;
 background-color: yellow;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="flexbox" /><summary type="html">FlexBox (부모 속성)</summary></entry><entry><title type="html">2 weeks project</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/" rel="alternate" type="text/html" title="2 weeks project" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-1</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="flexbox" /><summary type="html">FlexBox (부모 속성)</summary></entry><entry><title type="html">2 weeks project - ShapeOfVoice</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/" rel="alternate" type="text/html" title="2 weeks project - ShapeOfVoice" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-1</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/">&lt;blockquote&gt;
   &lt;h2 id=&quot;shape-of-voice&quot;&gt;Shape Of Voice&lt;/h2&gt;
 &lt;/blockquote&gt;
 

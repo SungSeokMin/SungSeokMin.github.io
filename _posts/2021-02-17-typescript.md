@@ -9,7 +9,56 @@ toc: true
 
 > ## TypeScript ?
 
-- JavaScript를 기반으로 한 언어로써 JavaScript에서 유요한 코드는 TypeScript에서도 유효하다.
+- 자바스크립트에 타입을 적용시켜서 컴파일 환경에서 보다 쉽게 에러를 핸들링 할 수 있게 도와주는 프로그래밍 언어
+
+### never
+
+- 함수의 리턴 타입으로 사용(오류를 출력하거나 리턴 값을 내보내지 않음)
+
+```
+function error(message: string): never {
+  throw new Error(error);
+}
+
+function fail() {
+  return error('fail');
+}
+
+function infinitieLoop(): never {
+  while(true){}
+}
+```
+
+### void
+
+- void : 함수의 리턴 타입으로 사용(어떤 타입도 가지지 않는 빈 상태를 의미)
+
+```
+function returnVoid(message: string) {
+  console.log(message);
+}
+
+returnVoid('리턴이 없다');
+```
+
+### Tuple
+
+- Primitive type의 순서를 정확히 아는 경우 사용
+
+```
+let x: [string, number] = ['sung', 27]; // good!!
+let y: [string, number] = ['sung', '스물일곫'] // error!!
+```
+
+### Union Type
+
+- 타입이 2개이상으로 될 것으로 기대할 때 사용
+
+```
+let x: string | number = '안녕하세요'; // good!!
+또는
+let x: string | number = 150; // good!!
+```
 
 ### 타입 추론(Type Inference)
 
@@ -22,6 +71,27 @@ toc: true
 - 변수를 선언할 때, 변수 값의 타입을 명시함으로써 변수 값의 데이터 타입을 지정하는 것
 
 <img width="614" alt="스크린샷 2021-02-17 오전 11 36 40" src="https://user-images.githubusercontent.com/72539723/108148564-6902ae00-7114-11eb-9481-a32cf645f849.png">
+
+### 타입 별칭 (Type Alias)
+
+- 타입에 직접 이름을 부여하고 재사용이 가능
+
+```
+type User = {
+  name: string;
+  age: number;
+}
+
+const user1: User = {
+  name: '성석민',
+  age: 27,
+}
+
+const user2: User = {
+  name: '홍길동',
+  age: 30,
+}
+```
 
 ### interface
 
@@ -72,7 +142,7 @@ const myInfo extends Developer{
 
 ### Type Aliases
 
-- interface와 동일하게 ㅅ
+- interface와 동일하게 사용
 
 ```
 type Person = {
@@ -143,3 +213,5 @@ tsc --init
 // w = watch (감시한다!!)
 tsc -w
 ```
+
+---
