@@ -1,0 +1,329 @@
+I"�<blockquote>
+  <h2 id="scss">SCSS</h2>
+</blockquote>
+
+<p>CSS 전처리기(CSS Preprocessor)</p>
+
+<ul>
+  <li>왜 사용하나요 ??
+    <ul>
+      <li>CSS의 불편함을 SCSS와 같은 확장 기능을 이용해 줄일 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="간단한-맛-보기"><span style="color: royalblue">간단한 맛 보기</span></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>===== HTML =====
+&lt;div class="container"&gt;
+  &lt;div class="aria"&gt;
+    &lt;h1&gt;안녕하세요&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+===== CSS =====
+.container {
+  width: 100%;
+  height: 100%
+}
+
+.container aria {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+
+.container aria h1 {
+  color: red;
+}
+
+===== SCSS =====
+.container {
+  .aria {
+    background-color: black;
+    h1 {
+      color: $color;
+    }
+  }
+}
+</code></pre></div></div>
+
+<h3 id="scss-주석의-2가지-방법">SCSS 주석의 2가지 방법</h3>
+
+<ol>
+  <li>기존의 CSS에서 사용한 방법 =&gt; /* */</li>
+  <li>JS의 주석 방법 =&gt; //</li>
+</ol>
+
+<p><strong>차이점</strong></p>
+
+<ul>
+  <li>컴파일 후 주석의 내용이 남아있느냐 남아있지 않느냐 차이!!
+    <ul>
+      <li>1번의 경우 주석의 내용이 남아있지만, 2번의 경우 주석의 내용이 남아있지 않는다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container {
+  .aria {
+    width: 100%;
+    /* height: 100%; */
+    // background-color: blcak;
+  }
+}
+
+===== 컴파일 후 =====
+.container {
+  .aria {
+    width: 100%;
+    /* height: 100%; */
+  }
+}
+</code></pre></div></div>
+
+<h3 id="상위-선택자-참조---">상위 선택자 참조 ( &amp; )</h3>
+
+<ul>
+  <li>중첩 안에서 &amp; 키워드는 부모 선택자를 참조하여 치환한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>===== SCSS =====
+.btn {
+  position: absolute;
+  &amp;.active {
+    color: red;
+  }
+}
+
+===== 컴파일 후 =====
+.btn {
+  position: absolute;
+}
+
+.btn.active {
+  color: red;
+}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>===== SCSS =====
+.fs {
+  %-small {font-size: 12px}
+  %-medium {font-size: 14px}
+  %-large {font-size: 16px}
+}
+
+===== 컴파일 후 =====
+.fs-small{ font-size: 12px }
+.fs-medium{ font-size: 14px }
+.fs-large{ font-size: 16px }
+</code></pre></div></div>
+
+<h3 id="중첩된-속성">중첩된 속성</h3>
+
+<ul>
+  <li>각 속성의 하위 속성들을 중첩해서 사용할 수 있다.</li>
+</ul>
+
+<p>❗️ 각 속성의 뒤에 : (콜론) 표시와 {} 영역 밖에 ; (세미콜론) 표시를 해줘야 한다. ❗️</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+===== SCSS =====
+.box {
+  font: ← ⭐️ {
+    weight: bold;
+    size: 14px;
+  }; ← ⭐️
+  maring: {
+    left: 50px;
+    right: 50px;
+  }
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+}
+
+===== 컴파일 후 =====
+.box {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+</code></pre></div></div>
+
+<h3 id="변수variables">변수(Variables)</h3>
+
+<ul>
+  <li>JavaScript의 변수선언(let)과 같은 성향을 지닌다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$size: 100px; ← 전역으로 사용 가능
+
+.container {
+  position: relative;
+  top : $size ← 위에서 전역적으로 선언한 변수 $size의 값 (100px)을 사용
+  .item {
+    width: $size;
+    height: $size;
+  }
+}
+</code></pre></div></div>
+
+<p>⭐️ 유효범위 ⭐️</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$size: 100px; ← 전역으로 사용 가능
+
+.container {
+  $size: 50px;
+  position: relative;
+  top : $size
+        ↑ 위에서 전역적으로 선언한 변수 $size의 값이 아닌 .container 안에서 재할당한 값 (50px)을 사용
+  .item {
+    $size: 500px;
+    width: $size; ← .item 영역 안에서 재할당한 값 (500px)을 사용
+    height: $size;
+  }
+}
+</code></pre></div></div>
+
+<h3 id="scss-산술-연산">SCSS 산술 연산</h3>
+
+<ul>
+  <li>+</li>
+  <li>-</li>
+  <li>*</li>
+  <li>/ ❗ CSS의 단축속성 때문에 나머지 연산자가 적용이 안 될 수 있다.</li>
+  <li>%</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>===== SCSS =====
+.box {
+  width: 100px + 20px;
+  height: 100px - 20px
+  font-size: 10px * 2;
+  margin: 20px / 2;
+  padding: 20px % 7;
+}
+
+===== 컴파일 후 =====
+.box {
+  width: 120px;
+  height: 80px;
+  font-size: 20Px;
+  margin: 20px/2; ❗ 적용이 안 된다.
+  padding: 6px ;
+}
+
+❓ 그렇다면 어떻게 해야할까 ??
+1. () 소괄호로 묶어준다.
+2. 변수를 활용한다.
+
+.box {
+  $size: 100px;
+  1. margin: (20px / 2);  =&gt; margin: 10px;
+  2. margin: $size / 2; =&gt; margin: 50px;
+}
+</code></pre></div></div>
+
+<p>⭐️ 다른 단위의 산술연산을 하고 싶은 경우 ⭐️</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.box {
+  width: 100% - 20px; =&gt; error
+}
+❓ 그렇다면 어떻게 해야할까 ??
+1. CSS의 calc() 함수를 사용한다.
+
+.box {
+  width: calc(100% - 20px); =&gt; good
+}
+</code></pre></div></div>
+
+<h3 id="mixin">mixin</h3>
+
+<ul>
+  <li>@mixin, @include 키워드를 통해서 코드를 재활용 할 수 있다.</li>
+</ul>
+
+<h4 id="ex-flex를-이용한-가운데-정렬을-많이-해아한다-"><span style="color: royalblue">Ex) flex를 이용한 가운데 정렬을 많이 해아한다 !!</span></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+===== SCSS =====
+.container {
+  @include flexCenter;
+  .item {
+    @include flexCenter;
+  }
+}
+
+===== 컴파일 후 =====
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</code></pre></div></div>
+
+<h4 id="ex-mixin을-함수처럼-사용하려면-"><span style="color: royalblue">Ex) @mixin을 함수처럼 사용하려면 ??</span></h4>
+
+<ul>
+  <li>How ?
+    <ul>
+      <li>@mixin 키워드를 이용해 만든 변수에 매겨변수를 지정한다.</li>
+      <li>지정된 매개변수에 값이 없을 경우에는 default 값을 설정 할 수 있다. =&gt; :(콜론)을 이용</li>
+      <li>width와 height는 default 값을 사용하고 싶고 background-color만 바꾸고 싶다면 ??
+        <ul>
+          <li>키워드 인수(접적으로 매개변수의 값을 지정)를 이용해 특정 값만 수정할 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==== SCSS =====
+                ↓ default 값을 설정할 수 있다.
+@mixin box($size: 80px, $color: red) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+.container {
+  @include box(200px, tomato); ← @mixin의 매개변수($size, $color)의 값으로 '200px, tomato'가 사용 된다.
+  .item {
+                 ↓ 키워드 인수 =&gt; $size의 값을 지정하지 않았으므로 default 값인 80px이 사용되고 $color의 값은 green이 사용 된다.
+    @include box($color: green);
+  }
+}
+
+==== 컴파일 후 =====
+.container {
+  width: 200px; ← @mixin의
+  height: 200px;
+  background-color: tomato;
+}
+
+.container .item {
+  width: 80px; ← @mixin의 매개변수($size)의 default 값이 할당 되었다.
+  height: 80px;
+  background-color: green; ← 키워드 인수($color)를 사용하여 바꾼 green의 값이 할당 되었다.
+}
+</code></pre></div></div>
+
+<p>키워드 인수
+직접적으로 매개변수의 값을 지정한다.</p>
+:ET

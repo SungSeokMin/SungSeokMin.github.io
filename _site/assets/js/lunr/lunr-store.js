@@ -88,4 +88,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/html/CSS/",
         "teaser": null
+      },{
+        "title": "SCSS",
+        "excerpt":"SCSS CSS 전처리기(CSS Preprocessor) 왜 사용하나요 ?? CSS의 불편함을 SCSS와 같은 확장 기능을 이용해 줄일 수 있다. 간단한 맛 보기 ===== HTML ===== &lt;div class=\"container\"&gt; &lt;div class=\"aria\"&gt; &lt;h1&gt;안녕하세요&lt;/h1&gt; &lt;/div&gt; &lt;/div&gt; ===== CSS ===== .container { width: 100%; height: 100% } .container aria { width: 50%; height: 100%; background-color: black; }...","categories": ["frontend","HTML"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/html/SCSS/",
+        "teaser": null
       }]

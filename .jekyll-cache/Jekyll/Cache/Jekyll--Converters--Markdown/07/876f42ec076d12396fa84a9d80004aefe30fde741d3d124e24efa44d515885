@@ -1,0 +1,11 @@
+I"�<blockquote>
+  <h2 id="scss">SCSS</h2>
+</blockquote>
+
+<p>CSS 전처리기 = CSS Preprocessor</p>
+
+<ul>
+  <li>How ?</li>
+  <li>Sass, Less 같은 전처리기는 직접 동작 시킬 수 없다.</li>
+</ul>
+:ET
