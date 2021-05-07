@@ -1,0 +1,82 @@
+I"k	<blockquote>
+  <p>CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>CSR ?</p>
+
+    <ul>
+      <li>브라우저가 서버에 HTML, JS파일을 요청한 후 로드되면 사용자의 상호작용에 따라 JS를 이용해서 동적으로 페이지를 렌더링 시키는 방법</li>
+    </ul>
+  </li>
+  <li>
+    <p>SSR ?</p>
+
+    <ul>
+      <li>브라우저가 페이지를 요청할 때마다 HTML, CSS, JS 파일 및 데이터를 받아와서 페이지를 렌더링 시키는 방법</li>
+    </ul>
+  </li>
+  <li>
+    <p>장점과 단점</p>
+    <ul>
+      <li>CSR의 경우는 처음 로딩하는 시간이 오래 걸리고, 검색엔진 초기화(SEO)의 문제가 있지만, 각 페이지 요청 시 빠르게 렌더링 되기 때문에 UX(사용자 경혐)이 좋다.</li>
+      <li>SSR의 경우는 처음 로딩하는 시간이 짧고, 검색엔진 초기화(SEO)가 가능하지만, 각 페이지 요청 시 새로고침 되기 때문에 UX(사용자 경험)가 좋지 않다.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>REST API</p>
+</blockquote>
+
+<ul>
+  <li>REST ?
+    <ul>
+      <li>자원을 주고받는 웹 상에서의 통신 체계에 있어서 범용적인 스타일을 규정한 아키텍처</li>
+    </ul>
+  </li>
+  <li>API ?
+    <ul>
+      <li>기존에 있는 응용 프로그램을 통해서 데이터를 제공받거나 기능을 사용하고자 할 때 사용하는 인터페이스 및 규격</li>
+    </ul>
+  </li>
+  <li>REST API ?
+    <ul>
+      <li>REST 원칙을 적용하여 서비스 API를 설계한 것을 말한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>브라우저 렌더링 과정</p>
+</blockquote>
+
+<ol>
+  <li>HTML 파싱 후, DOM 트리 구축</li>
+  <li>CSS 파싱 후, CSSSOM 트리 구축</li>
+  <li>JavaScript 실행 (❗️ script태그가 HTML 중간에 있다면 HTML 파싱이 중단된다.)</li>
+  <li>DOM과 CSSOM을 조합하여 렌더트리 구축</li>
+  <li>렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산해서 화면에 그린다.</li>
+</ol>
+
+<blockquote>
+  <p>Dom</p>
+</blockquote>
+
+<ul>
+  <li>웹 페이지를 프로그래밍적으로 제어할 수 있게 해주는 객체모델</li>
+</ul>
+
+<blockquote>
+  <p>HTTP &amp; HTTPS</p>
+</blockquote>
+
+<blockquote>
+  <p>CORS</p>
+</blockquote>
+
+<blockquote>
+  <p>데이터 바인딩 (단방향, 양방향)</p>
+</blockquote>
+:ET

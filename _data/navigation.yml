@@ -10,5 +10,5 @@ main:
     url: /project/
   - title: 'Algorithm'
     url: /algorithm/
-  # - title: 'category'
-  #   url: /categories/
+  - title: 'Interview'
+    url: /interview/

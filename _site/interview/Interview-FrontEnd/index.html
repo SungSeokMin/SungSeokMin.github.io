@@ -1,0 +1,563 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+<!-- begin _includes/seo.html --><title>Front-End - Happy Developer</title>
+<meta name="description" content="CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)">
+
+
+  <meta name="author" content="SungSeokMin">
+  
+  <meta property="article:author" content="SungSeokMin">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Happy Developer">
+<meta property="og:title" content="Front-End">
+<meta property="og:url" content="https://sungseokmin.github.io/interview/Interview-FrontEnd/">
+
+
+  <meta property="og:description" content="CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-05-06T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sungseokmin.github.io/interview/Interview-FrontEnd/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SungSeokMin",
+      "url": "https://sungseokmin.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link
+  href="/feed.xml"
+  type="application/atom+xml"
+  rel="alternate"
+  title="Happy Developer Feed"
+/>
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
+/>
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+  </head>
+
+  <body class="layout--category-interview">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Happy Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/frontend/">FrontEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/backend/">BackEnd</a>
+            </li><li class="masthead__menu-item">
+              <a href="/project/">Project</a>
+            </li><li class="masthead__menu-item">
+              <a href="/algorithm/">Algorithm</a>
+            </li><li class="masthead__menu-item">
+              <a href="/interview/">Interview</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">SungSeokMin</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:jkl154527@gmail.com">
+            <meta itemprop="email" content="jkl154527@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Front-End</h1>
+    
+    <blockquote>
+  <h2 id="csrclient-side-rendering--ssrserver-side-rendering">CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)</h2>
+</blockquote>
+
+<ul>
+  <li>
+    <p>CSR ?</p>
+
+    <ul>
+      <li>브라우저가 서버에 HTML, JS파일을 요청한 후 로드되면 사용자의 상호작용에 따라 JS를 이용해서 동적으로 페이지를 렌더링 시키는 방법</li>
+    </ul>
+  </li>
+  <li>
+    <p>SSR ?</p>
+
+    <ul>
+      <li>브라우저가 페이지를 요청할 때마다 HTML, CSS, JS 파일 및 데이터를 받아와서 페이지를 렌더링 시키는 방법</li>
+    </ul>
+  </li>
+  <li>
+    <p>장점과 단점</p>
+    <ul>
+      <li>CSR의 경우는 처음 로딩하는 시간이 오래 걸리고, 검색엔진 초기화(SEO)의 문제가 있지만, 각 페이지 요청 시 빠르게 렌더링 되기 때문에 UX(사용자 경혐)이 좋다.</li>
+      <li>SSR의 경우는 처음 로딩하는 시간이 짧고, 검색엔진 초기화(SEO)가 가능하지만, 각 페이지 요청 시 새로고침 되기 때문에 UX(사용자 경험)가 좋지 않다.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="rest-api">REST API</h2>
+</blockquote>
+
+<ul>
+  <li>REST ?
+    <ul>
+      <li>자원을 주고받는 웹 상에서의 통신 체계에 있어서 범용적인 스타일을 규정한 아키텍처</li>
+    </ul>
+  </li>
+  <li>API ?
+    <ul>
+      <li>기존에 있는 응용 프로그램을 통해서 데이터를 제공받거나 기능을 사용하고자 할 때 사용하는 인터페이스 및 규격</li>
+    </ul>
+  </li>
+  <li>REST API ?
+    <ul>
+      <li>REST 원칙을 적용하여 서비스 API를 설계한 것을 말한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="브라우저-렌더링-과정">브라우저 렌더링 과정</h2>
+</blockquote>
+
+<ol>
+  <li>HTML 파싱 후, DOM 트리 구축</li>
+  <li>CSS 파싱 후, CSSSOM 트리 구축</li>
+  <li>JavaScript 실행 (❗️ script태그가 HTML 중간에 있다면 HTML 파싱이 중단된다.)</li>
+  <li>DOM과 CSSOM을 조합하여 렌더트리 구축</li>
+  <li>렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산해서 화면에 그린다.</li>
+</ol>
+
+<blockquote>
+  <h2 id="dom">Dom</h2>
+</blockquote>
+
+<ul>
+  <li>웹페이지를 JavaScript로 제어하기 위한 객체 모델이며 웹 페이지를 프로그래밍 언어들에서 사용될 수 있게 연결시켜주는 역할을 담당</li>
+</ul>
+
+<blockquote>
+  <h2 id="http--https">HTTP &amp; HTTPS</h2>
+</blockquote>
+
+<ul>
+  <li>
+    <p>HTTP ?</p>
+
+    <ul>
+      <li>서버/클라이언트 모델을 따라 데이터를 주고 받기 위한 프로토콜
+        <ul>
+          <li>80번 포트를 사용하며, 인터넷에서 하이퍼텍스트를 교환하기 위한 통신 규약</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>HTTPS ?</p>
+    <ul>
+      <li>HTTP에 데이터 암호화가 추가된 프로토콜
+        <ul>
+          <li>433번 포트를 사용하며, 네트워크 상에서 중간에 제3자가 정보를볼 수 없도록 공개키 암호화를 지원</li>
+          <li>검색엔진 최적화(SEO)에 있어서 혜택을 받음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="cors">CORS</h2>
+</blockquote>
+
+<ul>
+  <li>HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제</li>
+</ul>
+
+<blockquote>
+  <h2 id="데이터-바인딩-단방향-양방향">데이터 바인딩 (단방향, 양방향)</h2>
+</blockquote>
+
+<ul>
+  <li>
+    <p>데이터 바인딩 ?</p>
+
+    <ul>
+      <li>두 데이터 또는 정보의 소스를 모두 일치시키는 기법</li>
+      <li>화면에 보이는 데이터와 브라우저 메모리에 있는 데이터를 일치시키는 기법</li>
+    </ul>
+  </li>
+  <li>
+    <p>단방향 데이터 바인딩 ?</p>
+
+    <ul>
+      <li>데이터에 변화가 생기면 특정함수를 실행시킨 후 다시 렌더링 되어서 DOM을 갱신</li>
+    </ul>
+  </li>
+  <li>
+    <p>양방향 데이터 바인딩 ?</p>
+    <ul>
+      <li>웹페이지의 변수 입력 부분을 수정하게 되면 JavaScript 변수의 값도 변경되어 실시간으로 DOM을 갱신</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>UI &amp; UX</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>UI ?</p>
+
+    <ul>
+      <li>사용자가 웹이나 앱을 사용할때 마주하는 디자인(layout, button, animation)의 기술적인 부분</li>
+    </ul>
+  </li>
+  <li>
+    <p>UX ?</p>
+    <ul>
+      <li>통계 자료 및 데이터를 기반으로 한 사용자 분석</li>
+    </ul>
+  </li>
+</ul>
+
+<br />
+<section class="taxonomy__section">
+  <div class="entries-list">
+     
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/interview/Interview-FrontEnd/" rel="permalink">Front-End
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)
+
+</p>
+  </article>
+</div>
+ 
+  </div>
+  <a href="#page-title" class="back-to-top"
+    >맨 위로 이동 &uarr;</a
+  >
+</section>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    <li><strong>팔로우:</strong></li>
+      
+    
+    <li>
+      <a href="https://github.com/SungSeokMin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-github"
+          aria-hidden="true"
+        ></i>
+        GitHub</a
+      >
+    </li>
+     
+    
+    <li>
+      <a href="https://instagram.com/sungstonemin" rel="nofollow noopener noreferrer"
+        ><i
+          class="fab fa-fw fa-instagram"
+          aria-hidden="true"
+        ></i>
+        Instagram</a
+      >
+    </li>
+      
+  </ul>
+</div>
+
+<div class="page__footer-copyright">
+  &copy; 2021 SungSeokMin. Powered by
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+  <a
+    href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
+    rel="nofollow"
+    >Minimal Mistakes</a
+  >.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

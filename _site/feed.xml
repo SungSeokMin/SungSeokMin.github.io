@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-04-25T16:58:54+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">SCSS</title><link href="https://sungseokmin.github.io/frontend/html/SCSS/" rel="alternate" type="text/html" title="SCSS" /><published>2021-04-25T00:00:00+09:00</published><updated>2021-04-25T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/SCSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/SCSS/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-05-07T16:43:49+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Front-End</title><link href="https://sungseokmin.github.io/interview/Interview-FrontEnd/" rel="alternate" type="text/html" title="Front-End" /><published>2021-05-06T00:00:00+09:00</published><updated>2021-05-06T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-FrontEnd</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-FrontEnd/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;csrclient-side-rendering--ssrserver-side-rendering&quot;&gt;CSR(Client Side Rendering) &amp;amp; SSR(Server Side Rendering)&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;CSR ?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;브라우저가 서버에 HTML, JS파일을 요청한 후 로드되면 사용자의 상호작용에 따라 JS를 이용해서 동적으로 페이지를 렌더링 시키는 방법&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SSR ?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;브라우저가 페이지를 요청할 때마다 HTML, CSS, JS 파일 및 데이터를 받아와서 페이지를 렌더링 시키는 방법&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;장점과 단점&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;CSR의 경우는 처음 로딩하는 시간이 오래 걸리고, 검색엔진 초기화(SEO)의 문제가 있지만, 각 페이지 요청 시 빠르게 렌더링 되기 때문에 UX(사용자 경혐)이 좋다.&lt;/li&gt;
+      &lt;li&gt;SSR의 경우는 처음 로딩하는 시간이 짧고, 검색엔진 초기화(SEO)가 가능하지만, 각 페이지 요청 시 새로고침 되기 때문에 UX(사용자 경험)가 좋지 않다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;rest-api&quot;&gt;REST API&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;REST ?
+    &lt;ul&gt;
+      &lt;li&gt;자원을 주고받는 웹 상에서의 통신 체계에 있어서 범용적인 스타일을 규정한 아키텍처&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;API ?
+    &lt;ul&gt;
+      &lt;li&gt;기존에 있는 응용 프로그램을 통해서 데이터를 제공받거나 기능을 사용하고자 할 때 사용하는 인터페이스 및 규격&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;REST API ?
+    &lt;ul&gt;
+      &lt;li&gt;REST 원칙을 적용하여 서비스 API를 설계한 것을 말한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;브라우저-렌더링-과정&quot;&gt;브라우저 렌더링 과정&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;HTML 파싱 후, DOM 트리 구축&lt;/li&gt;
+  &lt;li&gt;CSS 파싱 후, CSSSOM 트리 구축&lt;/li&gt;
+  &lt;li&gt;JavaScript 실행 (❗️ script태그가 HTML 중간에 있다면 HTML 파싱이 중단된다.)&lt;/li&gt;
+  &lt;li&gt;DOM과 CSSOM을 조합하여 렌더트리 구축&lt;/li&gt;
+  &lt;li&gt;렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산해서 화면에 그린다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;dom&quot;&gt;Dom&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;웹페이지를 JavaScript로 제어하기 위한 객체 모델이며 웹 페이지를 프로그래밍 언어들에서 사용될 수 있게 연결시켜주는 역할을 담당&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;http--https&quot;&gt;HTTP &amp;amp; HTTPS&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;HTTP ?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;서버/클라이언트 모델을 따라 데이터를 주고 받기 위한 프로토콜
+        &lt;ul&gt;
+          &lt;li&gt;80번 포트를 사용하며, 인터넷에서 하이퍼텍스트를 교환하기 위한 통신 규약&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;HTTPS ?&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;HTTP에 데이터 암호화가 추가된 프로토콜
+        &lt;ul&gt;
+          &lt;li&gt;433번 포트를 사용하며, 네트워크 상에서 중간에 제3자가 정보를볼 수 없도록 공개키 암호화를 지원&lt;/li&gt;
+          &lt;li&gt;검색엔진 최적화(SEO)에 있어서 혜택을 받음&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;cors&quot;&gt;CORS&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;데이터-바인딩-단방향-양방향&quot;&gt;데이터 바인딩 (단방향, 양방향)&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;데이터 바인딩 ?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;두 데이터 또는 정보의 소스를 모두 일치시키는 기법&lt;/li&gt;
+      &lt;li&gt;화면에 보이는 데이터와 브라우저 메모리에 있는 데이터를 일치시키는 기법&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;단방향 데이터 바인딩 ?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;데이터에 변화가 생기면 특정함수를 실행시킨 후 다시 렌더링 되어서 DOM을 갱신&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;양방향 데이터 바인딩 ?&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;웹페이지의 변수 입력 부분을 수정하게 되면 JavaScript 변수의 값도 변경되어 실시간으로 DOM을 갱신&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;UI &amp;amp; UX&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;UI ?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;사용자가 웹이나 앱을 사용할때 마주하는 디자인(layout, button, animation)의 기술적인 부분&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;UX ?&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;통계 자료 및 데이터를 기반으로 한 사용자 분석&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="interview" /><summary type="html">CSR(Client Side Rendering) &amp;amp; SSR(Server Side Rendering)</summary></entry><entry><title type="html">SCSS</title><link href="https://sungseokmin.github.io/frontend/html/SCSS/" rel="alternate" type="text/html" title="SCSS" /><published>2021-04-25T00:00:00+09:00</published><updated>2021-04-25T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/SCSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/SCSS/">&lt;blockquote&gt;
   &lt;h2 id=&quot;scss&quot;&gt;SCSS&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -1576,53 +1729,7 @@ tsc app.ts
 tsc -w
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="typescript" /><summary type="html">TypeScript ?</summary></entry><entry><title type="html">2 weeks project_시연영상 - ShapeOfVoice</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/" rel="alternate" type="text/html" title="2 weeks project_시연영상 - ShapeOfVoice" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-2</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/">&lt;blockquote&gt;
-  &lt;p&gt;Login&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925933-6c812280-6fb8-11eb-80bf-9fee727c6636.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;SignUp&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925939-6db24f80-6fb8-11eb-9624-8406f4be996d.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;TempLogin&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925945-6e4ae600-6fb8-11eb-9b30-0f5101efe70d.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Capture &amp;amp; Clear&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925949-730f9a00-6fb8-11eb-98e3-623c1377db11.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;AddBoard&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925953-7440c700-6fb8-11eb-8699-a48cac405337.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;BoardDetail&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925956-760a8a80-6fb8-11eb-8768-12c43147a38a.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;MyPage&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925961-77d44e00-6fb8-11eb-8bb6-f019a9943fa2.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Logout&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925967-799e1180-6fb8-11eb-8056-27ad72c88182.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Login</summary></entry><entry><title type="html">Redux</title><link href="https://sungseokmin.github.io/frontend/redux/Redux/" rel="alternate" type="text/html" title="Redux" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/redux/Redux</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/redux/Redux/">&lt;blockquote&gt;
+&lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="typescript" /><summary type="html">TypeScript ?</summary></entry><entry><title type="html">Redux</title><link href="https://sungseokmin.github.io/frontend/redux/Redux/" rel="alternate" type="text/html" title="Redux" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/redux/Redux</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/redux/Redux/">&lt;blockquote&gt;
   &lt;h2 id=&quot;redux&quot;&gt;Redux&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -1724,7 +1831,53 @@ const dispatch = useDispatch();
 dispatch(login(인자&amp;lt;없을 경우 생략&amp;gt;));
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;… 추후 업데이트 예정 …&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="redux" /><summary type="html">Redux</summary></entry><entry><title type="html">FlexBox</title><link href="https://sungseokmin.github.io/frontend/flexbox/Flex/" rel="alternate" type="text/html" title="FlexBox" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/flexbox/Flex</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/flexbox/Flex/">&lt;blockquote&gt;
+&lt;p&gt;… 추후 업데이트 예정 …&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="redux" /><summary type="html">Redux</summary></entry><entry><title type="html">2 weeks project_시연영상 - ShapeOfVoice</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/" rel="alternate" type="text/html" title="2 weeks project_시연영상 - ShapeOfVoice" /><published>2021-02-15T00:00:00+09:00</published><updated>2021-02-15T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-2</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/">&lt;blockquote&gt;
+  &lt;p&gt;Login&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925933-6c812280-6fb8-11eb-80bf-9fee727c6636.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;SignUp&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925939-6db24f80-6fb8-11eb-9624-8406f4be996d.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TempLogin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925945-6e4ae600-6fb8-11eb-9b30-0f5101efe70d.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Capture &amp;amp; Clear&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925949-730f9a00-6fb8-11eb-98e3-623c1377db11.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AddBoard&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925953-7440c700-6fb8-11eb-8699-a48cac405337.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;BoardDetail&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925956-760a8a80-6fb8-11eb-8768-12c43147a38a.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MyPage&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925961-77d44e00-6fb8-11eb-8bb6-f019a9943fa2.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Logout&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/107925967-799e1180-6fb8-11eb-8056-27ad72c88182.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Login</summary></entry><entry><title type="html">FlexBox</title><link href="https://sungseokmin.github.io/frontend/flexbox/Flex/" rel="alternate" type="text/html" title="FlexBox" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/flexbox/Flex</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/flexbox/Flex/">&lt;blockquote&gt;
   &lt;h3 id=&quot;flexbox-부모-속성&quot;&gt;FlexBox (부모 속성)&lt;/h3&gt;
 &lt;/blockquote&gt;
 
@@ -2285,83 +2438,4 @@ app.use(session({
 app.listen(3000, () =&amp;gt; {
   console.log('Express Start');
 })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="Express" /><summary type="html">Express ?</summary></entry><entry><title type="html">HTTP</title><link href="https://sungseokmin.github.io/backend/http/HTTP-backend/" rel="alternate" type="text/html" title="HTTP" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://sungseokmin.github.io/backend/http/HTTP-backend</id><content type="html" xml:base="https://sungseokmin.github.io/backend/http/HTTP-backend/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;http-&quot;&gt;HTTP ?&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;웹 상에서 client와 server 간에 요청/응답으로 데이터를 주고 받을 수 있는 프로토콜&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;작동방식&quot;&gt;작동방식&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;client -&amp;gt; (요청) -&amp;gt; server&lt;/li&gt;
-  &lt;li&gt;Server -&amp;gt; (응답) -&amp;gt; client&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;stateless(무상태성) : 이전 요청이나 다음 요청을 기억하지 않는다.
-    &lt;ul&gt;
-      &lt;li&gt;ex) client가 server에게 고기를 먹으러 가자고 요청을 보내자 server는 알겠다고 응답을 한다.&lt;/li&gt;
-      &lt;li&gt;응답을 받은 client는 언제갈까 라고 server에게 요청을 보내지만 server는 무엇을? 이라는 응답을 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;connectionless(무연결성) : 한번의 요청에는 한번의 응답을 한다.
-    &lt;ul&gt;
-      &lt;li&gt;ex) client가 server에게 뭐해?, 바빠?, 어디갈까? 라는 요청을 한번에 보낼 수 없다는 뜻!!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;메소드&quot;&gt;메소드&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GET : 서버로부터 정보를 조회하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;브라우저에서 웹페이지를 열거나 게시물을 읽는 등 조회하는 행위는 GET 요청&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;POST : 기존에 없던 리소스를 생성/변경하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;기존에 없던 게시글을 작성하는 행위 등은 POST 요청&lt;/li&gt;
-      &lt;li&gt;데이터가 Body로 전송된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PUT : 기존에 있던 리소스를 변경하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;기존에 있던 게시글을 수정하는 행위 등은 PUT 요청&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;DELETE : 리소스를 삭제하기 위해 설계된 메소드
-    &lt;ul&gt;
-      &lt;li&gt;게시글 삭제&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;OPTIONS, TRACE, CONNECT …&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;get-post의-차이&quot;&gt;GET, POST의 차이&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GET은 서버에게 동일한 요청을 여러 번 전송하더라도 동일한 응답이 돌아와야 하고
-    &lt;ul&gt;
-      &lt;li&gt;서버의 데이터나 상태를 변경시키지 않아야 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;POST는 서버에게 동일한 요청을 여러 번 전송해도 응답이 항상 다를 수 있다.
-    &lt;ul&gt;
-      &lt;li&gt;서버의 데이터나 상태를 변경 시킬 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;http-header&quot;&gt;HTTP HEADER&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/httpheader.png&quot; alt=&quot;Headers&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;response-status&quot;&gt;Response Status&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/request_status.png&quot; alt=&quot;응답코드&quot; /&gt;&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="http" /><summary type="html">HTTP ?</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="backend" /><category term="Express" /><summary type="html">Express ?</summary></entry></feed>

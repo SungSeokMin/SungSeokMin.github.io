@@ -94,4 +94,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/html/SCSS/",
         "teaser": null
+      },{
+        "title": "Front-End",
+        "excerpt":"CSR(Client Side Rendering) &amp; SSR(Server Side Rendering) CSR ? 브라우저가 서버에 HTML, JS파일을 요청한 후 로드되면 사용자의 상호작용에 따라 JS를 이용해서 동적으로 페이지를 렌더링 시키는 방법 SSR ? 브라우저가 페이지를 요청할 때마다 HTML, CSS, JS 파일 및 데이터를 받아와서 페이지를 렌더링 시키는 방법 장점과 단점 CSR의 경우는 처음 로딩하는 시간이...","categories": ["interview"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/interview/Interview-FrontEnd/",
+        "teaser": null
       }]
