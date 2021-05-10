@@ -1,5 +1,5 @@
-I"_<blockquote>
-  <p>CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)</p>
+I"�<blockquote>
+  <h2 id="csrclient-side-rendering--ssrserver-side-rendering">CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)</h2>
 </blockquote>
 
 <ul>
@@ -27,13 +27,13 @@
 </ul>
 
 <blockquote>
-  <p>REST API</p>
+  <h2 id="rest-api">REST API</h2>
 </blockquote>
 
 <ul>
   <li>REST ?
     <ul>
-      <li>자원을 주고받는 웹 상에서의 통신 체계에 있어서 범용적인 스타일을 규정한 아키텍처</li>
+      <li>URI와 HTTP를 이용한 통신 목적의 아키텍쳐 스타일</li>
     </ul>
   </li>
   <li>API ?
@@ -48,8 +48,18 @@
   </li>
 </ul>
 
+<p>특징</p>
+
+<ul>
+  <li>클라이언트/서버 : request, response가 있어야 한다.</li>
+  <li>무상태 : 이전 요청이 다음 요청의 처리에 연관되면 안된다.</li>
+  <li>캐시 처리 가능</li>
+  <li>계층화</li>
+  <li>인터페이스 일관성</li>
+</ul>
+
 <blockquote>
-  <p>브라우저 렌더링 과정</p>
+  <h2 id="브라우저-렌더링-과정">브라우저 렌더링 과정</h2>
 </blockquote>
 
 <ol>
@@ -61,7 +71,7 @@
 </ol>
 
 <blockquote>
-  <p>Dom</p>
+  <h2 id="dom">Dom</h2>
 </blockquote>
 
 <ul>
@@ -69,7 +79,7 @@
 </ul>
 
 <blockquote>
-  <p>HTTP &amp; HTTPS</p>
+  <h2 id="http--https">HTTP &amp; HTTPS</h2>
 </blockquote>
 
 <ul>
@@ -98,7 +108,7 @@
 </ul>
 
 <blockquote>
-  <p>CORS</p>
+  <h2 id="cors">CORS</h2>
 </blockquote>
 
 <ul>
@@ -106,7 +116,7 @@
 </ul>
 
 <blockquote>
-  <p>데이터 바인딩 (단방향, 양방향)</p>
+  <h2 id="데이터-바인딩-단방향-양방향">데이터 바인딩 (단방향, 양방향)</h2>
 </blockquote>
 
 <ul>
@@ -134,6 +144,56 @@
 </ul>
 
 <blockquote>
-  <p>UI &amp; UX</p>
+  <h2 id="ui--ux">UI &amp; UX</h2>
 </blockquote>
+
+<ul>
+  <li>
+    <p>UI ?</p>
+
+    <ul>
+      <li>사용자가 웹이나 앱을 사용할때 마주하는 디자인(layout, button, animation)의 기술적인 부분</li>
+    </ul>
+  </li>
+  <li>
+    <p>UX ?</p>
+    <ul>
+      <li>통계 자료 및 데이터를 기반으로 한 사용자 분석</li>
+    </ul>
+  </li>
+</ul>
+
+<p>=================================================</p>
+
+<ul>
+  <li>
+    <p>자기소개 ?</p>
+
+    <ul>
+      <li>안녕하세요. 신입 프론트엔드 개발자로 지원하게 된 성석민 입니다.
+비전공자에서 개발자가 되기까지 국비지원, 코드스테이츠 부트캠프를 통해 지식을 쌓게 되었고
+개발에 대한 흥미를 가지고 좋은 개발자가 되기 위해 노력하고 있습니다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>왜 개발에 관심을 가지게 되었느냐 ?</p>
+
+    <ul>
+      <li>대학교를 졸업하고 나서 회사를 계약직으로 다니게 되었는데 그 회사가 adobe flash를 이용해서 동영상 강의를 제공하는 회사 였습니다.
+그런데 adobe flash가 2020년 말에 지원 중단된다는 소식을 듣고 검색 해본 결과 html5가 유망할 것이다 라는 기사를 보게 되었습니다.
+젊은 나이에 하나라도 더 경험 해보자 하면서 개발자에 관한 검색을 해보다가 국비지원을 알게 되었고 그 과정을 통해서 개발이 이런 것이구나 재미를 느끼기 시작했습니다. 그 후에 프론트 엔드에 관심이 생겨서 코드스테이츠 부트캠프를 수료하였습니다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>지원동기가 어떻게 되었느 ?</p>
+
+    <ul>
+      <li>저 같은 경우에는 첫 번째 기준이 어떤 회사가 좋을까가 아니라 스타트업 어디든 지원해보자 였습니다.
+그 이유는 솔직히 신입들은 선택지가 넓지 않다고 생각을 했고, 대기업 보다 성장할 수 있는 기회가 많이 주어질 것 같아서 였습니다.
+그러다가 로켓펀치에서 위나인 회사를 보게 되었는데 자격요건, 우대사항들이 적혀저 있지 않더라구요 그래서 왜 안 적었을까를 생각 해봤는데
+배울 의지가 있으면 지원해봐라 살짝 이런 느낌이 들어서 자신감 있게 지원을 하게 되었고 또 하나는 김보상 웹 페이지에 들어가봤는데
+너무 깔끔하게 잘 만들어져 있어서 지원하게 되었습니다.</li>
+    </ul>
+  </li>
+</ul>
 :ET

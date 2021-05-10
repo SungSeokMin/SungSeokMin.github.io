@@ -1,0 +1,107 @@
+I"Z<blockquote>
+  <h2 id="var-let-const-차이점">var, let, const 차이점</h2>
+</blockquote>
+
+<ul>
+  <li>var는 함수레벨이 하나의 유효범위를 가지고 let과 const는 블럭레벨이 하나의 유호범위를 가진다.</li>
+</ul>
+
+<blockquote>
+  <h2 id="scope">scope</h2>
+</blockquote>
+
+<ul>
+  <li>변수가 선언되어있는 특정한 블럭 내부가 하나의 유효범위</li>
+</ul>
+
+<blockquote>
+  <h2 id="this">this</h2>
+</blockquote>
+
+<ul>
+  <li>일반 함수는 호출 위치에 따라 this가 정의
+    <ul>
+      <li>일반 함수 실행</li>
+      <li>dot notaition (객체의 메소드 실행)</li>
+      <li>new 키워드</li>
+      <li>call, apply, bind 실행</li>
+    </ul>
+  </li>
+  <li>화살표 함수는 자신이 선언된 함수 범위에서 this가 정의</li>
+</ul>
+
+<blockquote>
+  <h2 id="클로저">클로저</h2>
+</blockquote>
+
+<ul>
+  <li>내부 함수가 외부 함수의 지역변수에 접근 할 수 있는 것으로 변수를 private하게 사용하고 싶을 때 closure를 사용한다.</li>
+  <li>외부 함수는 외부 함수의 지역변수를 사용하는 내부함수가 소멸될 때 까지 소멸되지 않는다</li>
+</ul>
+
+<blockquote>
+  <h2 id="event-loop">Event Loop</h2>
+</blockquote>
+
+<ul>
+  <li>Memory Heap
+    <ul>
+      <li>메모리 할당이 일어나는 곳</li>
+      <li>Heap ?
+        <ul>
+          <li>구조화되지 않은 메모리 영역</li>
+          <li>객체(변수, 함수)들이 담김</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Call Stack</p>
+
+    <ul>
+      <li>실행될 코드의 한 줄 단위로 할당</li>
+    </ul>
+  </li>
+  <li>
+    <p>Web APIs</p>
+
+    <ul>
+      <li>비동기 처리를 담당</li>
+    </ul>
+  </li>
+  <li>
+    <p>Callback Queue</p>
+
+    <ul>
+      <li>비동기 처리가 끝난 후 실행되어야 할 콜백 함수가 차례로 할당</li>
+    </ul>
+  </li>
+  <li>Event Loop
+    <ul>
+      <li>Queue에 할당된 함수를 순서에 맞춰 Call Stack에 할당</li>
+    </ul>
+  </li>
+</ul>
+
+<p>비동기 처리가 없는 경우</p>
+
+<ol>
+  <li>함수가 실행되면 Call Stack에 쌓이고 출력된다.</li>
+</ol>
+
+<p>비동기 처리가 있는 경우</p>
+
+<ol>
+  <li>함수가 실행되면 Call Stack에 쌓이고 출력된다.</li>
+  <li>다음 함수가 비동기 처리 일 경우 Web APIs로 이동되고</li>
+  <li>비동기 처리가 끝나면 Callback Queue로 이동된다.</li>
+  <li>이때 Event Loop는 Call Stack이 비었는지 확인 후</li>
+  <li>비어있으면 Call Stack으로 이동 후 출력, 비어있지 않으면 Call Stack이 출력 될 때 까지 기다린다.</li>
+  <li>남아있던 Call Stack이 다 출력 될 경우 Callback Queue에서 Call Stack으로 이동된다.</li>
+  <li>Call Stack으로 이동된 비동기 처리 함수들이 출력된다.</li>
+</ol>
+
+<blockquote>
+  <h2 id="버추얼-돔">버추얼 돔</h2>
+</blockquote>
+:ET
