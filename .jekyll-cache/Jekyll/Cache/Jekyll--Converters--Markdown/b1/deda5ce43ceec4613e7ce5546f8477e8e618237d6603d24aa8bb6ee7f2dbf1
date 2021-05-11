@@ -1,0 +1,207 @@
+I"�<blockquote>
+  <h2 id="csrclient-side-rendering--ssrserver-side-rendering">CSR(Client Side Rendering) &amp; SSR(Server Side Rendering)</h2>
+</blockquote>
+
+<ul>
+  <li>
+    <p>CSR ?</p>
+
+    <ul>
+      <li>브라우저가 서버에 HTML, JS파일을 요청한 후 로드되면 사용자의 상호작용에 따라 JS를 이용해서 동적으로 페이지를 렌더링 시키는 방법</li>
+    </ul>
+  </li>
+  <li>
+    <p>SSR ?</p>
+
+    <ul>
+      <li>브라우저가 페이지를 요청할 때마다 HTML, CSS, JS 파일 및 데이터를 받아와서 페이지를 렌더링 시키는 방법</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="장점과-단점">장점과 단점</h3>
+
+<ul>
+  <li>CSR의 경우는 처음 로딩하는 시간이 오래 걸리고, 검색엔진 초기화(SEO)의 문제가 있지만, 각 페이지 요청 시 빠르게 렌더링 되기 때문에 UX(사용자 경혐)이 좋다.</li>
+  <li>SSR의 경우는 처음 로딩하는 시간이 짧고, 검색엔진 초기화(SEO)가 가능하지만, 각 페이지 요청 시 새로고침 되기 때문에 UX(사용자 경험)가 좋지 않다.</li>
+</ul>
+
+<blockquote>
+  <h2 id="rest-api">REST API</h2>
+</blockquote>
+
+<ul>
+  <li>REST
+    <ul>
+      <li>자원의 표현을 가지고 상태를 전달한다.</li>
+      <li>자원을 URI에 명시를 하고, 상태를 Http method로 명시한다.</li>
+    </ul>
+  </li>
+  <li>API
+    <ul>
+      <li>기존에 있는 응용 프로그램을 통해서 데이터를 제공받거나 기능을 사용하고자 할 때 사용하는 인터페이스 및 규격</li>
+    </ul>
+  </li>
+  <li>REST API
+    <ul>
+      <li>REST 원칙을 적용하여 서비스 API를 설계한 것을 말한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="rest-원칙">REST 원칙</h3>
+
+<ul>
+  <li>인터페이스 일관성 ⭐️</li>
+  <li>클라이언트/서버 : request, response가 있어야 한다.</li>
+  <li>무상태 : 이전 요청이 다음 요청의 처리에 연관되면 안된다.</li>
+  <li>캐시 처리 가능</li>
+  <li>계층화</li>
+</ul>
+
+<blockquote>
+  <h2 id="브라우저-렌더링-과정">브라우저 렌더링 과정</h2>
+</blockquote>
+
+<ol>
+  <li>HTML 파싱 후, DOM 트리 구축</li>
+  <li>CSS 파싱 후, CSSSOM 트리 구축</li>
+  <li>JavaScript 실행 (❗️ script태그가 HTML 중간에 있다면 HTML 파싱이 중단된다.)</li>
+  <li>DOM과 CSSOM을 조합하여 렌더트리 구축</li>
+  <li>렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산해서 화면에 그린다.</li>
+</ol>
+
+<blockquote>
+  <h2 id="dom">Dom</h2>
+</blockquote>
+
+<ul>
+  <li>문서 객체 모델, HTML,XML 문서의 프로그래밍 interface</li>
+  <li>프로그래밍 언어가 DOM 구조에 접근할 수 있는 방법을 제공하여 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다.</li>
+</ul>
+
+<blockquote>
+  <h2 id="virtual-dom">Virtual Dom</h2>
+</blockquote>
+
+<ul>
+  <li>변화가 일어나면 실제로 브라우저의 DOM에 새로운 것을 넣는 게 아니라
+JavaScript로 이루어진 가상의 DOM에 한번 렌더링 하고 기존의 DOM과 비교를 한 후 변화가 필요한 곳에만 업데이트를 해주는 역할</li>
+</ul>
+
+<blockquote>
+  <h2 id="http--https">HTTP &amp; HTTPS</h2>
+</blockquote>
+
+<ul>
+  <li>
+    <p>HTTP</p>
+
+    <ul>
+      <li>서버/클라이언트 모델을 따라 데이터를 주고 받기 위한 프로토콜
+        <ul>
+          <li>80번 포트를 사용하며, 인터넷에서 하이퍼텍스트를 교환하기 위한 통신 규약</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>HTTPS</p>
+    <ul>
+      <li>HTTP에 데이터 암호화가 추가된 프로토콜
+        <ul>
+          <li>433번 포트를 사용하며, 네트워크 상에서 중간에 제3자가 정보를볼 수 없도록 공개키 암호화를 지원</li>
+          <li>검색엔진 최적화(SEO)에 있어서 혜택을 받음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="cors">CORS</h2>
+</blockquote>
+
+<ul>
+  <li>HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제</li>
+</ul>
+
+<blockquote>
+  <h2 id="xss">XSS</h2>
+</blockquote>
+
+<ul>
+  <li>악의적인 사용자가 스크립트를 넣어 쿠키, 세션등의 정보를 탈취하는 공격 기법</li>
+</ul>
+
+<h3 id="대책">대책</h3>
+
+<ol>
+  <li>쿠키에 중요한 정보를 담지 않고 서버에 중요 정보를 저장</li>
+  <li>HttpOnly 옵션을 통해 cookie에 접근을 방지</li>
+  <li>문자열 치환</li>
+</ol>
+
+<blockquote>
+  <h2 id="csrf">CSRF</h2>
+</blockquote>
+
+<ul>
+  <li>사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위를 특정 웹사이트에 요청하게 하는 공격 기법</li>
+</ul>
+
+<h3 id="대책-1">대책</h3>
+
+<ol>
+  <li>Referer 검증</li>
+</ol>
+
+<ul>
+  <li>서버에서 request의 referer 확인하여 domain이 일치하는지 검증</li>
+</ul>
+
+<blockquote>
+  <h2 id="데이터-바인딩-단방향-양방향">데이터 바인딩 (단방향, 양방향)</h2>
+</blockquote>
+
+<ul>
+  <li>
+    <p>데이터 바인딩</p>
+
+    <ul>
+      <li>화면에 보이는 데이터와 브라우저 메모리에 있는 데이터를 일치시키는 기법</li>
+    </ul>
+  </li>
+  <li>
+    <p>단방향 데이터 바인딩</p>
+
+    <ul>
+      <li>데이터에 변화가 생기면 특정함수를 실행시킨 후 다시 렌더링 되어서 DOM을 갱신</li>
+    </ul>
+  </li>
+  <li>
+    <p>양방향 데이터 바인딩</p>
+    <ul>
+      <li>웹페이지의 변수 입력 부분을 수정하게 되면 JavaScript 변수의 값도 변경되어 실시간으로 DOM을 갱신</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="mvc-패턴">MVC 패턴</h2>
+</blockquote>
+
+<ul>
+  <li>Model : Controller에게 받은 요청에 따라 데이터를 관리하고 해당 데이터를 다시 Controller에게 전송한다.</li>
+  <li>View : 사용자한테 보여지는 부분으로 Controller로부터 전달받은 데이터를 Client로 전송해 결과를 나타낸다.</li>
+  <li>Controller : Model로 데이터 요청을 보낸 후 전달받은 데이터를 View에 전송한다.</li>
+</ul>
+
+<blockquote>
+  <h2 id="flux-패턴">Flux 패턴</h2>
+</blockquote>
+
+<ul>
+  <li>시스템에서 어떠한 Action을 받았을 때, Dispatcher가 받은 Action들을 통제하여 Store에 있는 데이터를 업데이트한 후 변경된 데이터가 있으면 View에 리렌더링 한다.</li>
+</ul>
+:ET

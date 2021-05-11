@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-05-10T17:51:58+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">JavaScript</title><link href="https://sungseokmin.github.io/interview/Interview-JavaScript/" rel="alternate" type="text/html" title="JavaScript" /><published>2021-05-10T00:00:00+09:00</published><updated>2021-05-10T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-JavaScript</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-JavaScript/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-05-11T20:49:14+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">JavaScript</title><link href="https://sungseokmin.github.io/interview/Interview-JavaScript/" rel="alternate" type="text/html" title="JavaScript" /><published>2021-05-10T00:00:00+09:00</published><updated>2021-05-10T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-JavaScript</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-JavaScript/">&lt;blockquote&gt;
   &lt;h2 id=&quot;var-let-const-차이점&quot;&gt;var, let, const 차이점&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -11,7 +11,45 @@
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;변수가 선언되어있는 특정한 블럭 내부가 하나의 유효범위&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;변수에 접근할 수 있는 유효범위&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;함수 스코프 (var)&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;함수 외부에서 함수 내부의 변수에 접근 불가&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;블럭 스코프 (let, const)&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;블럭 외부에서 블럭 내부의 변수에 접근 불가&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;closure&quot;&gt;Closure&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;내부 함수가 외부 함수의 지역변수에 접근 할 수 있는 것으로 변수를 private하게 사용하고 싶을 때 closure를 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;callback&quot;&gt;Callback&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파라미터로 함수를 전달 받아, 함수의 내부에서 실행하는 함수
+    &lt;ul&gt;
+      &lt;li&gt;때가 되면 나중에 호출 한다는 것이 콜백함수의 기본 개념&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -28,15 +66,6 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;화살표 함수는 자신이 선언된 함수 범위에서 this가 정의&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id=&quot;클로저&quot;&gt;클로저&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;내부 함수가 외부 함수의 지역변수에 접근 할 수 있는 것으로 변수를 private하게 사용하고 싶을 때 closure를 사용한다.&lt;/li&gt;
-  &lt;li&gt;외부 함수는 외부 함수의 지역변수를 사용하는 내부함수가 소멸될 때 까지 소멸되지 않는다&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -83,27 +112,17 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;비동기-처리가-없는-경우&quot;&gt;비동기 처리가 없는 경우&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;함수가 실행되면 Call Stack에 쌓이고 출력된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;비동기-처리가-있는-경우&quot;&gt;비동기 처리가 있는 경우&lt;/h3&gt;
+&lt;h3 id=&quot;비동기-처리-함수가-있는-경우&quot;&gt;비동기 처리 함수가 있는 경우&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;함수가 실행되면 Call Stack에 쌓이고 출력된다.&lt;/li&gt;
   &lt;li&gt;다음 함수가 비동기 처리 일 경우 Web APIs로 이동되고&lt;/li&gt;
   &lt;li&gt;비동기 처리가 끝나면 Callback Queue로 이동된다.&lt;/li&gt;
-  &lt;li&gt;이때 Event Loop는 Call Stack이 비었는지 확인 후&lt;/li&gt;
+  &lt;li&gt;이때 Event Loop는 Call Stack이 비었는지 확인&lt;/li&gt;
   &lt;li&gt;비어있으면 Call Stack으로 이동 후 출력, 비어있지 않으면 Call Stack이 출력 될 때 까지 기다린다.&lt;/li&gt;
   &lt;li&gt;남아있던 Call Stack이 다 출력 될 경우 Callback Queue에서 Call Stack으로 이동된다.&lt;/li&gt;
   &lt;li&gt;Call Stack으로 이동된 비동기 처리 함수들이 출력된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id=&quot;버추얼-돔&quot;&gt;버추얼 돔&lt;/h2&gt;
-&lt;/blockquote&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="interview" /><summary type="html">var, let, const 차이점</summary></entry><entry><title type="html">Front-End</title><link href="https://sungseokmin.github.io/interview/Interview-FrontEnd/" rel="alternate" type="text/html" title="Front-End" /><published>2021-05-06T00:00:00+09:00</published><updated>2021-05-06T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-FrontEnd</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-FrontEnd/">&lt;blockquote&gt;
+&lt;/ol&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="interview" /><summary type="html">var, let, const 차이점</summary></entry><entry><title type="html">Front-End</title><link href="https://sungseokmin.github.io/interview/Interview-FrontEnd/" rel="alternate" type="text/html" title="Front-End" /><published>2021-05-06T00:00:00+09:00</published><updated>2021-05-06T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-FrontEnd</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-FrontEnd/">&lt;blockquote&gt;
   &lt;h2 id=&quot;csrclient-side-rendering--ssrserver-side-rendering&quot;&gt;CSR(Client Side Rendering) &amp;amp; SSR(Server Side Rendering)&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -122,13 +141,13 @@
       &lt;li&gt;브라우저가 페이지를 요청할 때마다 HTML, CSS, JS 파일 및 데이터를 받아와서 페이지를 렌더링 시키는 방법&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;장점과 단점&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;CSR의 경우는 처음 로딩하는 시간이 오래 걸리고, 검색엔진 초기화(SEO)의 문제가 있지만, 각 페이지 요청 시 빠르게 렌더링 되기 때문에 UX(사용자 경혐)이 좋다.&lt;/li&gt;
-      &lt;li&gt;SSR의 경우는 처음 로딩하는 시간이 짧고, 검색엔진 초기화(SEO)가 가능하지만, 각 페이지 요청 시 새로고침 되기 때문에 UX(사용자 경험)가 좋지 않다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;장점과-단점&quot;&gt;장점과 단점&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CSR의 경우는 처음 로딩하는 시간이 오래 걸리고, 검색엔진 초기화(SEO)의 문제가 있지만, 각 페이지 요청 시 빠르게 렌더링 되기 때문에 UX(사용자 경혐)이 좋다.&lt;/li&gt;
+  &lt;li&gt;SSR의 경우는 처음 로딩하는 시간이 짧고, 검색엔진 초기화(SEO)가 가능하지만, 각 페이지 요청 시 새로고침 되기 때문에 UX(사용자 경험)가 좋지 않다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -136,31 +155,32 @@
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;REST ?
+  &lt;li&gt;REST
     &lt;ul&gt;
-      &lt;li&gt;URI와 HTTP를 이용한 통신 목적의 아키텍쳐 스타일&lt;/li&gt;
+      &lt;li&gt;자원의 표현을 가지고 상태를 전달한다.&lt;/li&gt;
+      &lt;li&gt;자원을 URI에 명시를 하고, 상태를 Http method로 명시한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;API ?
+  &lt;li&gt;API
     &lt;ul&gt;
       &lt;li&gt;기존에 있는 응용 프로그램을 통해서 데이터를 제공받거나 기능을 사용하고자 할 때 사용하는 인터페이스 및 규격&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;REST API ?
+  &lt;li&gt;REST API
     &lt;ul&gt;
       &lt;li&gt;REST 원칙을 적용하여 서비스 API를 설계한 것을 말한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;특징&lt;/p&gt;
+&lt;h3 id=&quot;rest-원칙&quot;&gt;REST 원칙&lt;/h3&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;인터페이스 일관성 ⭐️&lt;/li&gt;
   &lt;li&gt;클라이언트/서버 : request, response가 있어야 한다.&lt;/li&gt;
   &lt;li&gt;무상태 : 이전 요청이 다음 요청의 처리에 연관되면 안된다.&lt;/li&gt;
   &lt;li&gt;캐시 처리 가능&lt;/li&gt;
   &lt;li&gt;계층화&lt;/li&gt;
-  &lt;li&gt;인터페이스 일관성&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -180,7 +200,17 @@
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;웹페이지를 JavaScript로 제어하기 위한 객체 모델이며 웹 페이지를 프로그래밍 언어들에서 사용될 수 있게 연결시켜주는 역할을 담당&lt;/li&gt;
+  &lt;li&gt;문서 객체 모델, HTML,XML 문서의 프로그래밍 interface&lt;/li&gt;
+  &lt;li&gt;프로그래밍 언어가 DOM 구조에 접근할 수 있는 방법을 제공하여 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;virtual-dom&quot;&gt;Virtual Dom&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;변화가 일어나면 실제로 브라우저의 DOM에 새로운 것을 넣는 게 아니라
+JavaScript로 이루어진 가상의 DOM에 한번 렌더링 하고 기존의 DOM과 비교를 한 후 변화가 필요한 곳에만 업데이트를 해주는 역할&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -189,7 +219,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;HTTP ?&lt;/p&gt;
+    &lt;p&gt;HTTP&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;서버/클라이언트 모델을 따라 데이터를 주고 받기 위한 프로토콜
@@ -200,7 +230,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;HTTPS ?&lt;/p&gt;
+    &lt;p&gt;HTTPS&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;HTTP에 데이터 암호화가 추가된 프로토콜
         &lt;ul&gt;
@@ -221,27 +251,60 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
+  &lt;h2 id=&quot;xss&quot;&gt;XSS&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;악의적인 사용자가 스크립트를 넣어 쿠키, 세션등의 정보를 탈취하는 공격 기법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;대책&quot;&gt;대책&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;쿠키에 중요한 정보를 담지 않고 서버에 중요 정보를 저장&lt;/li&gt;
+  &lt;li&gt;HttpOnly 옵션을 통해 cookie에 접근을 방지&lt;/li&gt;
+  &lt;li&gt;문자열 치환&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;csrf&quot;&gt;CSRF&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위를 특정 웹사이트에 요청하게 하는 공격 기법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;대책-1&quot;&gt;대책&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Referer 검증&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;서버에서 request의 referer 확인하여 domain이 일치하는지 검증&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
   &lt;h2 id=&quot;데이터-바인딩-단방향-양방향&quot;&gt;데이터 바인딩 (단방향, 양방향)&lt;/h2&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;데이터 바인딩 ?&lt;/p&gt;
+    &lt;p&gt;데이터 바인딩&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;두 데이터 또는 정보의 소스를 모두 일치시키는 기법&lt;/li&gt;
       &lt;li&gt;화면에 보이는 데이터와 브라우저 메모리에 있는 데이터를 일치시키는 기법&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;단방향 데이터 바인딩 ?&lt;/p&gt;
+    &lt;p&gt;단방향 데이터 바인딩&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;데이터에 변화가 생기면 특정함수를 실행시킨 후 다시 렌더링 되어서 DOM을 갱신&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;양방향 데이터 바인딩 ?&lt;/p&gt;
+    &lt;p&gt;양방향 데이터 바인딩&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;웹페이지의 변수 입력 부분을 수정하게 되면 JavaScript 변수의 값도 변경되어 실시간으로 DOM을 갱신&lt;/li&gt;
     &lt;/ul&gt;
@@ -249,23 +312,21 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;h2 id=&quot;ui--ux&quot;&gt;UI &amp;amp; UX&lt;/h2&gt;
+  &lt;h2 id=&quot;mvc-패턴&quot;&gt;MVC 패턴&lt;/h2&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;UI ?&lt;/p&gt;
+  &lt;li&gt;Model : Controller에게 받은 요청에 따라 데이터를 관리하고 해당 데이터를 다시 Controller에게 전송한다.&lt;/li&gt;
+  &lt;li&gt;View : 사용자한테 보여지는 부분으로 Controller로부터 전달받은 데이터를 Client로 전송해 결과를 나타낸다.&lt;/li&gt;
+  &lt;li&gt;Controller : Model로 데이터 요청을 보낸 후 전달받은 데이터를 View에 전송한다.&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;사용자가 웹이나 앱을 사용할때 마주하는 디자인(layout, button, animation)의 기술적인 부분&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;UX ?&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;통계 자료 및 데이터를 기반으로 한 사용자 분석&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;flux-패턴&quot;&gt;Flux 패턴&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시스템에서 어떠한 Action을 받았을 때, Dispatcher가 받은 Action들을 통제하여 Store에 있는 데이터를 업데이트한 후 변경된 데이터가 있으면 View에 리렌더링 한다.&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="interview" /><summary type="html">CSR(Client Side Rendering) &amp;amp; SSR(Server Side Rendering)</summary></entry><entry><title type="html">SCSS</title><link href="https://sungseokmin.github.io/frontend/html/SCSS/" rel="alternate" type="text/html" title="SCSS" /><published>2021-04-25T00:00:00+09:00</published><updated>2021-04-25T00:00:00+09:00</updated><id>https://sungseokmin.github.io/frontend/html/SCSS</id><content type="html" xml:base="https://sungseokmin.github.io/frontend/html/SCSS/">&lt;blockquote&gt;
   &lt;h2 id=&quot;scss&quot;&gt;SCSS&lt;/h2&gt;
 &lt;/blockquote&gt;

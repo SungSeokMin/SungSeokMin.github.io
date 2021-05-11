@@ -102,7 +102,7 @@ var store = [{
         "teaser": null
       },{
         "title": "JavaScript",
-        "excerpt":"var, let, const 차이점 var는 함수레벨이 하나의 유효범위를 가지고 let과 const는 블럭레벨이 하나의 유호범위를 가진다. scope 변수가 선언되어있는 특정한 블럭 내부가 하나의 유효범위 this 일반 함수는 호출 위치에 따라 this가 정의 일반 함수 실행 dot notaition (객체의 메소드 실행) new 키워드 call, apply, bind 실행 화살표 함수는 자신이 선언된 함수...","categories": ["interview"],
+        "excerpt":"var, let, const 차이점 var는 함수레벨이 하나의 유효범위를 가지고 let과 const는 블럭레벨이 하나의 유호범위를 가진다. scope 변수에 접근할 수 있는 유효범위 함수 스코프 (var) 함수 외부에서 함수 내부의 변수에 접근 불가 블럭 스코프 (let, const) 블럭 외부에서 블럭 내부의 변수에 접근 불가 Closure 내부 함수가 외부 함수의 지역변수에 접근 할...","categories": ["interview"],
         "tags": [],
         "url": "https://sungseokmin.github.io/interview/Interview-JavaScript/",
         "teaser": null
