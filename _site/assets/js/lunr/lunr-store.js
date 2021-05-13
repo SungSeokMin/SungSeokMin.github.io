@@ -106,4 +106,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/interview/Interview-JavaScript/",
         "teaser": null
+      },{
+        "title": "Toy_회원가입 및 로그인",
+        "excerpt":"사용한 모듈 node.js 및 express.js 설치 node : Chrome V8 엔진으로 빌드된 JavaScript 런타임 nvm(node version manager) : 여러 개의 nodejs를 설치하고 사용할 버전을 쉽게 전활할 수 있도록 도와주는 역할 터미널 실행 후 nvm 설치 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 최신 버전 설치 nvm install node 특정 버전 설치 nvm...","categories": ["project","Toy"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/project/toy/Project-signUp_signIn/",
+        "teaser": null
       }]

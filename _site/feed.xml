@@ -1,4 +1,417 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-05-11T20:49:14+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">JavaScript</title><link href="https://sungseokmin.github.io/interview/Interview-JavaScript/" rel="alternate" type="text/html" title="JavaScript" /><published>2021-05-10T00:00:00+09:00</published><updated>2021-05-10T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-JavaScript</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-JavaScript/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sungseokmin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sungseokmin.github.io/" rel="alternate" type="text/html" /><updated>2021-05-13T19:58:52+09:00</updated><id>https://sungseokmin.github.io/feed.xml</id><title type="html">Happy Developer</title><subtitle>Happy Blog</subtitle><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><entry><title type="html">Toy_회원가입 및 로그인</title><link href="https://sungseokmin.github.io/project/toy/Project-signUp_signIn/" rel="alternate" type="text/html" title="Toy_회원가입 및 로그인" /><published>2021-05-13T00:00:00+09:00</published><updated>2021-05-13T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/toy/Project-signUp_signIn</id><content type="html" xml:base="https://sungseokmin.github.io/project/toy/Project-signUp_signIn/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;사용한-모듈&quot;&gt;사용한 모듈&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/72539723/118116692-8b5f4b80-b425-11eb-9453-3bcc598a4256.png&quot; alt=&quot;module&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;nodejs-및-expressjs-설치&quot;&gt;node.js 및 express.js 설치&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;node : Chrome V8 엔진으로 빌드된 JavaScript 런타임&lt;/li&gt;
+  &lt;li&gt;nvm(node version manager) : 여러 개의 nodejs를 설치하고 사용할 버전을 쉽게 전활할 수 있도록 도와주는 역할&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;터미널-실행-후&quot;&gt;터미널 실행 후&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvm 설치
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+최신 버전 설치
+nvm install node
+
+특정 버전 설치
+nvm install 12.18.3
+
+노드 사용
+nvm use 12.18.3
+
+내 컴퓨터 안에 설치되어 있는 노드 버전 목록
+nvm ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;express-설치-후-서버-오픈&quot;&gt;express 설치 후 서버 오픈&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;express : Node.js를 위한 빠르고 간편한 웹 프레임워크&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;express 설치&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;npm install express –save&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
+
+const express = require('express');
+const app = express();
+const port = 5000;
+
+app.get('/', (req, res) =&amp;gt; res.send('Hello World'));
+
+app.listen(port, () =&amp;gt; console.log(`running on ${port}`))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;mongodb-연결&quot;&gt;MongoDB 연결&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;https://www.mongodb.com 접속 후 회원가입&lt;/li&gt;
+  &lt;li&gt;Create a New Cluster&lt;/li&gt;
+  &lt;li&gt;Cluster를 만들었다면 SANDBOX 왼쪽 부분에 CONNECT 클릭&lt;/li&gt;
+  &lt;li&gt;UserName과 Password 입력 후 Create Database User&lt;br /&gt;❗️나중에 DB연결을 위해 name과 password 기억❗️&lt;/li&gt;
+  &lt;li&gt;Connect your application 클릭 후 mongodb+srv로 시작하는 문자열 복사해두기&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;VSCode로 이동 후 mongoose 설치&lt;br /&gt;npm install moongose –save&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;mongoose 모듈을 불러온 후 connect 하기&lt;/li&gt;
+  &lt;li&gt;연결이 잘 되었나 확인&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const mongoose = require('mongoose');
+
+❗️5번에서 복사한 문자열 중 &amp;lt;password&amp;gt; 부분 삭제 후 4번에서 작성한 password 적어주기❗️
+
+mongoose.connect('5번에서 복사한 문자열 붙여넣기', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: true,
+}).then(() =&amp;gt; console.log('MongoDB Connected...'))
+  .catch((err) =&amp;gt; console.log(err));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;연결-확인&quot;&gt;연결 확인&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// package.json
+
+=&amp;gt; scripts 부분에 start 명시
+&quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node index.js&quot;,
+  },
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm run start
+
+=&amp;gt; MongoDB Connected... 문구 확인
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;mongodb-model--schema&quot;&gt;MongoDB Model &amp;amp; Schema&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;최상위 루트에 models 디렉토리 생성 후 하위에 User.js 파일 생성&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// User.js
+
+const mongoose = require('mongoose');
+
+const userSchema = mongoose.Schema({
+  name: {
+    type: String,
+    maxlength: 50, /* 문자열 최대 길이 */,
+  },
+  email: {
+    type: String,
+    trim: true /* email의 공백을 허용하지 않는다. */,
+  },
+  password: {
+    type: String,
+    minlength: 5, /* 문자열 최소 길이 */
+  },
+  lastname: {
+    type: String,
+    maxlength: 50,
+  },
+  role: {
+    /* 일반유저, 관리자 등을 파악하기 위한 model */
+    type: Number,
+    default: 0,
+  },
+  image: String,
+  token: {
+    type: String,
+  },
+  tokenExp: {
+    // token 유효기간
+    type: Number,
+  },
+});
+
+/* schema를 model로 감싼 후 exports */
+const User = mongoose.model('User', userSchema);
+
+module.exports = { User };
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;bodyparser&quot;&gt;BodyParser&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BodyParser : Client의 request의 body 데이터를 분석해 주는 역할&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;❌ express 4.16버전 이후로는 bodyParser가 지원되지 않는다.❌&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;설치
+npm install body-parser --save
+
+4.16버전 이전
+
+// application/x-www-form-urlencoded
+app.use(bodyParser.urlecoded({extended: true}));
+
+// application/json
+app.use(bodyParser.json());
+
+4.16버전 이후
+
+// application/x-www-form-urlencoded
+app.use(express.urlencoded({extended: true}));
+
+// application/json
+app.use(express.json());
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;회원가입-기능&quot;&gt;회원가입 기능&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;http method 중 post를 이용해서 Route처리&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
+
+const { User } = require('./models/User');
+
+app.post('/register', (req, res) =&amp;gt; {
+  // User model을 가져온 후 인스턴스화
+  const user = new User(req.body);
+
+  user.save((err, userInfo) =&amp;gt; {
+    /* 만약 user에 정보를 저장하는데 에러가 나면 success를 false로 응답하고 그렇지 않은 경우에는 true로 응답한다 */
+    if(err) return res.json({success: false, err});
+    return res.status(200).json({success: true});
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;bcrypto를-이용한-비밀번호-암호화&quot;&gt;bcrypto를 이용한 비밀번호 암호화&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;💡 코드를 보기 앞서 신경써야 할 부분&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mongoose의 method 중 &amp;lt;pre(‘save’)&amp;gt; : DB에 저장하기 전 (.save()) 실행 되는 함수&lt;/li&gt;
+  &lt;li&gt;this&lt;/li&gt;
+  &lt;li&gt;saltRounds&lt;/li&gt;
+  &lt;li&gt;next();&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// models/User.js
+
+const bcrypt = require('bcrypt);
+const saltRounds = 10; =&amp;gt; salt의 자릿수를 지정
+
+userSchema.pre('save', function (next) {
+  /* index.js파일에서 const user = new User(req.body); 를 통해 인스턴스화를 했기 때문에 this는 req.body의 정보로 들어온 사용자가 된다. */
+  let user = this;
+
+  // isModified는 mongoose의 method
+  if (user.isModified('password')) {
+    // 비밀번호 암호화 시키기
+    bcrypt.genSalt(saltRounds, function (err, salt) {
+      if (err) return next(err);
+
+      bcrypt.hash(user.password, salt, function (err, hash) {
+        if (err) return next(err);
+        user.password = hash;
+        next(); =&amp;gt; index.js의 save하는 함수로 이동시킨다.
+      });
+    });
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;login-기능-구현&quot;&gt;Login 기능 구현&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jsonwebtoken 설치
+    &lt;ul&gt;
+      &lt;li&gt;npm install jsonwebtoken –save&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cookie-parser 설치
+    &lt;ul&gt;
+      &lt;li&gt;npm install cookie-parser&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;순서&quot;&gt;순서&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;‘/login’ endpoint로 route 처리&lt;/li&gt;
+  &lt;li&gt;client로 부터 넘어온 data 중 email이 DB에 있는지 없는지 확인&lt;/li&gt;
+  &lt;li&gt;있다면 비밀번호가 일치하는 지 확인&lt;/li&gt;
+  &lt;li&gt;2,3 조건이 만족한다면 Token 생성후 응답&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+app.post('/login', (req, res) =&amp;gt; {
+  // 1. 요청된 이메일을 데이터베이스에서 있는지 찾는다.
+  User.findOne({ email: req.body.email }, (err, user) =&amp;gt; {
+    if (!user) {
+      return res.json({
+        loginSuccess: false,
+        message: '제공된 이메일에 해당하는 유저가 없습니다.',
+      });
+    }
+    // 2. 요청된 이메일이 데이터 베이스에 있다면 비밀번호가 맞는 비밀번호 인지 확인.
+    user.comparePassword(req.body.password, (err, isMatch) =&amp;gt; {
+      if (!isMatch) {
+        return res.json({ loginSuccess: false, message: '비밀번호가 틀렸습니다.' });
+      }
+      // 3. 1,2번 조건이 만족 한다면 token 생성
+      user.generateToken((err, user) =&amp;gt; {
+        if(err) return res.status(400).send(err);
+
+        res.cookie('x_auth', user.token).status(200).json({loginSuccess: true, userId: user._id})
+      });
+    });
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// User.js
+const jwt = require('jsonwebtoken');
+
+=&amp;gt; comparePassword
+userSchema.methods.comparePassword = function(plainPassword, callback) {
+  bcrypt.compare(plainPassword, this.password, (err, isMatch) =&amp;gt; {
+    if(err) return callback(err);
+    return callback(null, isMatch); =&amp;gt; isMatch의 값은 boolean
+  })
+}
+
+=&amp;gt; generateToken
+userSchema.methods.generateToken = function (cb) {
+  let user = this;
+
+  // MongoDB에서 생성된 _id는 string이 아니므로 toHexString() 메소드를 사용해서 형변환을 해줘야한다.
+  const token = jwt.sign(user._id.toHexString(), 'secretToken');
+
+  user.token = token;
+
+  user.save(function (err, user) {
+    if (err) return cb(err);
+    cb(null, user);
+  });
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;auth-기능-구현&quot;&gt;Auth 기능 구현&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;순서-1&quot;&gt;순서&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;middleware 폴더 생성 후 하위 auth.js 파일 생성&lt;/li&gt;
+  &lt;li&gt;findByToken을 statics method를 이용해 함수 작성&lt;/li&gt;
+  &lt;li&gt;User 모델 require 후 auth 함수 작성&lt;/li&gt;
+  &lt;li&gt;index.js에서 auth route 처리&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// auth.js
+
+const { User } = require('../models/User');
+
+let auth = (req, res, next) =&amp;gt; {
+  // client cookie에서 토큰을 가져온다.
+  let token = req.cookies.x_auth;
+
+  // 토큰을 복호화 한 후 유저를 찾는다.
+  User.findByToken(token, (err, user) =&amp;gt; {
+    if (err) throw err;
+    if (!user) return res.json({ isAuth: false, error: true });
+
+    req.token = token;
+    req.user = user;
+    next();
+  });
+};
+
+module.exports = { auth };
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// User.js
+
+userSchema.statics.findByToken = function (token, cb) {
+  let user = this;
+
+  // 토큰을 복호화 한다.
+  jwt.verify(token, 'secretToken', function (err, decoded) {
+    user.findOne({ _id: decoded, token: token }, function (err, user) {
+      if (err) return cb(err);
+      cb(null, user);
+    });
+  });
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
+
+app.get('/api/users/auth', auth, (req, res) =&amp;gt; {
+  res.status(200).json({
+    _id: req.user._id,
+    isAdmin: req.user.role === 0 ? false : true,
+    isAuth: true,
+    email: req.user.email,
+    name: req.user.name,
+    lastname: req.user.lastname,
+    role: req.user.role,
+    image: req.user.image,
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;logout-기능-구현&quot;&gt;Logout 기능 구현&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;순서-2&quot;&gt;순서&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;DB에 저장한 token 값을 삭제하면 auth middleware가 동작을 안 하기 때문에 로그아웃이 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
+
+app.get('/api/users/logout', auth, (req, res) =&amp;gt; {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: '' }, (err, user) =&amp;gt; {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).send({ success: true });
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/SungSeokMin/boiler-plate_signIn_signUp&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;출처 : 인프런(따라하며 배우는 노드, 리액트 시리즈) - John Ahn&lt;/p&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="Toy" /><summary type="html">사용한 모듈</summary></entry><entry><title type="html">JavaScript</title><link href="https://sungseokmin.github.io/interview/Interview-JavaScript/" rel="alternate" type="text/html" title="JavaScript" /><published>2021-05-10T00:00:00+09:00</published><updated>2021-05-10T00:00:00+09:00</updated><id>https://sungseokmin.github.io/interview/Interview-JavaScript</id><content type="html" xml:base="https://sungseokmin.github.io/interview/Interview-JavaScript/">&lt;blockquote&gt;
   &lt;h2 id=&quot;var-let-const-차이점&quot;&gt;var, let, const 차이점&lt;/h2&gt;
 &lt;/blockquote&gt;
 
@@ -2308,169 +2721,4 @@ flex: 1;
 align-self: flex-end;
 background-color: yellow;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="flexbox" /><summary type="html">FlexBox (부모 속성)</summary></entry><entry><title type="html">2 weeks project - ShapeOfVoice</title><link href="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/" rel="alternate" type="text/html" title="2 weeks project - ShapeOfVoice" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://sungseokmin.github.io/project/2%20weeks%20project/Project-1</id><content type="html" xml:base="https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/">&lt;blockquote&gt;
-  &lt;h2 id=&quot;shape-of-voice&quot;&gt;Shape Of Voice&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;사람의 목소리 파동을 이용해 채도, 명도, 색을 다르게 나타내는 이미지를 생성하는 웹&lt;/p&gt;
-
-&lt;h3 id=&quot;schema&quot;&gt;schema&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;user : 각 유저들의 정보&lt;/li&gt;
-  &lt;li&gt;voice : 목소리에 대한 정보&lt;/li&gt;
-  &lt;li&gt;board : 게시글에 대한 정보&lt;/li&gt;
-  &lt;li&gt;voice_board : voice table과 board table의 join table&lt;/li&gt;
-  &lt;li&gt;user_board_like : 특정 user가 어떠한 게시판의 좋아요를 눌렀는지에 대한 table
-&lt;img src=&quot;/img/schema.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wire-frame&quot;&gt;Wire frame&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/wireframe.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;flowchart&quot;&gt;Flowchart&lt;/h3&gt;
-
-&lt;h4 id=&quot;client&quot;&gt;client&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/client_flowchart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;server&quot;&gt;server&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/server_flowchart_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;api&quot;&gt;API&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://app.gitbook.com/@cloudacesending/s/shapeofvoice/&quot;&gt;ShapeOfVoice API Documents&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id=&quot;진행하면서-겪은-상황&quot;&gt;진행하면서 겪은 상황&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;sequelize의-many-to-many를-설정해주는-데-어려움을-겪었다&quot;&gt;sequelize의 Many To Many를 설정해주는 데 어려움을 겪었다.&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;공식문서, 블로그 에서는 아래와 같은 글들이 있었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ex)
-voice.belongsToMany(board, { through: 'voice_board'});
-board.belongsToMany(voice, { through: 'voice_board'});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;models &amp;gt; index.js에서 console.log(sequelize.models)한 결과 voice_board테이블은
-있었지만 데이터베이스에서는 없었다.&lt;/p&gt;
-
-&lt;p&gt;❗️여기서 migrations폴더에 voice_board를 만들어주는 파일이 없는데 안 만들어지는 게 당연하지 않을까 ? 라는 생각을 했다.&lt;/p&gt;
-
-&lt;p&gt;팀원과 의견을 합쳐 하나 둘 씩 해결하기 시작…&lt;/p&gt;
-
-&lt;h5 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;migration폴더에 voice_board 테이블을 생성하는 파일을 만들자 !&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npx migration:generate --name voice_board
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;voiceId와 boardId를 만들어 각각 voice테이블의 id와 board테이블의 id를 참조시켜주자 !&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;module.exports = {
-  up: async (queryInterface, Sequelize) =&amp;gt; {
-    await queryInterface.createTable('voice_board', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER,
-      },
-      voiceId: {
-        type: Sequelize.INTEGER,
-        references: { model: 'voices', key: 'id' },
-        onDelete: 'CASCADE',
-      },
-      boardId: {
-        type: Sequelize.INTEGER,
-        references: { model: 'boards', key: 'id' },
-        onDelete: 'CASCADE',
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-    });
-  },
-
-  down: async (queryInterface, Sequelize) =&amp;gt; {
-    await queryInterface.dropTable('voice_board');
-  },
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;modles폴더 안에 있는 board, voice파일의 associate 안에 내용을 추가해주자 !&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;board.belongsToMany(models.voice, {
-        through: 'voice_board',
-      });
-voice.belongsToMany(models.board, {
-        through: 'voice_board',
-      });
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;결과&quot;&gt;결과&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/result.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;잘 해결 되었다!!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;sequelize-include를-이용한-join&quot;&gt;sequelize include를 이용한 JOIN&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;sql문법에서는 join을 사용해 해결이 가능했지만 sequelize 문법은 익숙하지 않아 힘들었다.&lt;/li&gt;
-  &lt;li&gt;json형식의 데이터를 가공하는 일은 쉽지 않았다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;해결방법&quot;&gt;해결방법&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;include를 이용해서 해결할 수 있었다.
-&lt;img src=&quot;/img/include.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;server에서 가공처리를 해주지 않고 client에서 가공처리를 해주었다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/map.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;느낀점&quot;&gt;느낀점&lt;/h3&gt;
-
-&lt;p&gt;문법을 익히는데 시간이 오래 걸리긴 했지만(완벽X) 알아가는 재미가 있다.&lt;br /&gt;
-가공하는 방법에서는 충분한 scope의 이해가 필요했다. &lt;br /&gt;
-많은 시간을 공들여 팀원과 함께 찾아낸 방법! 앞으로도 유용하게 쓰일 것 같다👍&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;redux-사용&quot;&gt;Redux 사용&lt;/h4&gt;
-
-&lt;p&gt;Redux를 사용해보긴 했지만 실질적으로 프로젝트에서 사용한 적이 없었다. &lt;br /&gt;
-막상 Redux를 이용해 state를 관리하려고 했을 때 action, reducer, store등 처음 보는 듯한
-문법 이였고 활용을 할 수 없어 어려움을 겪었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://localhost:4000/frontend/redux/Redux/&quot;&gt;Redux&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="project" /><category term="2 weeks project" /><summary type="html">Shape Of Voice</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>SungSeokMin</name><email>jkl154527@gmail.com</email></author><category term="frontend" /><category term="flexbox" /><summary type="html">FlexBox (부모 속성)</summary></entry></feed>
