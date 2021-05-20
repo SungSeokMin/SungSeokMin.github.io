@@ -1,0 +1,177 @@
+I"�<blockquote>
+  <h2 id="react-router-">React Router ?</h2>
+</blockquote>
+
+<ul>
+  <li>SPA : Single Page Application
+    <ul>
+      <li>페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="설치-방법">설치 방법</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install react-router-dom
+</code></pre></div></div>
+
+<h3 id="사용-방법">사용 방법</h3>
+
+<ol>
+  <li>BrowserRouter로 Route를 감싸준다.</li>
+  <li>Route 컴포넌트에 경로(path)와 컴포넌트(component)를 설정해서 나열한다.</li>
+  <li>브라우저에 요청한 경로에 Route의 path가 들어있으면 해당 Component를 보여준다.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// App.js
+
+import { BrowserRouter, Route } from 'react-router-dom';
+import About from './pages/About';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Route path="/" exact component={Home}&gt;&lt;/Route&gt;
+      &lt;Route path="/profile" component={Profile}&gt;&lt;/Route&gt;
+      &lt;Route path="/about" component={About}&gt;&lt;/Route&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+
+export default App;
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="dynamic-라우팅-1">Dynamic 라우팅 1</h2>
+</blockquote>
+
+<p>Route의 path부분의 마지막에 “:원하는 값” 을 넣어준다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// App.js
+
+=&gt; :id 부분은 id가 아니더라도 원하는 문자열이 될 수 있다.
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Route path="/" exact component={Home}&gt;&lt;/Route&gt;
+      &lt;Route path="/profile/:id" component={Profile}&gt;&lt;/Route&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre></div></div>
+
+<p>URI =&gt; http://localhost:3000/profile/1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Profile.js
+
+=&gt; App.js에서 :id로 path를 설정했기 때문에 Profile.js에서 id로 가져올 수 있다.
+=&gt; props.match.params.id로 가져온 값의 타입은 string이다.
+  -&gt; number 타입으로 사용하고 싶다면 Numner(props.match.params.id);
+
+const Profile = (props) =&gt; {
+  console.log(props); =&gt; ↓ 사진 첨부
+
+  const id = props.match.params.id;
+  console.log(id, typeof id); // 1, string
+
+  return &lt;div&gt;Profile Page&lt;/div&gt;;
+};
+</code></pre></div></div>
+
+<p><img width="545" alt="스크린샷 2021-05-20 오후 3 50 26" src="https://user-images.githubusercontent.com/72539723/118932542-1d65d780-b983-11eb-97f2-d9a9ad4a8d5a.png" /></p>
+
+<blockquote>
+  <h2 id="dynamic-라우팅-2">Dynamic 라우팅 2</h2>
+</blockquote>
+
+<p>Query string을 이용</p>
+
+<ul>
+  <li>query string의 값을 편하게 가져오기 위해 모듈 사용
+    <ul>
+      <li>npm install query-string</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// App.js
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Route path="/" exact component={Home}&gt;&lt;/Route&gt;
+      &lt;Route path="/about" component={About}&gt;&lt;/Route&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre></div></div>
+
+<p>URI =&gt; http://localhost:4000/about?name=sung</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// About.js
+
+import queryString from 'query-string';
+
+const About = (props) =&gt; {
+
+  const searchParams = props.location.search;
+  const query = queryString.parse(searchParams);
+
+  console.log(query) =&gt; {name: sung}
+
+  return &lt;div&gt;About page&lt;/div&gt;;
+};
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="switch--notfound">Switch &amp; NotFound</h2>
+</blockquote>
+
+<p>Route를 Switch로 감싸준다.</p>
+
+<ul>
+  <li>링크와 매치되는 첫 번째 라우트만 보여준다.</li>
+  <li>링크와 매치되지 않는 경로가 있다면 NotFound 페이지를 보여줄 수 있다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Switch&gt;
+        &lt;Route path="/profile/:id" component={Profile}&gt;&lt;/Route&gt;
+        &lt;Route path="/profile" component={Profile}&gt;&lt;/Route&gt;
+        &lt;Route path="/about" component={About}&gt;&lt;/Route&gt;
+        &lt;Route path="/" exact component={Home}&gt;&lt;/Route&gt;
+        &lt;Route component={NotFound} /&gt;
+      &lt;/Switch&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="-vs-">‘<a>’ VS <link /></a></h2>
+</blockquote>
+
+<p><a></a></p>
+<ul>
+  <li>페이지 이동 시 로딩이 되면서 파일들을 다시 다운받는다.
+    <ul>
+      <li>React의 특성을 살리지 못한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<link />
+
+<ul>
+  <li>페이지 이동 시 로딩이 되지 않고 파일들을 다시 다운받지 않는다.
+    <ul>
+      <li>React의 특성을 살릴 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -46,9 +46,9 @@ function App() {
 export default App;
 ```
 
-> ## Dynamic 라우팅
+> ## Dynamic 라우팅 1
 
-1. URI 마지막 부분에 <:원하는 값>을 넣어준다.
+Route의 path부분의 마지막에 ":원하는 값" 을 넣어준다.
 
 ```
 // App.js
@@ -85,3 +85,102 @@ const Profile = (props) => {
 ```
 
 <img width="545" alt="스크린샷 2021-05-20 오후 3 50 26" src="https://user-images.githubusercontent.com/72539723/118932542-1d65d780-b983-11eb-97f2-d9a9ad4a8d5a.png">
+
+> ## Dynamic 라우팅 2
+
+Query string을 이용
+
+- query string의 값을 편하게 가져오기 위해 모듈 사용
+  - npm install query-string
+
+```
+// App.js
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Route path="/" exact component={Home}></Route>
+      <Route path="/about" component={About}></Route>
+    </BrowserRouter>
+  );
+}
+```
+
+URI => http://localhost:4000/about?name=sung
+
+```
+// About.js
+
+import queryString from 'query-string';
+
+const About = (props) => {
+
+  const searchParams = props.location.search;
+  const query = queryString.parse(searchParams);
+
+  console.log(query) => {name: sung}
+
+  return <div>About page</div>;
+};
+```
+
+> ## Switch & NotFound
+
+Route를 Switch로 감싸준다.
+
+- 링크와 매치되는 첫 번째 라우트만 보여준다.
+- 링크와 매치되지 않는 경로가 있다면 NotFound 페이지를 보여줄 수 있다.
+
+```
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/profile/:id" component={Profile}></Route>
+        <Route path="/profile" component={Profile}></Route>
+        <Route path="/about" component={About}></Route>
+        <Route path="/" exact component={Home}></Route>
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
+  );
+}
+```
+
+> ## a Tag VS Link Tag
+
+### a
+
+- 페이지 이동 시 로딩이 되면서 파일들을 다시 다운받는다.
+  - React의 특성을 살리지 못한다.
+
+### Link
+
+- 페이지 이동 시 로딩이 되지 않고 파일들을 다시 다운받지 않는다.
+  - React의 특성을 살릴 수 있다.
+
+```
+import { Link } from 'react-router-dom';
+
+function Links() {
+  return (
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/profile">Profile</Link>
+      </li>
+      <li>
+        <Link to="/profile/:id">Profile/1</Link>
+      </li>
+      <li>
+        <Link to="/about">about</Link>
+      </li>
+      <li>
+        <Link to="/about?name=mark">About/name=mark</Link>
+      </li>
+    </ul>
+  );
+}
+```
