@@ -42,7 +42,7 @@ var store = [{
         "teaser": null
       },{
         "title": "React-router-dom",
-        "excerpt":"React Router ? SPA : Single Page Application 페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션 설치 방법 npm install react-router-dom 사용 방법 react-router-dom 모듈 안에는 각각의 함수들이 있다. BrowserRouter : History API를 사용하고, url과 ui를 동기화 해주는 라우터 Route : user가 원하는 경로와 Route안의 path에 있는 경로가 일치할 경우 해당...","categories": ["frontend","React","Router"],
+        "excerpt":"React Router ? SPA : Single Page Application 페이지 깜박임 없이 하나의 페이지로 동작하는 어플리케이션 설치 방법 npm install react-router-dom 사용 방법 BrowserRouter로 Route를 감싸준다. Route 컴포넌트에 경로(path)와 컴포넌트(component)를 설정해서 나열한다. 브라우저에 요청한 경로에 Route의 path가 들어있으면 해당 Component를 보여준다. // App.js import { BrowserRouter, Route } from 'react-router-dom'; import...","categories": ["frontend","React","Router"],
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/react/router/React_router/",
         "teaser": null
