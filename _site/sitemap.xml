@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>sungseokmin.github.io/project/toy/Project-signUp_signIn/</loc>
+      <loc>https://sungseokmin.github.io/project/toy/Project-signUp_signIn/</loc>
       
         <lastmod>2021-05-13T00:00:00+09:00</lastmod>
       
@@ -18,7 +18,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/interview/Interview-JavaScript/</loc>
+      <loc>https://sungseokmin.github.io/interview/Interview-JavaScript/</loc>
       
         <lastmod>2021-05-10T00:00:00+09:00</lastmod>
       
@@ -34,7 +34,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/interview/Interview-FrontEnd/</loc>
+      <loc>https://sungseokmin.github.io/interview/Interview-FrontEnd/</loc>
       
         <lastmod>2021-05-06T00:00:00+09:00</lastmod>
       
@@ -50,7 +50,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/html/SCSS/</loc>
+      <loc>https://sungseokmin.github.io/frontend/html/SCSS/</loc>
       
         <lastmod>2021-04-25T00:00:00+09:00</lastmod>
       
@@ -66,7 +66,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/html/CSS/</loc>
+      <loc>https://sungseokmin.github.io/frontend/html/CSS/</loc>
       
         <lastmod>2021-03-09T00:00:00+09:00</lastmod>
       
@@ -82,7 +82,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/</loc>
+      <loc>https://sungseokmin.github.io/frontend/react-typescript/react-typescript-copy/</loc>
       
         <lastmod>2021-02-20T00:00:00+09:00</lastmod>
       
@@ -98,7 +98,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/typescript/typescript/</loc>
+      <loc>https://sungseokmin.github.io/frontend/typescript/typescript/</loc>
       
         <lastmod>2021-02-17T00:00:00+09:00</lastmod>
       
@@ -114,7 +114,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/redux/Redux/</loc>
+      <loc>https://sungseokmin.github.io/frontend/redux/Redux/</loc>
       
         <lastmod>2021-02-15T00:00:00+09:00</lastmod>
       
@@ -130,7 +130,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/project/2%20weeks%20project/Project-2/</loc>
+      <loc>https://sungseokmin.github.io/project/2%20weeks%20project/Project-2/</loc>
       
         <lastmod>2021-02-15T00:00:00+09:00</lastmod>
       
@@ -146,7 +146,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/flexbox/Flex/</loc>
+      <loc>https://sungseokmin.github.io/frontend/flexbox/Flex/</loc>
       
         <lastmod>2021-02-03T00:00:00+09:00</lastmod>
       
@@ -162,7 +162,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/project/2%20weeks%20project/Project-1/</loc>
+      <loc>https://sungseokmin.github.io/project/2%20weeks%20project/Project-1/</loc>
       
         <lastmod>2021-02-01T00:00:00+09:00</lastmod>
       
@@ -178,7 +178,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/react/router/React_router/</loc>
+      <loc>https://sungseokmin.github.io/frontend/react/router/React_router/</loc>
       
         <lastmod>2021-01-31T00:00:00+09:00</lastmod>
       
@@ -194,7 +194,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/react/hooks/React_hooks/</loc>
+      <loc>https://sungseokmin.github.io/frontend/react/hooks/React_hooks/</loc>
       
         <lastmod>2021-01-31T00:00:00+09:00</lastmod>
       
@@ -210,7 +210,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/frontend/react/React-frontend/</loc>
+      <loc>https://sungseokmin.github.io/frontend/react/React-frontend/</loc>
       
         <lastmod>2021-01-31T00:00:00+09:00</lastmod>
       
@@ -226,7 +226,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/backend/node/Node-backend/</loc>
+      <loc>https://sungseokmin.github.io/backend/node/Node-backend/</loc>
       
         <lastmod>2021-01-31T00:00:00+09:00</lastmod>
       
@@ -242,7 +242,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/backend/http/HTTP-backend/</loc>
+      <loc>https://sungseokmin.github.io/backend/http/HTTP-backend/</loc>
       
         <lastmod>2021-01-31T00:00:00+09:00</lastmod>
       
@@ -258,7 +258,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/backend/express/Express-backend/</loc>
+      <loc>https://sungseokmin.github.io/backend/express/Express-backend/</loc>
       
         <lastmod>2021-01-31T00:00:00+09:00</lastmod>
       
@@ -274,7 +274,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/algorithm/robotPath-algorithm/</loc>
+      <loc>https://sungseokmin.github.io/algorithm/robotPath-algorithm/</loc>
       
         <lastmod>2021-01-30T00:00:00+09:00</lastmod>
       
@@ -290,7 +290,7 @@
     </url>
   
     <url>
-      <loc>sungseokmin.github.io/algorithm/LSCS-algorithm/</loc>
+      <loc>https://sungseokmin.github.io/algorithm/LSCS-algorithm/</loc>
       
         <lastmod>2021-01-30T00:00:00+09:00</lastmod>
       
