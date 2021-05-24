@@ -296,11 +296,11 @@
   <li>function Component에서 state를 관리하기 위해 해주는 고마운 녀석</li>
 </ul>
 
-<h3 id="사용-방법">사용 방법</h3>
+<blockquote>
+  <h2 id="usestate">useState</h2>
+</blockquote>
 
-<ul>
-  <li>useState : function component에서 상태를 저장하고 수정할 수 있도록 도와준다.</li>
-</ul>
+<p>function component에서 상태를 저장하고 수정할 수 있도록 도와준다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, {useState} = 'react';
 
@@ -320,9 +320,11 @@ function Login (props) {
 }
 </code></pre></div></div>
 
-<ul>
-  <li>useEffect : Component가 렌더링 될 때 마다 특정 작업을 수행하도록 설정할 수 있도록 도와준다.</li>
-</ul>
+<blockquote>
+  <h2 id="useeffect">useEffect</h2>
+</blockquote>
+
+<p>Component가 렌더링 될 때 마다 특정 작업을 수행하도록 설정할 수 있도록 도와준다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, {useState, useEffect} = 'react';
 
@@ -363,6 +365,90 @@ function Login (props) {
     &lt;/div&gt;
   )
 }
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="usereducer">useReducer</h2>
+</blockquote>
+
+<ul>
+  <li>다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우</li>
+  <li>다음 state가 이전 state에 의존적인 경우</li>
+  <li>Redux와 유사</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { useReducer } from 'react';
+
+// reducer =&gt; state를 변경하는 로직이 담겨있는 함수
+const reducer = (prevState, action) =&gt; {
+  if (action.type === 'PLUS') {
+    return { count: prevState.count + 1 };
+  }
+
+  return prevState;
+};
+
+// dispatch =&gt; action 객체를 넣어서 실행
+
+// action =&gt; 객체이고 필수 프로퍼티로 type을 가진다.
+
+const Example6 = () =&gt; {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You Clicked {state.count} times&lt;/p&gt;
+      &lt;button onClick={click}&gt;Click me&lt;/button&gt;
+    &lt;/div&gt;
+  );
+
+  function click() {
+    dispatch({ type: 'PLUS' });
+  }
+};
+
+export default Example6;
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="usememo">useMemo</h2>
+</blockquote>
+
+<p>데이터가 변할 때 마다 불필요한 렌더를 없애주기 위해 사용</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { useMemo, useState } from 'react';
+
+function sum(persons) {
+  console.log('sum...');
+  return persons.map((person) =&gt; person.age).reduce((l, r) =&gt; l + r, 0);
+}
+
+const Example7 = () =&gt; {
+  const [value, setValue] = useState('');
+  const [persons] = useState([
+    { name: 'mark', age: 39 },
+    { name: 'hanna', age: 28 },
+  ]);
+  function change(e) {
+    setValue(e.target.value);
+  }
+
+  // useMemo를 사용하지 않았을 때 =&gt; Input창에 값을 입력할때 마다 리렌더가 되면서 sum(persons)가 계속 호출된다.
+  const count = sum(persons);
+
+  // useMemo를 사용했을 때 =&gt; persons의 상태가 변경될 때만 sum(persons)가 호출된다.
+  const count = useMemo(() =&gt; {
+    sum(persons);
+  }, [persons]);
+
+  return (
+    &lt;div&gt;
+      &lt;input type="text" value={value} onChange={change} /&gt;
+      &lt;p&gt;{count}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example7;
 </code></pre></div></div>
 
 <br />
@@ -675,7 +761,7 @@ function Login (props) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     

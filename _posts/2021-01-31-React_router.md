@@ -84,6 +84,25 @@ const Profile = (props) => {
 };
 ```
 
+### react-router-dom의 hooks의 useParams();
+
+```
+// Profile.js
+
+=> App.js에서 :id로 path를 설정했기 때문에 Profile.js에서 id로 가져올 수 있다.
+
+import {useParams} from 'react-router'
+
+const Profile = () => {
+  const params = useParams();
+
+  const id = params.id;
+  console.log(id, typeof id); // 1, string
+
+  return <div>Profile Page</div>;
+};
+```
+
 <img width="545" alt="스크린샷 2021-05-20 오후 3 50 26" src="https://user-images.githubusercontent.com/72539723/118932542-1d65d780-b983-11eb-97f2-d9a9ad4a8d5a.png">
 
 > ## Dynamic 라우팅 2

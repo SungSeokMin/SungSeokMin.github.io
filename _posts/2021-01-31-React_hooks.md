@@ -12,9 +12,9 @@ toc: true
 
 - function Component에서 state를 관리하기 위해 해주는 고마운 녀석
 
-### 사용 방법
+> ## useState
 
-- useState : function component에서 상태를 저장하고 수정할 수 있도록 도와준다.
+function component에서 상태를 저장하고 수정할 수 있도록 도와준다.
 
 ```
 import React, {useState} = 'react';
@@ -35,7 +35,9 @@ function Login (props) {
 }
 ```
 
-- useEffect : Component가 렌더링 될 때 마다 특정 작업을 수행하도록 설정할 수 있도록 도와준다.
+> ## useEffect
+
+Component가 렌더링 될 때 마다 특정 작업을 수행하도록 설정할 수 있도록 도와준다.
 
 ```
 import React, {useState, useEffect} = 'react';
@@ -77,4 +79,84 @@ function Login (props) {
     </div>
   )
 }
+```
+
+> ## useReducer
+
+- 다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우
+- 다음 state가 이전 state에 의존적인 경우
+- Redux와 유사
+
+```
+import React, { useReducer } from 'react';
+
+// reducer => state를 변경하는 로직이 담겨있는 함수
+const reducer = (prevState, action) => {
+  if (action.type === 'PLUS') {
+    return { count: prevState.count + 1 };
+  }
+
+  return prevState;
+};
+
+// dispatch => action 객체를 넣어서 실행
+
+// action => 객체이고 필수 프로퍼티로 type을 가진다.
+
+const Example6 = () => {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+  return (
+    <div>
+      <p>You Clicked {state.count} times</p>
+      <button onClick={click}>Click me</button>
+    </div>
+  );
+
+  function click() {
+    dispatch({ type: 'PLUS' });
+  }
+};
+
+export default Example6;
+```
+
+> ## useMemo
+
+데이터가 변할 때 마다 불필요한 렌더를 없애주기 위해 사용
+
+```
+import React, { useMemo, useState } from 'react';
+
+function sum(persons) {
+  console.log('sum...');
+  return persons.map((person) => person.age).reduce((l, r) => l + r, 0);
+}
+
+const Example7 = () => {
+  const [value, setValue] = useState('');
+  const [persons] = useState([
+    { name: 'mark', age: 39 },
+    { name: 'hanna', age: 28 },
+  ]);
+  function change(e) {
+    setValue(e.target.value);
+  }
+
+  // useMemo를 사용하지 않았을 때 => Input창에 값을 입력할때 마다 리렌더가 되면서 sum(persons)가 계속 호출된다.
+  const count = sum(persons);
+
+  // useMemo를 사용했을 때 => persons의 상태가 변경될 때만 sum(persons)가 호출된다.
+  const count = useMemo(() => {
+    sum(persons);
+  }, [persons]);
+
+  return (
+    <div>
+      <input type="text" value={value} onChange={change} />
+      <p>{count}</p>
+    </div>
+  );
+};
+
+export default Example7;
 ```

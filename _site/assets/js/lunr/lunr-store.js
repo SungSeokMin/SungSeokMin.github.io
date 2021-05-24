@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "React_hooks",
-        "excerpt":"React Hooks ? function Component에서 state를 관리하기 위해 해주는 고마운 녀석 사용 방법 useState : function component에서 상태를 저장하고 수정할 수 있도록 도와준다. import React, {useState} = 'react'; function Login (props) { // 배열의 첫 요소는 값을 저장할 변수 // 배열의 두 번째 요소는 값을 바꿀 변수 const [id, setId]...","categories": ["frontend","React","hooks"],
+        "excerpt":"React Hooks ? function Component에서 state를 관리하기 위해 해주는 고마운 녀석 useState function component에서 상태를 저장하고 수정할 수 있도록 도와준다. import React, {useState} = 'react'; function Login (props) { // 배열의 첫 요소는 값을 저장할 변수 // 배열의 두 번째 요소는 값을 바꿀 변수 const [id, setId] = useState('') //...","categories": ["frontend","React","hooks"],
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/react/hooks/React_hooks/",
         "teaser": null
@@ -66,7 +66,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Redux",
-        "excerpt":"Redux action : store(저장소)로 data를 보내는 방법 // actions -&gt; index.js export const LOGIN = 'LOGIN'; export const LOGOUT = 'LOGOUT'; export const login = () =&gt; { return { type: LOGIN, payload : (생략가능) } } export const logout = () =&gt; { return { type: LOGOUT, payload :...","categories": ["frontend","redux"],
+        "excerpt":"Redux Flux개념을 바탕으로한 State관리 라이브러리 Npm 설치 npm install redux Action store(저장소)로 data를 보내는 방법 두 가지 형태의 액션 존재 {type: ‘타입’} {type: ‘타입’, params: ‘데이터’} // src/redux/actions.js const ADD_TODO = 'ADD_TODO'; export function addTodo(todo) { return { type: ADD_TODO, todo, } } Reducers action을 통해 타입을 정의 했으면, 그...","categories": ["frontend","redux"],
         "tags": [],
         "url": "https://sungseokmin.github.io/frontend/redux/Redux/",
         "teaser": null
