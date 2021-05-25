@@ -2,7 +2,7 @@ var store = [{
         "title": "LSCS-연속된 부분 배열의 합의 최대값",
         "excerpt":"LSCS 문제설명 정수를 요소로 갖는 배열 주어진 배열의 연속된 부분 배열의 합을 구한다. 이 중 가장 큰 값을 리턴해야 한다. 배열의 모든 요소가 음수인 경우도 있다. let output = LSCS([1, 2, 3]); console.log(output); // --&gt; 6 output = LSCS([1, 2, 3, -4]); console.log(output); // --&gt; 6 LSCS([1, 2, 3, -4,...","categories": ["algorithm"],
         "tags": [],
-        "url": "https://sungseokmin.github.io/algorithm/LSCS-algorithm/",
+        "url": "https://sungseokmin.github.io/algorithm/algorithm/",
         "teaser": null
       },{
         "title": "최소시간으로 길찾기-완전탐색",
@@ -110,6 +110,6 @@ var store = [{
         "title": "Toy_회원가입 및 로그인",
         "excerpt":"사용한 모듈 node.js 및 express.js 설치 node : Chrome V8 엔진으로 빌드된 JavaScript 런타임 nvm(node version manager) : 여러 개의 nodejs를 설치하고 사용할 버전을 쉽게 전활할 수 있도록 도와주는 역할 터미널 실행 후 nvm 설치 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 최신 버전 설치 nvm install node 특정 버전 설치 nvm...","categories": ["project","Toy"],
         "tags": [],
-        "url": "https://sungseokmin.github.io/project/toy/Project-signUp_signIn/",
+        "url": "https://sungseokmin.github.io/project/toy/toysiginsignup/",
         "teaser": null
       }]
