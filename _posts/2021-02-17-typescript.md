@@ -72,25 +72,33 @@ let x: string | number = 150; // good!!
 
 <img width="614" alt="스크린샷 2021-02-17 오전 11 36 40" src="https://user-images.githubusercontent.com/72539723/108148564-6902ae00-7114-11eb-9481-a32cf645f849.png">
 
-### 타입 별칭 (Type Alias)
+### Type Aliases
 
-- 타입에 직접 이름을 부여하고 재사용이 가능
+- interface와 동일하게 사용
 
 ```
-type User = {
+type Person = {
   name: string;
-  age: number;
+  age?: number;
 }
 
-const user1: User = {
-  name: '성석민',
+type Developer = Person & {
+  skills: string[];
+}
+
+const person: Person = {
+  name: '김코딩',
   age: 27,
 }
 
-const user2: User = {
-  name: '홍길동',
-  age: 30,
+const myInfo: Developer = {
+  name: '성석민',
+  skills: [ 'javascript', 'typescript' ]
 }
+
+type People = Person[];
+
+const people: People = [person, myInfo]
 ```
 
 ### interface
@@ -139,35 +147,6 @@ const myInfo extends Developer{
 <img width="522" alt="스크린샷 2021-02-17 오후 12 40 40" src="https://user-images.githubusercontent.com/72539723/108152897-58a30100-711d-11eb-9cc2-894e78b5843d.png">
 
 ✔️ Literal Type이 가독성이 좋아 많이 사용한다고 한다!!
-
-### Type Aliases
-
-- interface와 동일하게 사용
-
-```
-type Person = {
-  name: string;
-  age?: number;
-}
-
-type Developer = Person & {
-  skills: string[];
-}
-
-const person: Person = {
-  name: '김코딩',
-  age: 27,
-}
-
-const myInfo: Developer = {
-  name: '성석민',
-  skills: [ 'javascript', 'typescript' ]
-}
-
-type People = Person[];
-
-const people: People = [person, myInfo]
-```
 
 ### 접근제한자(Access Modifiers)
 
