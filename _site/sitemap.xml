@@ -275,36 +275,4 @@
 
     </url>
     
-    <url>
-        <loc>https://SungSeokMin.github.io/algorithm/robotPath-algorithm/</loc>
-        
-        <lastmod>2021-01-30T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>https://SungSeokMin.github.io/algorithm/algorithm/</loc>
-        
-        <lastmod>2021-01-30T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
 </urlset>
