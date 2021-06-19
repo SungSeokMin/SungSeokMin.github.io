@@ -1,4 +1,4 @@
-I"
+I"²
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -15,8 +15,6 @@
               <a href="/backend/">BackEnd</a>
             </li><li class="masthead__menu-item">
               <a href="/project/">Project</a>
-            </li><li class="masthead__menu-item">
-              <a href="/algorithm/">Algorithm</a>
             </li><li class="masthead__menu-item">
               <a href="/interview/">Interview</a>
             </li></ul>
