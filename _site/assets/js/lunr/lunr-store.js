@@ -100,4 +100,10 @@ var store = [{
         "tags": [],
         "url": "https://sungseokmin.github.io/project/toy/toysiginsignup/",
         "teaser": null
+      },{
+        "title": "자바스크립트와 웹 브라우저",
+        "excerpt":"HTML, CSS, JavaScript HTML : 웹 페이지의 구조를 나타냄 CSS : 웹 페이지 안에 존재하는 요소들의 스타일을 나타냄 JavaScript : 문서의 구조와 스타일에 변화를 줄 수 있음 Window Object JavaScript 실행시 가장 상위에 존재하는 객체 window.location : 현재 브라우저 창의 주소를 나타내는 객체 window.location.href : 브라우저 창에 입력된 주소, 변경...","categories": ["frontend","javascript"],
+        "tags": [],
+        "url": "https://sungseokmin.github.io/frontend/javascript/Javascript/",
+        "teaser": null
       }]

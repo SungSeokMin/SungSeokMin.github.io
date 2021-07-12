@@ -1,0 +1,227 @@
+I"�"<blockquote>
+  <h2 id="html-css-javascript">HTML, CSS, JavaScript</h2>
+</blockquote>
+
+<p>HTML : 웹 페이지의 구조를 나타냄</p>
+
+<p>CSS : 웹 페이지 안에 존재하는 요소들의 스타일을 나타냄</p>
+
+<p>JavaScript : 문서의 구조와 스타일에 변화를 줄 수 있음</p>
+
+<blockquote>
+  <h2 id="window-object">Window Object</h2>
+</blockquote>
+
+<h4 id="javascript-실행시-가장-상위에-존재하는-객체">JavaScript 실행시 가장 상위에 존재하는 객체</h4>
+
+<ul>
+  <li>window.location : 현재 브라우저 창의 주소를 나타내는 객체</li>
+  <li>window.location.href : 브라우저 창에 입력된 주소, 변경 가능</li>
+  <li>window.navigator : 브라우저 자체에 대한 정보</li>
+  <li>window.screen : 디스플레이의 사이즈</li>
+  <li><span style="color: orange">window.document</span> : 웹 페이지 문서의 HTML, CSS 등에 대한 접근 가능</li>
+</ul>
+
+<blockquote>
+  <h2 id="domdocument-object-model">DOM(Document Object Model)</h2>
+</blockquote>
+
+<h4 id="컴퓨터가-문서를-잘-처리할-수-있도록-문서의-구조를-약속한-것-tree-형태를-따름">컴퓨터가 문서를 잘 처리할 수 있도록 문서의 구조를 약속한 것 (tree 형태를 따름)</h4>
+
+<p>자식, 부모 엘리먼트에 접근하는 방법</p>
+
+<ul>
+  <li>.children : 해당 object의 자식 노드에 대한 배열</li>
+  <li>.parentNode : 부모 노드</li>
+  <li>.firstElementChild : 첫 자식 엘리먼트</li>
+  <li>.lastElementChild : 마지막 자식 엘리먼트</li>
+</ul>
+
+<p>같은 레벨의 형제 엘리먼트에 접근하는 방법</p>
+
+<ul>
+  <li>.nextElementSibling</li>
+  <li>.previousElementSibling</li>
+</ul>
+
+<p>DOM API를 활용해 문서의 엘리먼트를 선택하는 방법</p>
+
+<ul>
+  <li>querySelector(‘태그이름’) : HTML element 태그를 전달하면 해당 엘리먼트가 반환됨</li>
+  <li>querySelector(‘.class’) : HTML element 태그의 class를 전달하면 해당 엘리먼트가 반환됨</li>
+  <li>querySelector(‘#id’) : HTML element 태그의 id를 전달하면 해당 엘리먼트가 반환됨</li>
+  <li>querySelectorAll() : HTML element 태그의 모든 class 또는 id를 전달하면 해당되는 엘리만트가 전부 반환됨</li>
+</ul>
+
+<p>Element API</p>
+
+<ul>
+  <li>.innerHTML : 엘리먼트 안의 HTML코드를 변경</li>
+  <li><span style="color: orange">.innerText</span> : 엘리먼트 안의 텍스트를 변경</li>
+  <li>.style : css를 변경 가능</li>
+  <li>.value : input 엘리먼트에 입력된 값을 얻어올 수 있음</li>
+  <li>getAttribute(‘속성 이름’) : 엘리먼트의 속성 값을 얻어옴</li>
+  <li>setAttribute(‘속성 이름’, ‘설정할 속성의 값’) : 엘리먼트의 속성 값을 설정함</li>
+  <li><span style="color: orange">.createElement()</span> : 문자열 인자로 tag를 입력하면 해당 엘리먼트가 생성돼 반환됨</li>
+  <li><span style="color: orange">.appendChild(인자)</span> : 추가할 element를 인자로 받아 호출된 element의 자식으로 인자를 추가함</li>
+  <li><span style="color: orange">.removeChild(인자)</span> : 삭제할 element를 인자로 받아 호출된 element의 자식중에서 해당 element를 삭제</li>
+  <li><span style="color: orange">.insertBefore(인자1,인자2)</span> : 인자1로 받은 element를 호출된 element의 자식중 인자2의 이전에 추가함</li>
+  <li><span style="color: orange">.cloneNode()</span> : 호출된 element를 복사해서 반환함</li>
+</ul>
+
+<blockquote>
+  <h2 id="callback-function">Callback Function</h2>
+</blockquote>
+
+<p>조건을 등록해 두고 그 조건을 만족한 경우, 나중에 호출되는 함수</p>
+
+<ul>
+  <li>setTimeout(function, time) : 해당 시간(밀리세컨드 단위 1/1000초)이 지나면 function을 콜백하는 함수,
+    <ul>
+      <li>timerId를 반환</li>
+    </ul>
+  </li>
+  <li>clearTimeout(timerId) : timerId를 인자로 받아 예약되어 있던 function호출을 취소</li>
+  <li>setInterval(function, time) : 해당 시간이 경과할 때마다 function 함수를 콜백하는 함수
+    <ul>
+      <li>intervalId를 반환</li>
+    </ul>
+  </li>
+  <li>clearInterval(IntervalId) : intervalId를 인자로 받아 주기적으로 호출되던 function 호출을 취소</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function callback () {
+  console.log('callback');
+}
+
+// 3초 뒤에 callback 함수가 호출
+setTimeout(callback, 3000) -&gt; timerId : 1
+
+// 3초 마다 callback 함수가 호출
+setInterval(callback, 3000); -&gt; intervalId : 2
+
+clearInterval(2);
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="javascript-eventhandler-설정">JavaScript EventHandler 설정</h2>
+</blockquote>
+
+<p><a href="https://developer.mozilla.org/ko/docs/Web/Events">MDN 이벤트</a></p>
+
+<ul>
+  <li>addEventListener(이벤트, 함수) : 이벤트 등록</li>
+  <li>removeListener(이벤트, 함수) : 이벤트 삭제</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;button class="btn"&gt;클릭&lt;/button&gt;
+  &lt;input type="text" class="userName"/&gt;
+
+  &lt;script&gt;
+    const getBtn = document.querySelector('.btn');
+
+    getBtn.addEventListener('click', () =&gt; {
+      console.log('버튼이 클릭 되었습니다.);
+    })
+
+    const getInput = document.querySelector('.userName');
+
+    getInput.addEventListener('keydown', () =&gt; {
+      console.log('키보드가 눌렸습니다');
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="ajaxasynchronous-javascript-and-xml">AJAX(Asynchronous JavaScript and XML)</h2>
+
+<ul>
+  <li>자바스크립트를 이용해서 <span style="color: orange">비동기적</span>으로 서버와 브라우저가 데이터를 교환할 수 있는 통신 방법</li>
+  <li>사용자에게 더 나은 사용 경험 제공, 대부분의 웹사이트에서 사용되고 있는 기술</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script&gt;
+      // AJAX를 위한 객체 생성
+      const req = new XMLHttpRequest();
+
+      // 요청의 방식과 URL 설정
+      req.open('GET', './data.txt');
+
+      // 요청 전송
+      req.send();
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h4 id="응답-확인">응답 확인</h4>
+
+<ul>
+  <li>req.response에 저장됨</li>
+  <li>비동기 방식으로 요청하기 때문에 send 메소드 호출 후, 바로 코드에서 접근하면 데이터가 비어 있음</li>
+</ul>
+
+<h4 id="http-응답-코드">HTTP 응답 코드</h4>
+
+<p><img src="https://user-images.githubusercontent.com/72539723/125258673-880b1200-e339-11eb-88b7-f0a5ba2724ce.png" alt="응답코드" /></p>
+
+<blockquote>
+  <h2 id="jsonjavascript-object-notification">JSON(Javascript Object Notification)</h2>
+</blockquote>
+
+<p>자바스크립트의 객체를 문자열로 표현하는 방법</p>
+
+<ul>
+  <li>JSON.stringify(object) : 인자로 받은 객체를 JSON 문자열로 반환</li>
+  <li>JSON.parse(string) : 인자로 받은 문자열을 Javascript Object로 변경해 반환</li>
+</ul>
+
+<p>❗️ <span style="color: orange">undefined</span>, <span style="color: orange">function</span>은 변한되지 않는다. ❗️</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const obj = {
+  name: '성석민',
+  age: '27',
+  hobby: undefined,
+  method : function a() {console.log('Hello JSON')}
+}
+
+const getJSON = JSON.stringify(obj)
+console.log(getJSON) =&gt; "{"name":"성석민","age":"27"}"
+
+JSON.parse(getJSON) =&gt; {name: "성석민", age: "27"}
+</code></pre></div></div>
+
+<blockquote>
+  <h2 id="ajax를-통해-josn-데이터-가져오기">AJAX를 통해 JOSN 데이터 가져오기</h2>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JSON
+
+[
+{"id" : "배우1" , "msg" : "대사1"},
+{"id" : "배우2" , "msg" : "대사2"},
+{"id" : "배우3" , "msg" : "대사3"},
+{"id" : "배우4" , "msg" : "대사4"},
+{"id" : "배우5" , "msg" : "대사5"},
+{"id" : "배우6" , "msg" : "대사6"}
+]
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/72539723/125263990-6f512b00-e33e-11eb-92a0-9515104e0212.png" alt="AJAX + JSON" /></p>
+:ET

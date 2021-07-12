@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://SungSeokMin.github.io/frontend/javascript/Javascript/</loc>
+        
+        <lastmod>2021-07-12T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://SungSeokMin.github.io/project/toy/toysiginsignup/</loc>
         
         <lastmod>2021-05-13T00:00:00+09:00</lastmod>
